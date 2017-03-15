@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="recyclerview-v7-25.1.1">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.android/build-cache/6f6a660c916442d9092a441844a9c55ebe815305/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/6f6a660c916442d9092a441844a9c55ebe815305/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/6f6a660c916442d9092a441844a9c55ebe815305/output/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/6f6a660c916442d9092a441844a9c55ebe815305/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/6f6a660c916442d9092a441844a9c55ebe815305/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.1.1/recyclerview-v7-25.1.1-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.1.1/recyclerview-v7-25.1.1-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.1.1/recyclerview-v7-25.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

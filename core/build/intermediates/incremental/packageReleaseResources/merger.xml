@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3" xmlns:ns1="http://schemas.android.com/tools"><dataSet config="main$Generated" generated="true"><source path="D:\DanDan\CustomOA\core\src\main\res"/><source path="D:\DanDan\CustomOA\core\build\generated\res\rs\release"/><source path="D:\DanDan\CustomOA\core\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="D:\DanDan\CustomOA\core\src\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\DanDan\CustomOA\core\src\main\res"><file name="left_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\left_in.xml" qualifiers="" type="anim"/><file name="left_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\left_out.xml" qualifiers="" type="anim"/><file name="left_out_animation" path="D:\DanDan\CustomOA\core\src\main\res\anim\left_out_animation.xml" qualifiers="" type="anim"/><file name="push_down_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_down_in.xml" qualifiers="" type="anim"/><file name="push_down_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_down_out.xml" qualifiers="" type="anim"/><file name="push_left_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_left_in.xml" qualifiers="" type="anim"/><file name="push_left_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_left_out.xml" qualifiers="" type="anim"/><file name="push_right_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_right_in.xml" qualifiers="" type="anim"/><file name="push_right_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_right_out.xml" qualifiers="" type="anim"/><file name="push_up_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_up_in.xml" qualifiers="" type="anim"/><file name="push_up_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\push_up_out.xml" qualifiers="" type="anim"/><file name="right_in" path="D:\DanDan\CustomOA\core\src\main\res\anim\right_in.xml" qualifiers="" type="anim"/><file name="right_in_animation" path="D:\DanDan\CustomOA\core\src\main\res\anim\right_in_animation.xml" qualifiers="" type="anim"/><file name="right_out" path="D:\DanDan\CustomOA\core\src\main\res\anim\right_out.xml" qualifiers="" type="anim"/><file name="scale_down" path="D:\DanDan\CustomOA\core\src\main\res\anim\scale_down.xml" qualifiers="" type="anim"/><file name="slide_left" path="D:\DanDan\CustomOA\core\src\main\res\anim\slide_left.xml" qualifiers="" type="anim"/><file name="slide_right" path="D:\DanDan\CustomOA\core\src\main\res\anim\slide_right.xml" qualifiers="" type="anim"/><file name="slide_up" path="D:\DanDan\CustomOA\core\src\main\res\anim\slide_up.xml" qualifiers="" type="anim"/><file name="border_while" path="D:\DanDan\CustomOA\core\src\main\res\drawable\border_while.xml" qualifiers="" type="drawable"/><file name="circle_border_abc" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_abc.xml" qualifiers="" type="drawable"/><file name="circle_border_def" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_def.xml" qualifiers="" type="drawable"/><file name="circle_border_ghi" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_ghi.xml" qualifiers="" type="drawable"/><file name="circle_border_jkl" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_jkl.xml" qualifiers="" type="drawable"/><file name="circle_border_mno" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_mno.xml" qualifiers="" type="drawable"/><file name="circle_border_pqr" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_pqr.xml" qualifiers="" type="drawable"/><file name="circle_border_stu" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_stu.xml" qualifiers="" type="drawable"/><file name="circle_border_vwxyz" path="D:\DanDan\CustomOA\core\src\main\res\drawable\circle_border_vwxyz.xml" qualifiers="" type="drawable"/><file name="dialog_bg_bottom_left_press" path="D:\DanDan\CustomOA\core\src\main\res\drawable\dialog_bg_bottom_left_press.9.png" qualifiers="" type="drawable"/><file name="dialog_bg_bottom_right_press" path="D:\DanDan\CustomOA\core\src\main\res\drawable\dialog_bg_bottom_right_press.9.png" qualifiers="" type="drawable"/><file name="dialog_btn_left_selector" path="D:\DanDan\CustomOA\core\src\main\res\drawable\dialog_btn_left_selector.xml" qualifiers="" type="drawable"/><file name="dialog_btn_right_selector" path="D:\DanDan\CustomOA\core\src\main\res\drawable\dialog_btn_right_selector.xml" qualifiers="" type="drawable"/><file name="fab_label_background" path="D:\DanDan\CustomOA\core\src\main\res\drawable\fab_label_background.xml" qualifiers="" type="drawable"/><file name="frame" path="D:\DanDan\CustomOA\core\src\main\res\drawable\frame.9.png" qualifiers="" type="drawable"/><file name="ripple_bg" path="D:\DanDan\CustomOA\core\src\main\res\drawable\ripple_bg.xml" qualifiers="" type="drawable"/><file name="ripple_bg_f8" path="D:\DanDan\CustomOA\core\src\main\res\drawable\ripple_bg_f8.xml" qualifiers="" type="drawable"/><file name="ripple_bg_red" path="D:\DanDan\CustomOA\core\src\main\res\drawable\ripple_bg_red.xml" qualifiers="" type="drawable"/><file name="ripple_bg_while" path="D:\DanDan\CustomOA\core\src\main\res\drawable\ripple_bg_while.xml" qualifiers="" type="drawable"/><file name="rounded_corners" path="D:\DanDan\CustomOA\core\src\main\res\drawable\rounded_corners.xml" qualifiers="" type="drawable"/><file name="rounded_corners_f8" path="D:\DanDan\CustomOA\core\src\main\res\drawable\rounded_corners_f8.xml" qualifiers="" type="drawable"/><file name="rounded_corners_red" path="D:\DanDan\CustomOA\core\src\main\res\drawable\rounded_corners_red.xml" qualifiers="" type="drawable"/><file name="rounded_corners_while" path="D:\DanDan\CustomOA\core\src\main\res\drawable\rounded_corners_while.xml" qualifiers="" type="drawable"/><file name="sign_item_broder" path="D:\DanDan\CustomOA\core\src\main\res\drawable\sign_item_broder.xml" qualifiers="" type="drawable"/><file name="textview_lin" path="D:\DanDan\CustomOA\core\src\main\res\drawable\textview_lin.xml" qualifiers="" type="drawable"/><file name="wheel_bg" path="D:\DanDan\CustomOA\core\src\main\res\drawable\wheel_bg.xml" qualifiers="" type="drawable"/><file name="wheel_sel" path="D:\DanDan\CustomOA\core\src\main\res\drawable\wheel_sel.xml" qualifiers="" type="drawable"/><file name="wheel_val" path="D:\DanDan\CustomOA\core\src\main\res\drawable\wheel_val.xml" qualifiers="" type="drawable"/><file name="ripple_bg" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\ripple_bg.xml" qualifiers="v21" type="drawable"/><file name="ripple_bg_f8" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\ripple_bg_f8.xml" qualifiers="v21" type="drawable"/><file name="ripple_bg_hy" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\ripple_bg_hy.xml" qualifiers="v21" type="drawable"/><file name="ripple_bg_red" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\ripple_bg_red.xml" qualifiers="v21" type="drawable"/><file name="ripple_bg_while" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\ripple_bg_while.xml" qualifiers="v21" type="drawable"/><file name="rounded_corners_hy" path="D:\DanDan\CustomOA\core\src\main\res\drawable-v21\rounded_corners_hy.xml" qualifiers="v21" type="drawable"/><file name="core" path="D:\DanDan\CustomOA\core\src\main\res\layout\core.xml" qualifiers="" type="layout"/><file name="core_error" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_error.xml" qualifiers="" type="layout"/><file name="core_line" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_line.xml" qualifiers="" type="layout"/><file name="core_line_padding" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_line_padding.xml" qualifiers="" type="layout"/><file name="core_listview" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_listview.xml" qualifiers="" type="layout"/><file name="core_listview_footview" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_listview_footview.xml" qualifiers="" type="layout"/><file name="core_loadview" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_loadview.xml" qualifiers="" type="layout"/><file name="core_submitbutton" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_submitbutton.xml" qualifiers="" type="layout"/><file name="core_title_back" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_title_back.xml" qualifiers="" type="layout"/><file name="core_webview" path="D:\DanDan\CustomOA\core\src\main\res\layout\core_webview.xml" qualifiers="" type="layout"/><file name="custom_oa_title" path="D:\DanDan\CustomOA\core\src\main\res\layout\custom_oa_title.xml" qualifiers="" type="layout"/><file name="empty" path="D:\DanDan\CustomOA\core\src\main\res\layout\empty.xml" qualifiers="" type="layout"/><file name="gridview_item" path="D:\DanDan\CustomOA\core\src\main\res\layout\gridview_item.xml" qualifiers="" type="layout"/><file name="mp_about" path="D:\DanDan\CustomOA\core\src\main\res\layout\mp_about.xml" qualifiers="" type="layout"/><file name="mp_login" path="D:\DanDan\CustomOA\core\src\main\res\layout\mp_login.xml" qualifiers="" type="layout"/><file name="mp_setting" path="D:\DanDan\CustomOA\core\src\main\res\layout\mp_setting.xml" qualifiers="" type="layout"/><file name="mp_splash" path="D:\DanDan\CustomOA\core\src\main\res\layout\mp_splash.xml" qualifiers="" type="layout"/><file name="mp_userinfo" path="D:\DanDan\CustomOA\core\src\main\res\layout\mp_userinfo.xml" qualifiers="" type="layout"/><file name="about_bg" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\about_bg.png" qualifiers="" type="mipmap"/><file name="add" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\add.png" qualifiers="" type="mipmap"/><file name="app_gwgl" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_gwgl.png" qualifiers="" type="mipmap"/><file name="app_gzzb" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_gzzb.png" qualifiers="" type="mipmap"/><file name="app_lssgl" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_lssgl.png" qualifiers="" type="mipmap"/><file name="app_rcap" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_rcap.png" qualifiers="" type="mipmap"/><file name="app_sswsdf" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_sswsdf.png" qualifiers="" type="mipmap"/><file name="app_sswstj" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_sswstj.png" qualifiers="" type="mipmap"/><file name="app_sswzdj" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_sswzdj.png" qualifiers="" type="mipmap"/><file name="app_tzgg" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_tzgg.png" qualifiers="" type="mipmap"/><file name="app_xxxw" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_xxxw.png" qualifiers="" type="mipmap"/><file name="app_yzap" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_yzap.png" qualifiers="" type="mipmap"/><file name="app_zssdj" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_zssdj.png" qualifiers="" type="mipmap"/><file name="app_zsskq" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_zsskq.png" qualifiers="" type="mipmap"/><file name="app_zxzssgl" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_zxzssgl.png" qualifiers="" type="mipmap"/><file name="app_zxzsstj" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\app_zxzsstj.png" qualifiers="" type="mipmap"/><file name="back_press" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\back_press.png" qualifiers="" type="mipmap"/><file name="clear_press" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\clear_press.png" qualifiers="" type="mipmap"/><file name="data_fail" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\data_fail.png" qualifiers="" type="mipmap"/><file name="errorserver" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\errorserver.png" qualifiers="" type="mipmap"/><file name="home" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\home.png" qualifiers="" type="mipmap"/><file name="hy" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\hy.png" qualifiers="" type="mipmap"/><file name="icon_addapp" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\icon_addapp.png" qualifiers="" type="mipmap"/><file name="image_defualt" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\image_defualt.png" qualifiers="" type="mipmap"/><file name="into_icon" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\into_icon.png" qualifiers="" type="mipmap"/><file name="man" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\man.png" qualifiers="" type="mipmap"/><file name="net_fail" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\net_fail.png" qualifiers="" type="mipmap"/><file name="nodata" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\nodata.png" qualifiers="" type="mipmap"/><file name="nodata_n" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\nodata_n.png" qualifiers="" type="mipmap"/><file name="nomsg" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\nomsg.png" qualifiers="" type="mipmap"/><file name="nonet" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\nonet.png" qualifiers="" type="mipmap"/><file name="photo" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\photo.png" qualifiers="" type="mipmap"/><file name="pwd" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\pwd.png" qualifiers="" type="mipmap"/><file name="searchnodata" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\searchnodata.png" qualifiers="" type="mipmap"/><file name="search_blue" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\search_blue.png" qualifiers="" type="mipmap"/><file name="search_icon" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\search_icon.png" qualifiers="" type="mipmap"/><file name="setting_about" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\setting_about.png" qualifiers="" type="mipmap"/><file name="setting_clean" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\setting_clean.png" qualifiers="" type="mipmap"/><file name="setting_push" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\setting_push.png" qualifiers="" type="mipmap"/><file name="setting_version" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\setting_version.png" qualifiers="" type="mipmap"/><file name="splash" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\splash.png" qualifiers="" type="mipmap"/><file name="splash_bg" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\splash_bg.png" qualifiers="" type="mipmap"/><file name="uid" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\uid.png" qualifiers="" type="mipmap"/><file path="D:\DanDan\CustomOA\core\src\main\res\values\attrs.xml" qualifiers=""><attr format="dimension" name="image45"/><attr format="dimension" name="image22"/><attr format="dimension" name="image44"/><attr format="dimension" name="image42"/><attr format="dimension" name="image40"/><attr format="dimension" name="image62"/><attr format="dimension" name="textSize20"/><attr format="dimension" name="image60"/><attr format="dimension" name="image80"/><attr format="dimension" name="image7"/><attr format="dimension" name="textSize24"/><attr format="dimension" name="image8"/><attr format="dimension" name="image100"/><attr format="dimension" name="image16"/><attr format="dimension" name="image34"/><declare-styleable name="TabItemButton">
+        <attr format="reference" name="drawableTop_normal"/>
+        <attr format="reference" name="drawableTop_selected"/>
+        <attr format="boolean" name="isSelected"/>
+        <attr format="dimension" name="drawableWidth"/>
+        <attr format="dimension" name="drawableHeight"/>
+    </declare-styleable><attr format="dimension" name="image13"/><attr format="dimension" name="image10"/><attr format="dimension" name="image32"/><attr format="dimension" name="image11"/><attr format="dimension" name="image30"/><attr format="dimension" name="image50"/><attr format="dimension" name="image73"/><attr format="dimension" name="image70"/><attr format="dimension" name="image71"/><attr format="dimension" name="textSize14"/><attr format="dimension" name="textSize13"/><attr format="dimension" name="textSize12"/><attr format="dimension" name="textSize18"/><attr format="dimension" name="textSize17"/><attr format="dimension" name="textSize16"/><attr format="dimension" name="textSize15"/><declare-styleable name="IndentifyingCode">
+        <attr format="integer|reference" name="codeCount"/>
+        <attr format="dimension" name="textSize"/>
+        <attr format="string" name="text"/>
+    </declare-styleable><attr format="dimension" name="image48"/><attr format="dimension" name="image154"/></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\colors.xml" qualifiers=""><color name="black_semi_transparent">#B2000000</color><color name="blue_semi_transparent">#805677fc</color><color name="background">#e5e5e5</color><color name="colorPrimary50">#A8CEF9</color><color name="white50">#7fffffff</color><color name="linecolor">#e5e5e5</color><color name="rcap_gray">#c9c9c9</color><color name="black">#000000</color><color name="floatmenu_color">#F19149</color><color name="colorPrimaryHy">#37c7be</color><color name="pink_pressed">#ec407a</color><color name="floatmenu_color_pressed">#7fF19149</color><color name="ripple_bg_pressed">#FF21272B</color><color name="white_pressed">#f1f1f1</color><color name="view_bg">#ededed</color><color name="pink">#e91e63</color><color name="colorPrimary">#2196f3</color><color name="transparent">#00000000</color><color name="colorAccent">#2196f3</color><color name="color_fff">#ffffff</color><color name="red">#ff0000</color><color name="black50">#7f000000</color><color name="half_black">#808080</color><color name="colorPrimaryDark">#2894ff</color><color name="select_title">#808080</color><color name="tran">#50000000</color><color name="blue_semi_transparent_pressed">#80738ffe</color><color name="bg">#ededed</color><color name="arc_blue">#10a679</color><color name="page_bg">#f4f4f4</color><color name="white">#ffffff</color></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Core</string><string name="transition__img">转场动画</string><string name="data_fail">服务异常哦</string><string name="searchnodata">没有搜索到哦</string><string name="uploadUrl">http://192.168.3.14:8081/</string><string name="login_fail">登录失败</string><string name="rootUrl">http://192.168.3.163:8082/mp-lgj/</string><string name="about_copyright_cn">常州刘国钧高等职业技术学校版权所有</string><string name="reload">点击重新加载</string><string name="defulicon">[{\"id\":\"1\",\"name\":\"学校新闻\",\"url\":\"\",\"idCat\":\"1\",\"icon\":\"app_xxxw\",\"packageName\":\"\",\"action\":\"xxxw\",\"nameCat\":\"生活\"}]</string><string name="about_copyright_zn">Copyright xxxxxxxxx</string><string name="nodata">还没有数据哦</string><string name="net_no2">没有网络</string></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme.NoTitle" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style><style name="noAnimTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="AppTheme.NoTitle.Translucent">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style><style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style><style name="but_back">
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:text"> 返回</item>
+        <item name="android:textColor">#7d7d7d</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@mipmap/back_press</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style><style name="style_large">
+        <item name="textSize24">27.6sp</item>
+        <item name="textSize20">23sp</item>
+        <item name="textSize18">20.7sp</item>
+        <item name="textSize17">19.55sp</item>
+        <item name="textSize16">18.4sp</item>
+        <item name="textSize15">17.25sp</item>
+        <item name="textSize14">16.1sp</item>
+        <item name="textSize13">14.95sp</item>
+        <item name="textSize12">13.8sp</item>
+        <item name="image7">8dp</item>
+        <item name="image8">9.2dp</item>
+        <item name="image10">11.5dp</item>
+        <item name="image11">12.6dp</item>
+        <item name="image13">14.95dp</item>
+        <item name="image16">18.4dp</item>
+        <item name="image22">25.3dp</item>
+        <item name="image30">34.5dp</item>
+        <item name="image32">36.8dp</item>
+        <item name="image34">39.1dp</item>
+        <item name="image40">46dp</item>
+        <item name="image42">48.3dp</item>
+        <item name="image44">50.6dp</item>
+        <item name="image45">51.75dp</item>
+        <item name="image48">55.2dp</item>
+        <item name="image50">57.5dp</item>
+        <item name="image60">69dp</item>
+        <item name="image62">71.3dp</item>
+        <item name="image70">80.5dp</item>
+        <item name="image71">81.65dp</item>
+        <item name="image73">83.95dp</item>
+        <item name="image80">92dp</item>
+        <item name="image100">115dp</item>
+        <item name="image154">177.1dp</item>
+    </style><style name="pickTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textColor">#1298FF</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style><style name="NoTitleTranslucentTheme" parent="FullScreenTheme">
+        <item name="android:windowBackground">@color/black50</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="marquee">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style><style name="ActionSheetStyleiOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#ff0000</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">12sp</item>
+    </style><style name="login_title_txt">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="setting_img">
+        <item name="android:layout_width">?attr/image22</item>
+        <item name="android:layout_height">?attr/image22</item>
+    </style><style name="style_norm">
+        <item name="textSize24">24sp</item>
+        <item name="textSize20">20sp</item>
+        <item name="textSize18">18sp</item>
+        <item name="textSize17">17sp</item>
+        <item name="textSize16">16sp</item>
+        <item name="textSize15">15sp</item>
+        <item name="textSize14">14sp</item>
+        <item name="textSize13">13sp</item>
+        <item name="textSize12">12sp</item>
+        <item name="image7">7dp</item>
+        <item name="image8">8dp</item>
+        <item name="image10">10dp</item>
+        <item name="image11">11dp</item>
+        <item name="image13">13dp</item>
+        <item name="image16">16dp</item>
+        <item name="image22">22dp</item>
+        <item name="image30">30dp</item>
+        <item name="image32">32dp</item>
+        <item name="image34">34dp</item>
+        <item name="image40">40dp</item>
+        <item name="image42">42dp</item>
+        <item name="image44">44dp</item>
+        <item name="image45">45dp</item>
+        <item name="image48">48dp</item>
+        <item name="image50">50dp</item>
+        <item name="image60">60dp</item>
+        <item name="image62">62dp</item>
+        <item name="image70">70dp</item>
+        <item name="image71">71dp</item>
+        <item name="image73">73dp</item>
+        <item name="image80">80dp</item>
+        <item name="image100">100dp</item>
+        <item name="image154">154dp</item>
+    </style><style name="style_big">
+        <item name="textSize24">30sp</item>
+        <item name="textSize20">25sp</item>
+        <item name="textSize18">22.5sp</item>
+        <item name="textSize17">21.25sp</item>
+        <item name="textSize16">20sp</item>
+        <item name="textSize15">18.75sp</item>
+        <item name="textSize14">17.5sp</item>
+        <item name="textSize13">16.25sp</item>
+        <item name="textSize12">15sp</item>
+        <item name="image7">8.75dp</item>
+        <item name="image8">10dp</item>
+        <item name="image10">12.5dp</item>
+        <item name="image11">13.7dp</item>
+        <item name="image13">16.25dp</item>
+        <item name="image16">20dp</item>
+        <item name="image22">27.5dp</item>
+        <item name="image30">37.5dp</item>
+        <item name="image32">40dp</item>
+        <item name="image34">42.5dp</item>
+        <item name="image40">50dp</item>
+        <item name="image42">52.5dp</item>
+        <item name="image44">55dp</item>
+        <item name="image45">56.25dp</item>
+        <item name="image48">60dp</item>
+        <item name="image50">62.5dp</item>
+        <item name="image60">75dp</item>
+        <item name="image62">77.5dp</item>
+        <item name="image70">87.5dp</item>
+        <item name="image71">88.75dp</item>
+        <item name="image73">91.25dp</item>
+        <item name="image80">100dp</item>
+        <item name="image100">125dp</item>
+        <item name="image154">192.5dp</item>
+    </style><style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+    </style><style name="setting_img_into">
+        <item name="android:layout_width">?attr/image7</item>
+        <item name="android:layout_height">?attr/image11</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style><style name="title_txt">
+        <item name="android:textColor">#7d7d7d</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="noAnimThemep.noAnimThemeStatusBarColorGray">
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">#6F7075</item>
+    </style><style name="noAnimThemep" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/colorPrimary</item>
+    </style><style name="MyDialog" parent="@android:style/Theme.DeviceDefault.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        
+        <item name="android:windowIsFloating">true</item>
+        
+        <item name="android:windowIsTranslucent">true</item>
+        
+        <item name="android:windowNoTitle">true</item>
+        
+        <item name="android:windowBackground">@color/transparent</item>
+        
+        <item name="android:backgroundDimEnabled">true</item>
+        
+    </style><style name="setting_txt">
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">?attr/textSize14</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">12.5dip</item>
+        <item name="android:layout_marginBottom">12.5dip</item>
+    </style></file></source><source path="D:\DanDan\CustomOA\core\build\generated\res\rs\release"/><source path="D:\DanDan\CustomOA\core\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="D:\DanDan\CustomOA\core\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="IndentifyingCode"><attr format="integer|reference" name="codeCount"/><attr format="dimension" name="textSize"/><attr format="string" name="text"/></declare-styleable><declare-styleable name="TabItemButton"><attr format="reference" name="drawableTop_normal"/><attr format="reference" name="drawableTop_selected"/><attr format="boolean" name="isSelected"/><attr format="dimension" name="drawableWidth"/><attr format="dimension" name="drawableHeight"/></declare-styleable></configuration></mergedItems></merger>

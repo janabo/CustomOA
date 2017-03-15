@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#f7f7f7">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/loginMess"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@color/bg"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:failureImage="@color/bg"
+        fresco:failureImageScaleType="centerInside"
+        fresco:backgroundImage="@color/transparent"
+        fresco:overlayImage="@color/transparent"
+        fresco:pressedStateOverlayImage="@color/transparent"
+        fresco:roundAsCircle="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/oa_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#7d7d7d"
+        android:text="自定义OA"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/oa_search"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:src="@mipmap/search_blue"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
