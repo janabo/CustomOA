@@ -13,6 +13,7 @@ import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.widget.ErrorLayout;
 import com.dk.mp.main.R;
 import com.dk.mp.main.adapter.MainAdapter;
+import com.dk.mp.main.db.RealmHelper;
 import com.dk.mp.main.entity.OaItemEntity;
 import com.dk.mp.main.utils.CoustomManagerUtils;
 import com.google.gson.reflect.TypeToken;
@@ -21,7 +22,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -35,6 +35,7 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
     private List<OaItemEntity> list = new ArrayList<OaItemEntity>();
     private SwipeRefreshLayout swipeRefreshLayout;
     private ErrorLayout mError;
+    private RealmHelper mRealmHelper;
 
     @Override
     protected int getLayoutId() {
@@ -43,12 +44,13 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
     @Override
     protected void initialize(final View view) {
+        mRealmHelper = new RealmHelper(getContext(),getSharedPreferences());
         mError = (ErrorLayout) view.findViewById(R.id.main_error);
         swipeRefreshLayout = (SwipeRefreshLayout)view;
         swipeRefreshLayout.setOnRefreshListener(this);
         myListView = (RecyclerView) view.findViewById(R.id.recyclerView);
         myListView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        adapter = new MainAdapter(getContext(),list);
+        adapter = new MainAdapter(getContext(),list,getSharedPreferences(),mRealmHelper);
         myListView.setAdapter(adapter);
 //        initDatas();
     }
@@ -76,14 +78,13 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
                             myListView.setVisibility(View.VISIBLE);
                             list.clear();
                             List<OaItemEntity> alllist = CoustomManagerUtils.getEntitlyList(getSharedPreferences(),getGson(),oaItemEntityList);
-                            Iterator<OaItemEntity> it = alllist.iterator();
-                            while(it.hasNext()){
-                                OaItemEntity x = it.next();
-                                if(!x.isShow()){
-                                    it.remove();
+                            List<OaItemEntity> mData = new ArrayList<OaItemEntity>();
+                            for(OaItemEntity x : alllist){
+                                if(x.isShow() && "true".equals(x.getDiy())){
+                                    mData.add(x);
                                 }
                             }
-                            list.addAll(alllist);
+                            list.addAll(mData);
                             adapter.notifyDataSetChanged();
                         }
                     } catch (JSONException e) {

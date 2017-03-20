@@ -16,6 +16,7 @@ public class OaItemEntity {
     private String detailUrl;//详情入口
     private String bussessName;//所属业务
     private String diy;//是否在自定义首页
+    private String identity;
 
     private boolean isShow;//是否展示在首页
 
@@ -99,4 +100,11 @@ public class OaItemEntity {
         isShow = show;
     }
 
+    public String getIdentity() {
+        return identity;
+    }
+
+    public void setIdentity(String identity) {
+        this.identity = identity;
+    }
 }

@@ -12,8 +12,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dk.mp.core.entity.OaApp;
 import com.dk.mp.core.ui.HttpWebActivity;
+import com.dk.mp.core.util.CoreSharedPreferencesHelper;
+import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
+import com.dk.mp.main.db.RealmHelper;
 import com.dk.mp.main.entity.OaItemEntity;
 import com.dk.mp.main.ui.ManagerActivity;
 
@@ -28,13 +32,17 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     private Context context;
     private LayoutInflater lif;
     private List<OaItemEntity> list;
+    private CoreSharedPreferencesHelper helper;
+    RealmHelper mRealmHelper;
 
     /**
      * 构造方法.
      */
-    public MainAdapter(Context context, List list) {
+    public MainAdapter(Context context, List list,CoreSharedPreferencesHelper helper,RealmHelper mRealmHelper) {
         this.context = context;
         this.list = list;
+        this.helper = helper;
+        this.mRealmHelper = mRealmHelper;
     }
 
     private class FootView extends RecyclerView.ViewHolder{
@@ -60,6 +68,33 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             newimage = (ImageView) itemView.findViewById(R.id.newimage);// 新、无图标
             title = (TextView) itemView.findViewById(R.id.content);// 消息标题
             gotolist = (Button) itemView.findViewById(R.id.gotolist);// 查看更多
+
+            title.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    OaItemEntity bean = list.get(getLayoutPosition());
+                    insertRealm(bean);
+                    Intent intent  = new Intent(getContext(), HttpWebActivity.class);
+                    intent.putExtra("title",bean.getTitle());
+                    intent.putExtra("url",bean.getDetailUrl()+"&token="+helper.getLoginMsg().getUid());
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            });
+
+            gotolist.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    OaItemEntity bean = list.get(getLayoutPosition());
+                    insertRealm(bean);
+                    Intent intent  = new Intent(getContext(), HttpWebActivity.class);
+                    intent.putExtra("title",bean.getLabel());
+                    intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            });
+
         }
     }
 
@@ -87,20 +122,15 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         } else if (position == list.size()){
             ((FootView)holder).linearLayout.setVisibility(View.VISIBLE);
         }
-
         if (position == list.size()) {
         } else {
-            ((MyView)holder).modeltitle.setText(list.get(position).getLabel());
-            ((MyView)holder).modelsecondtitle.setText("你需要查看的"+list.get(position).getLabel());
-            ((MyView)holder).count.setText(list.get(position).getCount());
-            ((MyView)holder).title.setText((list.get(position).getTitle()==null || list.get(position).getTitle().equals(""))?"目前还没有你需要查看的"+list.get(position).getLabel()+"哦！":list.get(position).getTitle());
-            ((MyView)holder).title.setTag(list.get(position).getDetailUrl());
-            ((MyView)holder).title.setOnClickListener((list.get(position).getTitle()==null || list.get(position).getTitle().equals(""))?null:this);
-            ((MyView)holder).newimage.setImageResource(list.get(position).getCount().equals("0") ? R.mipmap.noimage : R.mipmap.newimage);
-            ((MyView)holder).gotolist.setTag(list.get(position).getUrl());
-            ((MyView)holder).gotolist.setOnClickListener(this);
+            OaItemEntity bean= list.get(position);
+            ((MyView)holder).modeltitle.setText(conventEmpToString(bean.getLabel()));
+            ((MyView)holder).modelsecondtitle.setText("你需要查看的"+conventEmpToString(bean.getLabel()));
+            ((MyView)holder).count.setText(StringUtils.isNotEmpty(bean.getCount())?bean.getCount():"0");
+            ((MyView)holder).title.setText(!StringUtils.isNotEmpty(bean.getTitle())?"目前还没有你需要查看的"+bean.getLabel()+"哦！":bean.getTitle());
+            ((MyView)holder).newimage.setImageResource((StringUtils.isNotEmpty(bean.getCount()) && !bean.getCount().equals("0")) ? R.mipmap.newimage : R.mipmap.noimage);
         }
-//        holder.itemView.setTag(position);
     }
 
     @Override
@@ -130,15 +160,33 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     @Override
     public void onClick(View view) {
-        Intent intent;
-        if (view.getTag().toString().equals("foot")) {//编辑应用
-            intent = new Intent(getContext(), ManagerActivity.class);
-        } else {
-            intent = new Intent(getContext(), HttpWebActivity.class);
-            intent.putExtra("title","测试");
-            intent.putExtra("url",view.getTag().toString());
-        }
+        Intent intent= new Intent(getContext(), ManagerActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getContext().startActivity(intent);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 反转null 为“”
+     * @return
+     */
+    public String conventEmpToString(String par){
+        if(StringUtils.isNotEmpty(par)){
+            return par;
+        }
+        return "";
+    }
+
+    public void insertRealm(OaItemEntity bean){
+        OaApp oaApp = new OaApp();
+        oaApp.setUrl(bean.getUrl());
+        oaApp.setTitle(bean.getTitle());
+        oaApp.setName(bean.getName());
+        oaApp.setLabel(bean.getLabel());
+        oaApp.setBussessName(bean.getBussessName());
+        oaApp.setCount(bean.getCount());
+        oaApp.setDetailUrl(bean.getDetailUrl());
+        oaApp.setDiy(bean.getDiy());
+        oaApp.setIdentity(bean.getIdentity());
+        mRealmHelper.addApp(oaApp);
     }
 }

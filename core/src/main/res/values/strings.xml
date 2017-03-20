@@ -12,6 +12,7 @@
     <string name="data_fail">服务异常哦</string>
     <string name="login_fail">登录失败</string>
     <string name="searchnodata">没有搜索到哦</string>
+    <string name="search_fail">搜索失败</string>
 
     <string name="defulicon">[{\"id\":\"1\",\"name\":\"学校新闻\",\"url\":\"\",\"idCat\":\"1\",\"icon\":\"app_xxxw\",\"packageName\":\"\",\"action\":\"xxxw\",\"nameCat\":\"生活\"}]</string>
 

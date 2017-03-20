@@ -27,11 +27,12 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     private static final Set<Class<? extends RealmModel>> MODEL_CLASSES;
     static {
         Set<Class<? extends RealmModel>> modelClasses = new HashSet<Class<? extends RealmModel>>();
-        modelClasses.add(com.dk.mp.core.entity.XbPersons.class);
+        modelClasses.add(com.dk.mp.core.entity.Jbxx.class);
         modelClasses.add(com.dk.mp.core.entity.RcapDetail.class);
+        modelClasses.add(com.dk.mp.core.entity.XbPersons.class);
         modelClasses.add(com.dk.mp.core.entity.Department.class);
         modelClasses.add(com.dk.mp.core.entity.Rcap.class);
-        modelClasses.add(com.dk.mp.core.entity.Jbxx.class);
+        modelClasses.add(com.dk.mp.core.entity.OaApp.class);
         MODEL_CLASSES = Collections.unmodifiableSet(modelClasses);
     }
 
@@ -39,16 +40,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public Table createTable(Class<? extends RealmModel> clazz, SharedRealm sharedRealm) {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return io.realm.XbPersonsRealmProxy.initTable(sharedRealm);
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return io.realm.JbxxRealmProxy.initTable(sharedRealm);
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return io.realm.RcapDetailRealmProxy.initTable(sharedRealm);
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return io.realm.XbPersonsRealmProxy.initTable(sharedRealm);
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return io.realm.DepartmentRealmProxy.initTable(sharedRealm);
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return io.realm.RcapRealmProxy.initTable(sharedRealm);
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return io.realm.JbxxRealmProxy.initTable(sharedRealm);
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return io.realm.OaAppRealmProxy.initTable(sharedRealm);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -58,16 +61,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public RealmObjectSchema createRealmObjectSchema(Class<? extends RealmModel> clazz, RealmSchema realmSchema) {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return io.realm.XbPersonsRealmProxy.createRealmObjectSchema(realmSchema);
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return io.realm.JbxxRealmProxy.createRealmObjectSchema(realmSchema);
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return io.realm.RcapDetailRealmProxy.createRealmObjectSchema(realmSchema);
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return io.realm.XbPersonsRealmProxy.createRealmObjectSchema(realmSchema);
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return io.realm.DepartmentRealmProxy.createRealmObjectSchema(realmSchema);
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return io.realm.RcapRealmProxy.createRealmObjectSchema(realmSchema);
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return io.realm.JbxxRealmProxy.createRealmObjectSchema(realmSchema);
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return io.realm.OaAppRealmProxy.createRealmObjectSchema(realmSchema);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -77,16 +82,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public ColumnInfo validateTable(Class<? extends RealmModel> clazz, SharedRealm sharedRealm, boolean allowExtraColumns) {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return io.realm.XbPersonsRealmProxy.validateTable(sharedRealm, allowExtraColumns);
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return io.realm.JbxxRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return io.realm.RcapDetailRealmProxy.validateTable(sharedRealm, allowExtraColumns);
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return io.realm.XbPersonsRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return io.realm.DepartmentRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return io.realm.RcapRealmProxy.validateTable(sharedRealm, allowExtraColumns);
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return io.realm.JbxxRealmProxy.validateTable(sharedRealm, allowExtraColumns);
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return io.realm.OaAppRealmProxy.validateTable(sharedRealm, allowExtraColumns);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -96,16 +103,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public List<String> getFieldNames(Class<? extends RealmModel> clazz) {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return io.realm.XbPersonsRealmProxy.getFieldNames();
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return io.realm.JbxxRealmProxy.getFieldNames();
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return io.realm.RcapDetailRealmProxy.getFieldNames();
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return io.realm.XbPersonsRealmProxy.getFieldNames();
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return io.realm.DepartmentRealmProxy.getFieldNames();
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return io.realm.RcapRealmProxy.getFieldNames();
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return io.realm.JbxxRealmProxy.getFieldNames();
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return io.realm.OaAppRealmProxy.getFieldNames();
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -115,16 +124,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
     public String getTableName(Class<? extends RealmModel> clazz) {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return io.realm.XbPersonsRealmProxy.getTableName();
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return io.realm.JbxxRealmProxy.getTableName();
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return io.realm.RcapDetailRealmProxy.getTableName();
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return io.realm.XbPersonsRealmProxy.getTableName();
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return io.realm.DepartmentRealmProxy.getTableName();
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return io.realm.RcapRealmProxy.getTableName();
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return io.realm.JbxxRealmProxy.getTableName();
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return io.realm.OaAppRealmProxy.getTableName();
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -137,16 +148,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             objectContext.set((BaseRealm) baseRealm, row, columnInfo, acceptDefaultValue, excludeFields);
             checkClass(clazz);
 
-            if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-                return clazz.cast(new io.realm.XbPersonsRealmProxy());
+            if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+                return clazz.cast(new io.realm.JbxxRealmProxy());
             } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
                 return clazz.cast(new io.realm.RcapDetailRealmProxy());
+            } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+                return clazz.cast(new io.realm.XbPersonsRealmProxy());
             } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
                 return clazz.cast(new io.realm.DepartmentRealmProxy());
             } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
                 return clazz.cast(new io.realm.RcapRealmProxy());
-            } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-                return clazz.cast(new io.realm.JbxxRealmProxy());
+            } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+                return clazz.cast(new io.realm.OaAppRealmProxy());
             } else {
                 throw getMissingProxyClassException(clazz);
             }
@@ -166,16 +179,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<E> clazz = (Class<E>) ((obj instanceof RealmObjectProxy) ? obj.getClass().getSuperclass() : obj.getClass());
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return clazz.cast(io.realm.XbPersonsRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) obj, update, cache));
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return clazz.cast(io.realm.JbxxRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) obj, update, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return clazz.cast(io.realm.RcapDetailRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.RcapDetail) obj, update, cache));
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return clazz.cast(io.realm.XbPersonsRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) obj, update, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return clazz.cast(io.realm.DepartmentRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.Department) obj, update, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return clazz.cast(io.realm.RcapRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.Rcap) obj, update, cache));
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return clazz.cast(io.realm.JbxxRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) obj, update, cache));
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return clazz.cast(io.realm.OaAppRealmProxy.copyOrUpdate(realm, (com.dk.mp.core.entity.OaApp) obj, update, cache));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -187,16 +202,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            io.realm.XbPersonsRealmProxy.insert(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            io.realm.JbxxRealmProxy.insert(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             io.realm.RcapDetailRealmProxy.insert(realm, (com.dk.mp.core.entity.RcapDetail) object, cache);
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            io.realm.XbPersonsRealmProxy.insert(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             io.realm.DepartmentRealmProxy.insert(realm, (com.dk.mp.core.entity.Department) object, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             io.realm.RcapRealmProxy.insert(realm, (com.dk.mp.core.entity.Rcap) object, cache);
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            io.realm.JbxxRealmProxy.insert(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            io.realm.OaAppRealmProxy.insert(realm, (com.dk.mp.core.entity.OaApp) object, cache);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -214,30 +231,34 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             // generated by RealmProxy or the original type extending directly from RealmObject
             @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-            if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-                io.realm.XbPersonsRealmProxy.insert(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
+            if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+                io.realm.JbxxRealmProxy.insert(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
                 io.realm.RcapDetailRealmProxy.insert(realm, (com.dk.mp.core.entity.RcapDetail) object, cache);
+            } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+                io.realm.XbPersonsRealmProxy.insert(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
                 io.realm.DepartmentRealmProxy.insert(realm, (com.dk.mp.core.entity.Department) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
                 io.realm.RcapRealmProxy.insert(realm, (com.dk.mp.core.entity.Rcap) object, cache);
-            } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-                io.realm.JbxxRealmProxy.insert(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
+            } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+                io.realm.OaAppRealmProxy.insert(realm, (com.dk.mp.core.entity.OaApp) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
-                if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-                    io.realm.XbPersonsRealmProxy.insert(realm, iterator, cache);
+                if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+                    io.realm.JbxxRealmProxy.insert(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
                     io.realm.RcapDetailRealmProxy.insert(realm, iterator, cache);
+                } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+                    io.realm.XbPersonsRealmProxy.insert(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
                     io.realm.DepartmentRealmProxy.insert(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
                     io.realm.RcapRealmProxy.insert(realm, iterator, cache);
-                } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-                    io.realm.JbxxRealmProxy.insert(realm, iterator, cache);
+                } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+                    io.realm.OaAppRealmProxy.insert(realm, iterator, cache);
                 } else {
                     throw getMissingProxyClassException(clazz);
                 }
@@ -251,16 +272,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((obj instanceof RealmObjectProxy) ? obj.getClass().getSuperclass() : obj.getClass());
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) obj, cache);
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            io.realm.JbxxRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) obj, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             io.realm.RcapDetailRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.RcapDetail) obj, cache);
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) obj, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             io.realm.DepartmentRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Department) obj, cache);
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             io.realm.RcapRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Rcap) obj, cache);
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            io.realm.JbxxRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) obj, cache);
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            io.realm.OaAppRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.OaApp) obj, cache);
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -278,30 +301,34 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
             // generated by RealmProxy or the original type extending directly from RealmObject
             @SuppressWarnings("unchecked") Class<RealmModel> clazz = (Class<RealmModel>) ((object instanceof RealmObjectProxy) ? object.getClass().getSuperclass() : object.getClass());
 
-            if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-                io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
+            if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+                io.realm.JbxxRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
                 io.realm.RcapDetailRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.RcapDetail) object, cache);
+            } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+                io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.XbPersons) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
                 io.realm.DepartmentRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Department) object, cache);
             } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
                 io.realm.RcapRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Rcap) object, cache);
-            } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-                io.realm.JbxxRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.Jbxx) object, cache);
+            } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+                io.realm.OaAppRealmProxy.insertOrUpdate(realm, (com.dk.mp.core.entity.OaApp) object, cache);
             } else {
                 throw getMissingProxyClassException(clazz);
             }
             if (iterator.hasNext()) {
-                if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-                    io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, iterator, cache);
+                if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+                    io.realm.JbxxRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
                     io.realm.RcapDetailRealmProxy.insertOrUpdate(realm, iterator, cache);
+                } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+                    io.realm.XbPersonsRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
                     io.realm.DepartmentRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
                     io.realm.RcapRealmProxy.insertOrUpdate(realm, iterator, cache);
-                } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-                    io.realm.JbxxRealmProxy.insertOrUpdate(realm, iterator, cache);
+                } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+                    io.realm.OaAppRealmProxy.insertOrUpdate(realm, iterator, cache);
                 } else {
                     throw getMissingProxyClassException(clazz);
                 }
@@ -314,16 +341,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         throws JSONException {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return clazz.cast(io.realm.XbPersonsRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return clazz.cast(io.realm.JbxxRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return clazz.cast(io.realm.RcapDetailRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return clazz.cast(io.realm.XbPersonsRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return clazz.cast(io.realm.DepartmentRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return clazz.cast(io.realm.RcapRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return clazz.cast(io.realm.JbxxRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return clazz.cast(io.realm.OaAppRealmProxy.createOrUpdateUsingJsonObject(realm, json, update));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -334,16 +363,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         throws IOException {
         checkClass(clazz);
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return clazz.cast(io.realm.XbPersonsRealmProxy.createUsingJsonStream(realm, reader));
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return clazz.cast(io.realm.JbxxRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return clazz.cast(io.realm.RcapDetailRealmProxy.createUsingJsonStream(realm, reader));
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return clazz.cast(io.realm.XbPersonsRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return clazz.cast(io.realm.DepartmentRealmProxy.createUsingJsonStream(realm, reader));
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return clazz.cast(io.realm.RcapRealmProxy.createUsingJsonStream(realm, reader));
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return clazz.cast(io.realm.JbxxRealmProxy.createUsingJsonStream(realm, reader));
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return clazz.cast(io.realm.OaAppRealmProxy.createUsingJsonStream(realm, reader));
         } else {
             throw getMissingProxyClassException(clazz);
         }
@@ -355,16 +386,18 @@ class DefaultRealmModuleMediator extends RealmProxyMediator {
         // generated by RealmProxy or the original type extending directly from RealmObject
         @SuppressWarnings("unchecked") Class<E> clazz = (Class<E>) realmObject.getClass().getSuperclass();
 
-        if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
-            return clazz.cast(io.realm.XbPersonsRealmProxy.createDetachedCopy((com.dk.mp.core.entity.XbPersons) realmObject, 0, maxDepth, cache));
+        if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
+            return clazz.cast(io.realm.JbxxRealmProxy.createDetachedCopy((com.dk.mp.core.entity.Jbxx) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.RcapDetail.class)) {
             return clazz.cast(io.realm.RcapDetailRealmProxy.createDetachedCopy((com.dk.mp.core.entity.RcapDetail) realmObject, 0, maxDepth, cache));
+        } else if (clazz.equals(com.dk.mp.core.entity.XbPersons.class)) {
+            return clazz.cast(io.realm.XbPersonsRealmProxy.createDetachedCopy((com.dk.mp.core.entity.XbPersons) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.Department.class)) {
             return clazz.cast(io.realm.DepartmentRealmProxy.createDetachedCopy((com.dk.mp.core.entity.Department) realmObject, 0, maxDepth, cache));
         } else if (clazz.equals(com.dk.mp.core.entity.Rcap.class)) {
             return clazz.cast(io.realm.RcapRealmProxy.createDetachedCopy((com.dk.mp.core.entity.Rcap) realmObject, 0, maxDepth, cache));
-        } else if (clazz.equals(com.dk.mp.core.entity.Jbxx.class)) {
-            return clazz.cast(io.realm.JbxxRealmProxy.createDetachedCopy((com.dk.mp.core.entity.Jbxx) realmObject, 0, maxDepth, cache));
+        } else if (clazz.equals(com.dk.mp.core.entity.OaApp.class)) {
+            return clazz.cast(io.realm.OaAppRealmProxy.createDetachedCopy((com.dk.mp.core.entity.OaApp) realmObject, 0, maxDepth, cache));
         } else {
             throw getMissingProxyClassException(clazz);
         }

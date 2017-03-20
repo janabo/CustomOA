@@ -68,4 +68,13 @@ public abstract class BaseFragment extends BaseLazyFragment {
         return preference;
     }
 
+    /**
+     * 获取string
+     * @param string R.string.x
+     * @return  ""
+     */
+    public String getReString(int string) {
+        return getResources().getString(string);
+    }
+
 }

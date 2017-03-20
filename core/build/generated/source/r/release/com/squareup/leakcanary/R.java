@@ -13,20 +13,20 @@ public final class R {
         public static int leak_canary_toast_background = 0x7f02006e;
     }
     public static final class id {
-        public static int leak_canary_action = 0x7f0d00ad;
-        public static int leak_canary_display_leak_failure = 0x7f0d00ac;
-        public static int leak_canary_display_leak_list = 0x7f0d00ab;
-        public static int leak_canary_row_connector = 0x7f0d00b0;
-        public static int leak_canary_row_more = 0x7f0d00b1;
-        public static int leak_canary_row_text = 0x7f0d00ae;
-        public static int leak_canary_row_time = 0x7f0d00af;
+        public static int leak_canary_action = 0x7f0d00b3;
+        public static int leak_canary_display_leak_failure = 0x7f0d00b2;
+        public static int leak_canary_display_leak_list = 0x7f0d00b1;
+        public static int leak_canary_row_connector = 0x7f0d00b6;
+        public static int leak_canary_row_more = 0x7f0d00b7;
+        public static int leak_canary_row_text = 0x7f0d00b4;
+        public static int leak_canary_row_time = 0x7f0d00b5;
     }
     public static final class layout {
-        public static int leak_canary_display_leak = 0x7f040036;
-        public static int leak_canary_heap_dump_toast = 0x7f040037;
-        public static int leak_canary_leak_row = 0x7f040038;
-        public static int leak_canary_ref_row = 0x7f040039;
-        public static int leak_canary_ref_top_row = 0x7f04003a;
+        public static int leak_canary_display_leak = 0x7f040038;
+        public static int leak_canary_heap_dump_toast = 0x7f040039;
+        public static int leak_canary_leak_row = 0x7f04003a;
+        public static int leak_canary_ref_row = 0x7f04003b;
+        public static int leak_canary_ref_top_row = 0x7f04003c;
     }
     public static final class string {
         public static int leak_canary_analysis_failed = 0x7f070015;
@@ -55,6 +55,6 @@ public final class R {
     }
     public static final class style {
         public static int leak_canary_LeakCanary_Base = 0x7f090032;
-        public static int leak_canary_Theme_Transparent = 0x7f090184;
+        public static int leak_canary_Theme_Transparent = 0x7f090187;
     }
 }

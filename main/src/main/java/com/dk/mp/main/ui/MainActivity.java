@@ -14,6 +14,7 @@ import com.dk.mp.core.setting.ui.SettingActivity;
 import com.dk.mp.core.ui.BaseFragment;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.main.R;
+import com.dk.mp.txl.ui.TxlFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
@@ -25,8 +26,8 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
     private ViewPager mViewPager;
 
     MainFragment mainFragment = new MainFragment();
-    MainFragment phoneFragment = new MainFragment();
-    MainFragment manageFragment = new MainFragment();
+    TxlFragment phoneFragment = new TxlFragment();
+    ManagerFragment manageFragment = new ManagerFragment();
 
     private List<String> titles;
     private List<BaseFragment> fragments;

@@ -1,11 +1,13 @@
 package com.dk.mp.core.ui;
 
 import android.graphics.Bitmap;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.dk.mp.core.R;
@@ -39,6 +41,19 @@ public class HttpWebActivity extends MyActivity{
             setMUrl(url);
         }else{
             mError.setErrorType(ErrorLayout.NETWORK_ERROR);
+        }
+        try {
+            Button back = (Button) findViewById(R.id.back);
+            back.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (mWebView.canGoBack()) {
+                        mWebView.goBack();
+                    } else {
+                        finish();
+                    }
+                }
+            });
+        } catch (Exception e) {
         }
     }
 
@@ -124,5 +139,15 @@ public class HttpWebActivity extends MyActivity{
     public void onPause() {
         super.onPause();
         mWebView.onPause();
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+            mWebView.goBack();
+            return true;
+        } else {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

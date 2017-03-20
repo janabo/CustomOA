@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/CustomOA.iml" filepath="$PROJECT_DIR$/CustomOA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gzzd/gzzd.iml" filepath="$PROJECT_DIR$/gzzd/gzzd.iml" />
       <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txl/txl.iml" filepath="$PROJECT_DIR$/txl/txl.iml" />
     </modules>
   </component>
 </project>

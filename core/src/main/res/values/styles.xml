@@ -255,4 +255,13 @@
         <item name="android:gravity">center</item>
         <item name="android:singleLine">true</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Transparent" parent="AppTheme.NoActionBar">
+
+    </style>
 </resources>

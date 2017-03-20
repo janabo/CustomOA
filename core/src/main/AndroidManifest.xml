@@ -4,16 +4,20 @@
         android:supportsRtl="true">
 
         <activity android:name=".ui.HttpWebActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent">
         </activity>
 
-        <activity android:name=".login.LoginActivity">
+        <activity android:name=".login.LoginActivity"
+            android:theme="@style/Transparent">
         </activity>
 
-        <activity android:name=".setting.ui.SettingActivity">
+        <activity android:name=".setting.ui.SettingActivity"
+            android:theme="@style/Transparent">
         </activity>
 
-        <activity android:name=".setting.ui.UserInfoActivity"></activity>
+        <activity android:name=".setting.ui.UserInfoActivity"
+            android:theme="@style/Transparent"></activity>
 
     </application>
 

@@ -16,7 +16,7 @@
             android:id="@+id/top"
             android:layout_width="fill_parent"
             android:layout_height="48dip"
-            android:background="#f7f7f7"
+            android:background="#ffffff"
             android:orientation="vertical" >
             <Button
                 android:id="@+id/back"
@@ -24,7 +24,8 @@
                 android:layout_width="70dip"
                 android:layout_height="48dip"
                 android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
             <TextView
                 android:id="@+id/title"
                 style="@style/login_title_txt"
@@ -32,7 +33,7 @@
                 android:layout_height="48dip"
                 android:text="登录"
                 android:layout_centerHorizontal="true"
-                android:textColor="#ffffff" />
+                android:textColor="#212121" />
         </RelativeLayout>
 
     <LinearLayout

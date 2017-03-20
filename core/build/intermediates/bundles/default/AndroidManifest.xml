@@ -14,13 +14,20 @@
         android:supportsRtl="true" >
         <activity
             android:name="com.dk.mp.core.ui.HttpWebActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" >
         </activity>
-        <activity android:name="com.dk.mp.core.login.LoginActivity" >
+        <activity
+            android:name="com.dk.mp.core.login.LoginActivity"
+            android:theme="@style/Transparent" >
         </activity>
-        <activity android:name="com.dk.mp.core.setting.ui.SettingActivity" >
+        <activity
+            android:name="com.dk.mp.core.setting.ui.SettingActivity"
+            android:theme="@style/Transparent" >
         </activity>
-        <activity android:name="com.dk.mp.core.setting.ui.UserInfoActivity" />
+        <activity
+            android:name="com.dk.mp.core.setting.ui.UserInfoActivity"
+            android:theme="@style/Transparent" />
     </application>
 
 </manifest>
