@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\drawable\\circle_border_pqr.xml",
-        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\drawable\\circle_border_pqr.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\drawable\\dialog_bg_bottom_right_press.9.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\drawable\\dialog_bg_bottom_right_press.9.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\drawable\\circle_border_pqr.xml",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\drawable\\circle_border_pqr.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",

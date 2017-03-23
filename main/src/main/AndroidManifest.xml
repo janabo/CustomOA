@@ -6,13 +6,21 @@
         android:supportsRtl="true">
 
         <activity android:name=".ui.MainActivity"
-            android:theme="@style/Transparent">
+            android:theme="@style/Transparent"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="main" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.ManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent">
+        </activity>
+
+        <activity
+            android:name=".ui.AddAppActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Transparent">
         </activity>
 

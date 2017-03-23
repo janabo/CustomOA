@@ -64,6 +64,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\uid.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\back_press1.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\back_press1.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\search_blue.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\search_blue.png"
     },

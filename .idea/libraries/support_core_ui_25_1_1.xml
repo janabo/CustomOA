@@ -2,10 +2,6 @@
   <library name="support-core-ui-25.1.1">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.android/build-cache/b6272d6be4ced65457a1f8ccef14166c50372dcf/output/res" />
@@ -13,10 +9,6 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.1/support-core-ui-25.1.1-sources.jar!/" />
-      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.1/support-core-ui-25.1.1-sources.jar!/" />
-      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.1/support-core-ui-25.1.1-sources.jar!/" />
-      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.1/support-core-ui-25.1.1-sources.jar!/" />
       <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.1/support-core-ui-25.1.1-sources.jar!/" />
     </SOURCES>
   </library>

@@ -8,12 +8,12 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\ripple_bg_red.xml"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_middle.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\fba5c8642317929547a04aac4f75037d5e612092\\output\\res\\drawable\\slt_as_ios7_other_bt_middle.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_middle.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\fba5c8642317929547a04aac4f75037d5e612092\\output\\res\\drawable\\slt_as_ios7_other_bt_middle.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_bottom.xml",

@@ -23,7 +23,16 @@
             android:paddingBottom="15dip"
             android:text=""
             android:textColor="#212121"
-            android:textSize="?attr/textSize12"/>
+            android:textSize="12sp"/>
 
     </LinearLayout>
+
+    <ImageView android:id="@+id/gragItemViewAdd"
+        android:layout_width="22dp" android:layout_height="22dp"
+        android:layout_gravity="right" android:src="@mipmap/addapp"
+        android:background="@null"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
 </FrameLayout>

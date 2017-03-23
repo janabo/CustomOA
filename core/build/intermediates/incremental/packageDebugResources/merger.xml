@@ -26,7 +26,7 @@
     </style><style name="but_back">
         <item name="android:paddingLeft">8dip</item>
         <item name="android:text"> 返回</item>
-        <item name="android:textColor">#7d7d7d</item>
+        <item name="android:textColor">#212121</item>
         <item name="android:textSize">16sp</item>
         <item name="android:singleLine">true</item>
         <item name="android:background">@mipmap/back_press</item>
@@ -188,7 +188,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style><style name="title_txt">
-        <item name="android:textColor">#7d7d7d</item>
+        <item name="android:textColor">#212121</item>
         <item name="android:textSize">18sp</item>
         <item name="android:gravity">center</item>
         <item name="android:singleLine">true</item>
@@ -232,4 +232,4 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
-    </style></file></source><source path="D:\DanDan\CustomOA\core\build\generated\res\rs\debug"/><source path="D:\DanDan\CustomOA\core\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="D:\DanDan\CustomOA\core\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="IndentifyingCode"><attr format="integer|reference" name="codeCount"/><attr format="dimension" name="textSize"/><attr format="string" name="text"/></declare-styleable><declare-styleable name="TabItemButton"><attr format="reference" name="drawableTop_normal"/><attr format="reference" name="drawableTop_selected"/><attr format="boolean" name="isSelected"/><attr format="dimension" name="drawableWidth"/><attr format="dimension" name="drawableHeight"/></declare-styleable></configuration></mergedItems></merger>
+    </style></file><file name="back_press1" path="D:\DanDan\CustomOA\core\src\main\res\mipmap\back_press1.png" qualifiers="" type="mipmap"/></source><source path="D:\DanDan\CustomOA\core\build\generated\res\rs\debug"/><source path="D:\DanDan\CustomOA\core\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="D:\DanDan\CustomOA\core\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="IndentifyingCode"><attr format="integer|reference" name="codeCount"/><attr format="dimension" name="textSize"/><attr format="string" name="text"/></declare-styleable><declare-styleable name="TabItemButton"><attr format="reference" name="drawableTop_normal"/><attr format="reference" name="drawableTop_selected"/><attr format="boolean" name="isSelected"/><attr format="dimension" name="drawableWidth"/><attr format="dimension" name="drawableHeight"/></declare-styleable></configuration></mergedItems></merger>

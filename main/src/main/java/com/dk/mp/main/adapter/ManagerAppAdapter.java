@@ -6,9 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.dk.mp.main.R;
@@ -23,7 +22,7 @@ import java.util.List;
 /**
  * Created by dongqs on 16/7/23.
  */
-public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.MyViewHolder> implements DraggableItemAdapter<ManagerAppAdapter.MyViewHolder>,CompoundButton.OnCheckedChangeListener {
+public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.MyViewHolder> implements DraggableItemAdapter<ManagerAppAdapter.MyViewHolder>{
 
     private Context mContext;
     private List<OaItemEntity> list;
@@ -32,13 +31,13 @@ public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.My
     public class MyViewHolder extends AbstractDraggableItemViewHolder {
         public LinearLayout mContainer;
         public TextView titlelable;
-        public Switch aSwitch;
+        private ImageView deleteapp;
 
         public MyViewHolder(View v) {
             super(v);
             mContainer = (LinearLayout) v.findViewById(R.id.rootview);
             titlelable = (TextView) v.findViewById(R.id.titlelable);
-            aSwitch = (Switch) v.findViewById(R.id.showswitch);
+            deleteapp = (ImageView) v.findViewById(R.id.delete_app);
         }
     }
 
@@ -63,10 +62,7 @@ public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.My
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final OaItemEntity item = list.get(position);
-        holder.titlelable.setText(item.getLabel()+"（长按调整顺序）");
-        holder.aSwitch.setChecked(item.isShow());
-        holder.aSwitch.setTag(position);
-        holder.aSwitch.setOnCheckedChangeListener(this);
+        holder.titlelable.setText(item.getLabel());
 
         int dragState = holder.getDragStateFlags();
         if (((dragState & DraggableItemConstants.STATE_FLAG_IS_UPDATED) != 0)) {
@@ -75,11 +71,6 @@ public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.My
             }
         }
 
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        list.get((Integer) compoundButton.getTag()).setShow(b);
     }
 
     @Override

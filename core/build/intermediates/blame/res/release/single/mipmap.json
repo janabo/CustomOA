@@ -28,12 +28,12 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\errorserver.png"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\clear_press.png",
-        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\clear_press.png"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\pwd.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\pwd.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\clear_press.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\clear_press.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\setting_push.png",
@@ -70,6 +70,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\setting_about.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\setting_about.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\back_press1.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\back_press1.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\search_blue.png",

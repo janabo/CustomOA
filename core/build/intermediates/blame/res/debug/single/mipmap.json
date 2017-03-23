@@ -96,6 +96,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\photo.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\mipmap\\back_press1.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\back_press1.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\mipmap\\clear_press.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\clear_press.png"
     },

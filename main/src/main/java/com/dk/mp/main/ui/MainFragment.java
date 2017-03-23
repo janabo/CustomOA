@@ -52,7 +52,6 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         myListView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         adapter = new MainAdapter(getContext(),list,getSharedPreferences(),mRealmHelper);
         myListView.setAdapter(adapter);
-//        initDatas();
     }
 
     private void initDatas(){

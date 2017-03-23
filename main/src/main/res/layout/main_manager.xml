@@ -5,6 +5,11 @@
     android:orientation="vertical"
     android:background="#ededed">
 
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/core_title_back"
+        android:visibility="gone"></include>
+
     <com.dk.mp.core.widget.ErrorLayout
         android:id="@+id/main_error"
         android:layout_width="match_parent"

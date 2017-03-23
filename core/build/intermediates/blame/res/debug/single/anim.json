@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\left_out_animation.xml",
-        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\anim\\left_out_animation.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\left_out_animation.xml",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\anim\\left_out_animation.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_down_in.xml",
