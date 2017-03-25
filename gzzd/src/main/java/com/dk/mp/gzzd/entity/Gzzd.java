@@ -16,6 +16,7 @@ public class Gzzd {
     private String titleSec;
     private String subTitle;//附标题
     private String fj;
+    private String time; //通知公告time
 
     public String getId() {
         return id;
@@ -103,5 +104,13 @@ public class Gzzd {
 
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

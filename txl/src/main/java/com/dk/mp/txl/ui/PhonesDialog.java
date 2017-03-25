@@ -168,11 +168,13 @@ public class PhonesDialog{
 
             if (!CursorDBHelper.checkNumber(context, phone)) {
                 CursorDBHelper.insertPerson(context, jbxx.getName(), phone);
+                mExpro.setImageResource(R.mipmap.icon_expr_success);
+                Toast.makeText(context,"导入联系人成功",Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(context,"该联系人已经存在，无需重复导入",Toast.LENGTH_SHORT).show();
             }
-
-            mExpro.setImageResource(R.mipmap.icon_expr_success);
         }else{
-            Toast.makeText(context,"该用户下没有电话号码，无法导出",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"该联系人无电话号码",Toast.LENGTH_SHORT).show();
         }
     }
 

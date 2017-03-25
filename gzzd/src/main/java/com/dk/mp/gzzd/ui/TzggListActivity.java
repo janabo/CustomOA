@@ -67,8 +67,8 @@ public class TzggListActivity extends MyActivity implements View.OnClickListener
             public void setItemValue(RecyclerView.ViewHolder holder, int position) {
                 Gzzd m = mData.get(position);
                 ((MyView)holder).ssl_fjh.setText(m.getTitle());
-                ((MyView)holder).ssq.setText(m.getDate());
-                ((MyView)holder).fs.setText(m.getUser());
+                ((MyView)holder).ssq.setText(m.getSubTitle());
+                ((MyView)holder).fs.setText(m.getTime());
             }
 
             @Override
