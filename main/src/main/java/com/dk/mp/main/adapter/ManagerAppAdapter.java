@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.main.R;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.dk.mp.main.ui.ManagerActivity;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemConstants;

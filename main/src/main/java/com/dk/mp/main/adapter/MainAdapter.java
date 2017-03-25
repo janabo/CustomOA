@@ -14,12 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dk.mp.core.entity.OaApp;
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.ui.HttpWebActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
 import com.dk.mp.main.db.RealmHelper;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.dk.mp.main.ui.ManagerActivity;
 
 import java.util.List;

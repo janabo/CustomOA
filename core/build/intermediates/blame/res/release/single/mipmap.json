@@ -4,8 +4,16 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\nomsg.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_hygl.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_hygl.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\hy.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\hy.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_zbap.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_zbap.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\about_bg.png",
@@ -14,6 +22,14 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\searchnodata.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\searchnodata.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_tzgg.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_tzgg.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_wdcg.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_wdcg.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\splash.png",
@@ -28,12 +44,20 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\errorserver.png"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\pwd.png",
-        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\pwd.png"
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_wddb.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_wddb.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_wdcy.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_wdcy.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\clear_press.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\clear_press.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\pwd.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\pwd.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\setting_push.png",
@@ -68,6 +92,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\search_icon.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_gk.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_gk.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\setting_about.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\setting_about.png"
     },
@@ -88,6 +116,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\nonet.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_wdsh.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_wdsh.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\net_fail.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\net_fail.png"
     },
@@ -100,8 +132,16 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\add.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_wdsq.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_wdsq.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\data_fail.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\data_fail.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_ldrc.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_ldrc.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\splash_bg.png",
@@ -118,5 +158,9 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\image_defualt.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\image_defualt.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_gzzd.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_gzzd.png"
     }
 ]

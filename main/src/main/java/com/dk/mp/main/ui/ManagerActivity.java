@@ -7,12 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.core.view.RecycleViewDivider;
 import com.dk.mp.main.R;
 import com.dk.mp.main.adapter.ManagerAppAdapter;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.google.gson.reflect.TypeToken;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
 

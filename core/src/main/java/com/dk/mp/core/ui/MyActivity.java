@@ -28,17 +28,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.dk.mp.core.R;
-import com.dk.mp.core.entity.App;
-import com.dk.mp.core.util.AppUtil;
+import com.dk.mp.core.db.RealmHelper;
+import com.dk.mp.core.entity.OaApp;
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.ImageUtil;
 import com.dk.mp.core.util.PinyinUtil;
 import com.dk.mp.core.util.SnackBarUtil;
+import com.dk.mp.core.util.StringUtils;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.dk.mp.core.application.MyApplication.getContext;
 
 /**
  * 作者：janabo on 2016/12/14 14:53
@@ -56,6 +59,7 @@ public abstract class MyActivity extends AppCompatActivity{
 
     private int x;
     private int y;
+    private RealmHelper mRealmHelper;
 
     /**
      * @return 界面布局
@@ -78,21 +82,11 @@ public abstract class MyActivity extends AppCompatActivity{
 //        View view = inflater.inflate(getLayoutID(), null);
 //        frameLayout = (FrameLayout)findViewById(R.id.id_content);
 //        frameLayout.addView(view);
-        intentFilter2.addAction("flishall");
-        registerReceiver(receiver, intentFilter2);
+//        intentFilter2.addAction("flishall");
+//        registerReceiver(receiver, intentFilter2);
         getSharedPreferences();
+        mRealmHelper = new RealmHelper(getContext(),preference);
         initView();
-//        if (x != -10) {
-//            frameLayout.post(new Runnable() {
-//                @Override
-//                public void run() {
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//                        Animator animator = createRevealAnimator(false, x, y);
-//                        animator.start();
-//                    }
-//                }
-//            });
-//        }
         initialize ( );
 
         //在自己的应用初始Activity中加入如下两行代码
@@ -230,7 +224,6 @@ public abstract class MyActivity extends AppCompatActivity{
     }
 
     public void initDock(){
-        final Gson gson = new Gson();
         final LayoutInflater inflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -253,26 +246,40 @@ public abstract class MyActivity extends AppCompatActivity{
             @Override
             public void onDrawerOpened(View drawerView) {
                 itemContent.removeAllViews();
-                List<App> apps = gson.fromJson(preference.getValue("preferenceItem"),new TypeToken<ArrayList<App>>() {}.getType());
+                List<OaItemEntity> apps = getRecentUseApp();
                 if (apps != null) {
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
                     View endview = new View(mContext);
                     endview.setLayoutParams(params);
-                    for (final App app : apps) {
+                    for (final OaItemEntity app : apps) {
                         View addview = new View(mContext);
                         addview.setLayoutParams(params);
                         itemContent.addView(addview);
                         View view = inflater.inflate(R.layout.gridview_item, null);
                         ImageView imageView = (ImageView) view.findViewById(R.id.item_image);
                         TextView textView= (TextView) view.findViewById(R.id.item_text);
-                        textView.setText(app.getName());
-                        imageView.setImageResource(ImageUtil.getResource(app.getIcon()));
+                        textView.setText(app.getLabel());
+                        imageView.setImageResource(ImageUtil.getRes(app.getLabel()));
                         view.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 drawerLayout.closeDrawers();
                                 sendBroadcast(new Intent().setAction("flishall"));
-                                new AppUtil(mContext).checkApp(app);
+                                insertRealm(app);
+                                Intent intent;
+                                if(StringUtils.isNotEmpty(app.getUrl())){
+                                    intent  = new Intent(mContext, HttpWebActivity.class);
+                                    intent.putExtra("title",app.getLabel());
+                                    intent.putExtra("url",app.getUrl()+"&token="+preference.getLoginMsg().getUid());
+                                }else{
+                                    intent = new Intent();
+                                    intent.putExtra("title",app.getLabel());
+                                    intent.setAction(mContext.getString(R.string.projectcode)+"_" +app.getIdentity());
+                                    intent.addCategory(Intent.CATEGORY_DEFAULT);
+                                }
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                mContext.startActivity(intent);
+
                             }
                         });
                         itemContent.addView(view);
@@ -394,5 +401,41 @@ public abstract class MyActivity extends AppCompatActivity{
 
         ImageView view = (ImageView) findViewById(R.id.brithday);
         view.setVisibility(View.VISIBLE);
+    }
+
+    public void insertRealm(OaItemEntity bean){
+        OaApp oaApp = new OaApp();
+        oaApp.setUrl(bean.getUrl());
+        oaApp.setTitle(bean.getTitle());
+        oaApp.setName(bean.getName());
+        oaApp.setLabel(bean.getLabel());
+        oaApp.setBussessName(bean.getBussessName());
+        oaApp.setCount(bean.getCount());
+        oaApp.setDetailUrl(bean.getDetailUrl());
+        oaApp.setDiy(bean.getDiy());
+        oaApp.setIdentity(bean.getIdentity());
+        mRealmHelper.addApp(oaApp);
+    }
+
+    /**
+     * 最新使用的
+     */
+    public List<OaItemEntity> getRecentUseApp(){
+        List<OaItemEntity> items = new ArrayList<>();
+        List<OaApp> apps = mRealmHelper.queryAllOaApp();
+        for(OaApp o : apps){
+            OaItemEntity oa = new OaItemEntity();
+            oa.setBussessName(o.getBussessName());
+            oa.setCount(o.getCount());
+            oa.setDetailUrl(o.getDetailUrl());
+            oa.setDiy(o.getDiy());
+            oa.setLabel(o.getLabel());
+            oa.setName(o.getName());
+            oa.setTitle(o.getTitle());
+            oa.setUrl(o.getUrl());
+            oa.setIdentity(o.getIdentity());
+            items.add(oa);
+        }
+        return items;
     }
 }

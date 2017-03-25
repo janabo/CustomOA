@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.android.volley.VolleyError;
 import com.dk.mp.core.entity.OaApp;
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.ui.BaseFragment;
@@ -19,7 +20,6 @@ import com.dk.mp.core.widget.ErrorLayout;
 import com.dk.mp.main.R;
 import com.dk.mp.main.adapter.ManagerAdapter;
 import com.dk.mp.main.db.RealmHelper;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;

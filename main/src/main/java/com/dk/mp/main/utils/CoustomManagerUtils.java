@@ -1,7 +1,7 @@
 package com.dk.mp.main.utils;
 
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

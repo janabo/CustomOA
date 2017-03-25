@@ -9,13 +9,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.core.view.RecycleViewDivider;
 import com.dk.mp.core.widget.ErrorLayout;
 import com.dk.mp.main.R;
 import com.dk.mp.main.adapter.AddAdapter;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;

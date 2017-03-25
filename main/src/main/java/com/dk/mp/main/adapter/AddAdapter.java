@@ -9,8 +9,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.main.R;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractDraggableItemViewHolder;
 
 import java.util.List;

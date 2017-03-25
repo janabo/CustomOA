@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.android.volley.VolleyError;
+import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.ui.BaseFragment;
@@ -14,7 +15,6 @@ import com.dk.mp.core.widget.ErrorLayout;
 import com.dk.mp.main.R;
 import com.dk.mp.main.adapter.MainAdapter;
 import com.dk.mp.main.db.RealmHelper;
-import com.dk.mp.main.entity.OaItemEntity;
 import com.dk.mp.main.utils.CoustomManagerUtils;
 import com.google.gson.reflect.TypeToken;
 
