@@ -1784,13 +1784,15 @@ public final class R {
         public static final int noAnimThemep = 0x7f09018a;
         public static final int noAnimThemep_noAnimThemeStatusBarColorGray = 0x7f09018b;
         public static final int pickTheme = 0x7f09018c;
-        public static final int setting_img = 0x7f09018d;
-        public static final int setting_img_into = 0x7f09018e;
-        public static final int setting_txt = 0x7f09018f;
-        public static final int style_big = 0x7f090190;
-        public static final int style_large = 0x7f090191;
-        public static final int style_norm = 0x7f090192;
-        public static final int title_txt = 0x7f090193;
+        public static final int rcap_but_back = 0x7f09018d;
+        public static final int rcap_title_txt = 0x7f09018e;
+        public static final int setting_img = 0x7f09018f;
+        public static final int setting_img_into = 0x7f090190;
+        public static final int setting_txt = 0x7f090191;
+        public static final int style_big = 0x7f090192;
+        public static final int style_large = 0x7f090193;
+        public static final int style_norm = 0x7f090194;
+        public static final int title_txt = 0x7f090195;
     }
     public static final class styleable {
         public static final int[] ActionBar = { 0x7f010001, 0x7f010024, 0x7f010025, 0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e, 0x7f01008f };

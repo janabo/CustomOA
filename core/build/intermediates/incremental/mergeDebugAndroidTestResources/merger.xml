@@ -1971,7 +1971,15 @@
         <item name="android:textSize">18sp</item>
         <item name="android:gravity">center</item>
         <item name="android:singleLine">true</item>
-    </style><color name="arc_blue">#10a679</color><attr format="dimension" name="image154"/><style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style><color name="arc_blue">#10a679</color><attr format="dimension" name="image154"/><style name="rcap_but_back">
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:text"> 返回</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@mipmap/back_press1</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style><style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
     </style><attr format="dimension" name="textSize20"/><color name="white50">#7fffffff</color><style name="NoTitleTranslucentTheme" parent="FullScreenTheme">
@@ -2091,7 +2099,12 @@
     </style><attr format="dimension" name="image100"/><string name="net_no2">没有网络</string><style name="AppTheme.NoTitle" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style><color name="red">#ff0000</color><attr format="dimension" name="image50"/><color name="black50">#7f000000</color><style name="ActionSheetStyleiOS7">
+    </style><color name="red">#ff0000</color><attr format="dimension" name="image50"/><color name="black50">#7f000000</color><style name="rcap_title_txt">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="ActionSheetStyleiOS7">
         <item name="actionSheetBackground">@android:color/transparent</item>
         <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
         <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>

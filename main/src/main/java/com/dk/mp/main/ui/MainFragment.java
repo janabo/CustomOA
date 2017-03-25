@@ -79,7 +79,7 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
                             List<OaItemEntity> alllist = CoustomManagerUtils.getEntitlyList(getSharedPreferences(),getGson(),oaItemEntityList);
                             List<OaItemEntity> mData = new ArrayList<OaItemEntity>();
                             for(OaItemEntity x : alllist){
-                                if(x.isShow() && "true".equals(x.getDiy())){
+                                if(x.isShow()){
                                     mData.add(x);
                                 }
                             }

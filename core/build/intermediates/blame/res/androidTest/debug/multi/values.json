@@ -9397,15 +9397,7 @@
                     "endOffset": 167300
                 },
                 "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 139,
-                        "startColumn": 4,
-                        "startOffset": 7277,
-                        "endLine": 147,
-                        "endColumn": 12,
-                        "endOffset": 7711
-                    }
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
                 }
             },
             {
@@ -9517,98 +9509,132 @@
                     "startLine": 2366,
                     "startColumn": 4,
                     "startOffset": 170167,
-                    "endLine": 2369,
+                    "endLine": 2374,
                     "endColumn": 12,
-                    "endOffset": 170333
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2370,
-                    "startColumn": 4,
-                    "startOffset": 170338,
-                    "endLine": 2375,
-                    "endColumn": 12,
-                    "endOffset": 170633
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2376,
-                    "startColumn": 4,
-                    "startOffset": 170638,
-                    "endLine": 2382,
-                    "endColumn": 12,
-                    "endOffset": 170980
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2383,
-                    "startColumn": 4,
-                    "startOffset": 170985,
-                    "endLine": 2417,
-                    "endColumn": 12,
-                    "endOffset": 172452
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2418,
-                    "startColumn": 4,
-                    "startOffset": 172457,
-                    "endLine": 2452,
-                    "endColumn": 12,
-                    "endOffset": 173937
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2453,
-                    "startColumn": 4,
-                    "startOffset": 173942,
-                    "endLine": 2487,
-                    "endColumn": 12,
-                    "endOffset": 175360
-                },
-                "from": {
-                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2488,
-                    "startColumn": 4,
-                    "startOffset": 175365,
-                    "endLine": 2493,
-                    "endColumn": 12,
-                    "endOffset": 175609
+                    "endOffset": 170607
                 },
                 "from": {
                     "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 312,
+                        "startLine": 190,
                         "startColumn": 4,
-                        "startOffset": 15101,
-                        "endLine": 317,
+                        "startOffset": 9903,
+                        "endLine": 198,
                         "endColumn": 12,
-                        "endOffset": 15345
+                        "endOffset": 10343
                     }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2375,
+                    "startColumn": 4,
+                    "startOffset": 170612,
+                    "endLine": 2380,
+                    "endColumn": 12,
+                    "endOffset": 170861
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 199,
+                        "startColumn": 4,
+                        "startOffset": 10348,
+                        "endLine": 204,
+                        "endColumn": 12,
+                        "endOffset": 10597
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2381,
+                    "startColumn": 4,
+                    "startOffset": 170866,
+                    "endLine": 2384,
+                    "endColumn": 12,
+                    "endOffset": 171032
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2385,
+                    "startColumn": 4,
+                    "startOffset": 171037,
+                    "endLine": 2390,
+                    "endColumn": 12,
+                    "endOffset": 171332
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2391,
+                    "startColumn": 4,
+                    "startOffset": 171337,
+                    "endLine": 2397,
+                    "endColumn": 12,
+                    "endOffset": 171679
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2398,
+                    "startColumn": 4,
+                    "startOffset": 171684,
+                    "endLine": 2432,
+                    "endColumn": 12,
+                    "endOffset": 173151
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2433,
+                    "startColumn": 4,
+                    "startOffset": 173156,
+                    "endLine": 2467,
+                    "endColumn": 12,
+                    "endOffset": 174636
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2468,
+                    "startColumn": 4,
+                    "startOffset": 174641,
+                    "endLine": 2502,
+                    "endColumn": 12,
+                    "endOffset": 176059
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2503,
+                    "startColumn": 4,
+                    "startOffset": 176064,
+                    "endLine": 2508,
+                    "endColumn": 12,
+                    "endOffset": 176308
+                },
+                "from": {
+                    "file": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
                 }
             }
         ]

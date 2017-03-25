@@ -1904,17 +1904,17 @@
         <attr format="integer|reference" name="codeCount"/>
         <attr format="dimension" name="textSize"/>
         <attr format="string" name="text"/>
-    </declare-styleable><attr format="dimension" name="image48"/><attr format="dimension" name="image154"/></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\colors.xml" qualifiers=""><color name="black_semi_transparent">#B2000000</color><color name="blue_semi_transparent">#805677fc</color><color name="background">#e5e5e5</color><color name="colorPrimary50">#A8CEF9</color><color name="white50">#7fffffff</color><color name="linecolor">#e5e5e5</color><color name="rcap_gray">#c9c9c9</color><color name="black">#000000</color><color name="floatmenu_color">#F19149</color><color name="colorPrimaryHy">#37c7be</color><color name="pink_pressed">#ec407a</color><color name="floatmenu_color_pressed">#7fF19149</color><color name="ripple_bg_pressed">#FF21272B</color><color name="white_pressed">#f1f1f1</color><color name="view_bg">#ededed</color><color name="pink">#e91e63</color><color name="colorPrimary">#2196f3</color><color name="transparent">#00000000</color><color name="colorAccent">#2196f3</color><color name="color_fff">#ffffff</color><color name="red">#ff0000</color><color name="black50">#7f000000</color><color name="half_black">#808080</color><color name="colorPrimaryDark">#2894ff</color><color name="select_title">#808080</color><color name="tran">#50000000</color><color name="blue_semi_transparent_pressed">#80738ffe</color><color name="bg">#ededed</color><color name="arc_blue">#10a679</color><color name="page_bg">#f4f4f4</color><color name="white">#ffffff</color></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Core</string><string name="transition__img">转场动画</string><string name="data_fail">服务异常哦</string><string name="searchnodata">没有搜索到哦</string><string name="uploadUrl">http://192.168.3.14:8081/</string><string name="login_fail">登录失败</string><string name="rootUrl">http://192.168.3.163:8082/mp-lgj/</string><string name="about_copyright_cn">常州刘国钧高等职业技术学校版权所有</string><string name="reload">点击重新加载</string><string name="defulicon">[{\"id\":\"1\",\"name\":\"学校新闻\",\"url\":\"\",\"idCat\":\"1\",\"icon\":\"app_xxxw\",\"packageName\":\"\",\"action\":\"xxxw\",\"nameCat\":\"生活\"}]</string><string name="about_copyright_zn">Copyright xxxxxxxxx</string><string name="search_fail">搜索失败</string><string name="nodata">还没有数据哦</string><string name="net_no2">没有网络</string></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme.NoTitle" parent="AppTheme">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style><style name="noAnimTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowAnimationStyle">@null</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-    </style><style name="AppTheme.NoTitle.Translucent">
+    </declare-styleable><attr format="dimension" name="image48"/><attr format="dimension" name="image154"/></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\colors.xml" qualifiers=""><color name="black_semi_transparent">#B2000000</color><color name="blue_semi_transparent">#805677fc</color><color name="background">#e5e5e5</color><color name="colorPrimary50">#A8CEF9</color><color name="white50">#7fffffff</color><color name="linecolor">#e5e5e5</color><color name="rcap_gray">#c9c9c9</color><color name="black">#000000</color><color name="floatmenu_color">#F19149</color><color name="colorPrimaryHy">#37c7be</color><color name="pink_pressed">#ec407a</color><color name="floatmenu_color_pressed">#7fF19149</color><color name="ripple_bg_pressed">#FF21272B</color><color name="white_pressed">#f1f1f1</color><color name="view_bg">#ededed</color><color name="pink">#e91e63</color><color name="colorPrimary">#2196f3</color><color name="transparent">#00000000</color><color name="colorAccent">#2196f3</color><color name="color_fff">#ffffff</color><color name="red">#ff0000</color><color name="black50">#7f000000</color><color name="half_black">#808080</color><color name="colorPrimaryDark">#2894ff</color><color name="select_title">#808080</color><color name="tran">#50000000</color><color name="blue_semi_transparent_pressed">#80738ffe</color><color name="bg">#ededed</color><color name="arc_blue">#10a679</color><color name="page_bg">#f4f4f4</color><color name="white">#ffffff</color></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Core</string><string name="transition__img">转场动画</string><string name="data_fail">服务异常哦</string><string name="searchnodata">没有搜索到哦</string><string name="uploadUrl">http://192.168.3.14:8081/</string><string name="login_fail">登录失败</string><string name="rootUrl">http://192.168.3.163:8082/mp-lgj/</string><string name="about_copyright_cn">常州刘国钧高等职业技术学校版权所有</string><string name="reload">点击重新加载</string><string name="defulicon">[{\"id\":\"1\",\"name\":\"学校新闻\",\"url\":\"\",\"idCat\":\"1\",\"icon\":\"app_xxxw\",\"packageName\":\"\",\"action\":\"xxxw\",\"nameCat\":\"生活\"}]</string><string name="about_copyright_zn">Copyright xxxxxxxxx</string><string name="search_fail">搜索失败</string><string name="nodata">还没有数据哦</string><string name="net_no2">没有网络</string></file><file path="D:\DanDan\CustomOA\core\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme.NoTitle.Translucent">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowTranslucentStatus">true</item>
+    </style><style name="rcap_but_back">
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:text"> 返回</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@mipmap/back_press1</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
     </style><style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
@@ -1926,47 +1926,6 @@
         <item name="android:singleLine">true</item>
         <item name="android:background">@mipmap/back_press</item>
         <item name="android:gravity">center_vertical|center_horizontal</item>
-    </style><style name="style_large">
-        <item name="textSize24">27.6sp</item>
-        <item name="textSize20">23sp</item>
-        <item name="textSize18">20.7sp</item>
-        <item name="textSize17">19.55sp</item>
-        <item name="textSize16">18.4sp</item>
-        <item name="textSize15">17.25sp</item>
-        <item name="textSize14">16.1sp</item>
-        <item name="textSize13">14.95sp</item>
-        <item name="textSize12">13.8sp</item>
-        <item name="image7">8dp</item>
-        <item name="image8">9.2dp</item>
-        <item name="image10">11.5dp</item>
-        <item name="image11">12.6dp</item>
-        <item name="image13">14.95dp</item>
-        <item name="image16">18.4dp</item>
-        <item name="image22">25.3dp</item>
-        <item name="image30">34.5dp</item>
-        <item name="image32">36.8dp</item>
-        <item name="image34">39.1dp</item>
-        <item name="image40">46dp</item>
-        <item name="image42">48.3dp</item>
-        <item name="image44">50.6dp</item>
-        <item name="image45">51.75dp</item>
-        <item name="image48">55.2dp</item>
-        <item name="image50">57.5dp</item>
-        <item name="image60">69dp</item>
-        <item name="image62">71.3dp</item>
-        <item name="image70">80.5dp</item>
-        <item name="image71">81.65dp</item>
-        <item name="image73">83.95dp</item>
-        <item name="image80">92dp</item>
-        <item name="image100">115dp</item>
-        <item name="image154">177.1dp</item>
-    </style><style name="pickTheme">
-        <item name="android:textSize">16sp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:textColor">#1298FF</item>
-        <item name="android:layout_marginLeft">10dip</item>
-        <item name="android:layout_marginRight">10dip</item>
     </style><style name="NoTitleTranslucentTheme" parent="FullScreenTheme">
         <item name="android:windowBackground">@color/black50</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -1980,24 +1939,6 @@
     </style><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style><style name="ActionSheetStyleiOS7">
-        <item name="actionSheetBackground">@android:color/transparent</item>
-        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
-        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
-        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
-        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
-        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
-        <item name="cancelButtonTextColor">#ff0000</item>
-        <item name="otherButtonTextColor">#1E82FF</item>
-        <item name="actionSheetPadding">10dp</item>
-        <item name="otherButtonSpacing">0dp</item>
-        <item name="cancelButtonMarginTop">10dp</item>
-        <item name="actionSheetTextSize">12sp</item>
-    </style><style name="login_title_txt">
-        <item name="android:textColor">#000000</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:singleLine">true</item>
     </style><style name="setting_img">
         <item name="android:layout_width">?attr/image22</item>
         <item name="android:layout_height">?attr/image22</item>
@@ -2077,24 +2018,6 @@
         <item name="android:layout_height">?attr/image11</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
-    </style><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style><style name="title_txt">
-        <item name="android:textColor">#212121</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:singleLine">true</item>
-    </style><style name="noAnimThemep.noAnimThemeStatusBarColorGray">
-        <item name="android:statusBarColor" ns1:targetApi="lollipop">#6F7075</item>
-    </style><style name="noAnimThemep" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowAnimationStyle">@null</item>
-        <item name="android:windowBackground">@color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/colorPrimary</item>
     </style><style name="Transparent" parent="AppTheme.NoActionBar">
 
     </style><style name="MyDialog" parent="@android:style/Theme.DeviceDefault.DialogWhenLarge">
@@ -2116,6 +2039,96 @@
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">12.5dip</item>
         <item name="android:layout_marginBottom">12.5dip</item>
+    </style><style name="AppTheme.NoTitle" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style><style name="noAnimTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="style_large">
+        <item name="textSize24">27.6sp</item>
+        <item name="textSize20">23sp</item>
+        <item name="textSize18">20.7sp</item>
+        <item name="textSize17">19.55sp</item>
+        <item name="textSize16">18.4sp</item>
+        <item name="textSize15">17.25sp</item>
+        <item name="textSize14">16.1sp</item>
+        <item name="textSize13">14.95sp</item>
+        <item name="textSize12">13.8sp</item>
+        <item name="image7">8dp</item>
+        <item name="image8">9.2dp</item>
+        <item name="image10">11.5dp</item>
+        <item name="image11">12.6dp</item>
+        <item name="image13">14.95dp</item>
+        <item name="image16">18.4dp</item>
+        <item name="image22">25.3dp</item>
+        <item name="image30">34.5dp</item>
+        <item name="image32">36.8dp</item>
+        <item name="image34">39.1dp</item>
+        <item name="image40">46dp</item>
+        <item name="image42">48.3dp</item>
+        <item name="image44">50.6dp</item>
+        <item name="image45">51.75dp</item>
+        <item name="image48">55.2dp</item>
+        <item name="image50">57.5dp</item>
+        <item name="image60">69dp</item>
+        <item name="image62">71.3dp</item>
+        <item name="image70">80.5dp</item>
+        <item name="image71">81.65dp</item>
+        <item name="image73">83.95dp</item>
+        <item name="image80">92dp</item>
+        <item name="image100">115dp</item>
+        <item name="image154">177.1dp</item>
+    </style><style name="pickTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textColor">#1298FF</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style><style name="rcap_title_txt">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="ActionSheetStyleiOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#ff0000</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">12sp</item>
+    </style><style name="login_title_txt">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style><style name="title_txt">
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="noAnimThemep.noAnimThemeStatusBarColorGray">
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">#6F7075</item>
+    </style><style name="noAnimThemep" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/colorPrimary</item>
     </style></file><file path="D:\DanDan\CustomOA\core\src\main\res\values-v21\styles.xml" qualifiers="v21"><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -2364,6 +2364,21 @@
         <item name="android:layout_marginLeft">10dip</item>
         <item name="android:layout_marginRight">10dip</item>
     </style>
+    <style name="rcap_but_back">
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:text"> 返回</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@mipmap/back_press1</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+    <style name="rcap_title_txt">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style>
     <style name="setting_img">
         <item name="android:layout_width">?attr/image22</item>
         <item name="android:layout_height">?attr/image22</item>

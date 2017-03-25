@@ -29,6 +29,7 @@ public class ManagerActivity extends MyActivity{
     private ManagerAppAdapter adapter;
     private List<OaItemEntity> list = new ArrayList<OaItemEntity>();
     private LinearLayout footrootview;
+    private List<OaItemEntity> hideApps = new ArrayList<>();
 
     @Override
     protected int getLayoutID() {
@@ -40,7 +41,7 @@ public class ManagerActivity extends MyActivity{
         super.initialize();
         setTitle("编辑应用");
 
-        initDatas();
+
         footrootview = (LinearLayout) findViewById(R.id.footrootview);
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         RecyclerViewDragDropManager dragMgr = new RecyclerViewDragDropManager();
@@ -49,7 +50,7 @@ public class ManagerActivity extends MyActivity{
         dragMgr.setInitiateOnLongPress(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ManagerAppAdapter(this,list);
+        adapter = new ManagerAppAdapter(this,list,ManagerActivity.this);
         recyclerView.setAdapter(dragMgr.createWrappedAdapter(adapter));
         recyclerView.addItemDecoration(new RecycleViewDivider(ManagerActivity.this, LinearLayoutManager.HORIZONTAL, StringUtils.dip2px(this,10), Color.rgb(244, 244, 244)));
 
@@ -66,20 +67,44 @@ public class ManagerActivity extends MyActivity{
     }
 
     private void initDatas(){
+        hideApps.clear();
+        list.clear();
         List<OaItemEntity> t = getGson().fromJson(getSharedPreferences().getValue(getSharedPreferences().getLoginMsg().getUid()+"_customoa"),new TypeToken<List<OaItemEntity>>(){}.getType());
         List<OaItemEntity> mData = new ArrayList<OaItemEntity>();
         for(OaItemEntity x : t){
-            if(x.isShow() && "true".equals(x.getDiy())){
+            if(x.isShow()){
                 mData.add(x);
+            }else{
+                hideApps.add(x);
             }
         }
         list.addAll(mData);
+        adapter.notifyDataSetChanged();
     }
 
     @Override
     public void back() {
         super.back();
-        getSharedPreferences().setValue(getSharedPreferences().getLoginMsg().getUid()+"_customoa",getGson().toJson(list));
+//        list.addAll(hideApps);
+//        getSharedPreferences().setValue(getSharedPreferences().getLoginMsg().getUid()+"_customoa",getGson().toJson(list));
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        list.addAll(hideApps);
+        getSharedPreferences().setValue(getSharedPreferences().getLoginMsg().getUid()+"_customoa",getGson().toJson(list));
+        list.clear();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initDatas();
+    }
+
+    public void deleteApp(OaItemEntity bean){
+        hideApps.add(bean);
+        adapter.notifyDataSetChanged();
+    }
 }

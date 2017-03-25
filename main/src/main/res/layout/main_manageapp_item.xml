@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootview"
     android:layout_width="match_parent"
     android:layout_height="60dp"
@@ -13,12 +12,14 @@
         android:background="#e5e5e5"></View>
 
     <LinearLayout
+        android:id="@+id/background_lin"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#2196f3"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="9dp">
+        android:layout_marginTop="9dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:id="@+id/imageView"
@@ -50,10 +51,11 @@
 
         <ImageView
             android:id="@+id/delete_app"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/clear_press"
-            android:gravity="center_vertical"/>
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/app_del"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"/>
 
     </LinearLayout>
 

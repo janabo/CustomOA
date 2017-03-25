@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/lock_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/lock_message">
+
+    <FrameLayout
+        android:id="@+id/id_user_avatarView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="67dip"
+        android:background="@mipmap/lock_avatar_default" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/loginMess"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            fresco:fadeDuration="300"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@mipmap/photo"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:failureImage="@mipmap/photo"
+            fresco:failureImageScaleType="centerInside"
+            fresco:backgroundImage="@color/transparent"
+            fresco:overlayImage="@color/transparent"
+            fresco:pressedStateOverlayImage="@color/transparent"
+            fresco:roundAsCircle="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/id_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/id_lock_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#ffffff" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+
+        <com.dk.mp.main.view.locus.LocusPassWordView
+            android:id="@+id/id_lock_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/id_forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="忘记手势密码"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1750,13 +1750,15 @@ int style noAnimTheme 0x7f090189
 int style noAnimThemep 0x7f09018a
 int style noAnimThemep_noAnimThemeStatusBarColorGray 0x7f09018b
 int style pickTheme 0x7f09018c
-int style setting_img 0x7f09018d
-int style setting_img_into 0x7f09018e
-int style setting_txt 0x7f09018f
-int style style_big 0x7f090190
-int style style_large 0x7f090191
-int style style_norm 0x7f090192
-int style title_txt 0x7f090193
+int style rcap_but_back 0x7f09018d
+int style rcap_title_txt 0x7f09018e
+int style setting_img 0x7f09018f
+int style setting_img_into 0x7f090190
+int style setting_txt 0x7f090191
+int style style_big 0x7f090192
+int style style_large 0x7f090193
+int style style_norm 0x7f090194
+int style title_txt 0x7f090195
 int[] styleable ActionBar { 0x7f010001, 0x7f010024, 0x7f010025, 0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e, 0x7f01008f }
 int styleable ActionBar_background 10
 int styleable ActionBar_backgroundSplit 12

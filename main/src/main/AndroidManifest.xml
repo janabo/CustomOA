@@ -24,6 +24,15 @@
             android:theme="@style/Transparent">
         </activity>
 
+        <activity
+            android:name=".ui.LockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle.Translucent">
+            <intent-filter>
+                <action android:name="lock" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
     </application>
 
 </manifest>

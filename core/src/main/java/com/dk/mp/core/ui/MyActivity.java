@@ -45,7 +45,7 @@ import java.util.List;
  */
 public abstract class MyActivity extends AppCompatActivity{
     public Context mContext = this;
-    private CoreSharedPreferencesHelper preference;
+    public CoreSharedPreferencesHelper preference;
     private Gson gson;
 
     private DrawerLayout drawerLayout;
@@ -80,6 +80,7 @@ public abstract class MyActivity extends AppCompatActivity{
 //        frameLayout.addView(view);
         intentFilter2.addAction("flishall");
         registerReceiver(receiver, intentFilter2);
+        getSharedPreferences();
         initView();
 //        if (x != -10) {
 //            frameLayout.post(new Runnable() {

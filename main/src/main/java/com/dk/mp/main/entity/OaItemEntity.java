@@ -20,6 +20,8 @@ public class OaItemEntity {
 
     private boolean isShow;//是否展示在首页
 
+    private boolean selected = false;//被选中添加
+
     public int getId() {
         return id;
     }
@@ -106,5 +108,13 @@ public class OaItemEntity {
 
     public void setIdentity(String identity) {
         this.identity = identity;
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

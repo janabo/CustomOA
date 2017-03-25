@@ -2,6 +2,7 @@ package com.dk.mp.main.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -59,9 +60,11 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         private ImageView newimage;
         private TextView title;
         private Button gotolist;
+        private LinearLayout background_lin;
 
         public MyView(View itemView) {
             super(itemView);
+            background_lin = (LinearLayout) itemView.findViewById(R.id.background_lin);
             modeltitle = (TextView) itemView.findViewById(R.id.modeltitle);// 模块标题
             modelsecondtitle = (TextView) itemView.findViewById(R.id.modelsecondtitle);// 模块副标题
             count = (TextView) itemView.findViewById(R.id.number);// 最新信息条数
@@ -125,6 +128,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         if (position == list.size()) {
         } else {
             OaItemEntity bean= list.get(position);
+            setBackground((MyView)holder,bean.getLabel());
             ((MyView)holder).modeltitle.setText(conventEmpToString(bean.getLabel()));
             ((MyView)holder).modelsecondtitle.setText("你需要查看的"+conventEmpToString(bean.getLabel()));
             ((MyView)holder).count.setText(StringUtils.isNotEmpty(bean.getCount())?bean.getCount():"0");
@@ -188,5 +192,47 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         oaApp.setDiy(bean.getDiy());
         oaApp.setIdentity(bean.getIdentity());
         mRealmHelper.addApp(oaApp);
+    }
+
+
+    public void setBackground(MainAdapter.MyView holder, String appname){
+        switch (appname){
+            case "通知公告":
+                holder.background_lin.setBackgroundColor(Color.rgb(239,125,90));
+                break;
+            case "规章制度":
+                holder.background_lin.setBackgroundColor(Color.rgb(103,115,183));
+                break;
+            case "值班安排":
+                holder.background_lin.setBackgroundColor(Color.rgb(85,165,28));
+                break;
+            case "领导日程":
+                holder.background_lin.setBackgroundColor(Color.rgb(45,147,200));
+                break;
+            case "会议管理":
+                holder.background_lin.setBackgroundColor(Color.rgb(0,131,194));
+                break;
+            case "我的传阅":
+                holder.background_lin.setBackgroundColor(Color.rgb(0,168,136));
+                break;
+            case "公开":
+                holder.background_lin.setBackgroundColor(Color.rgb(50,177,108));
+                break;
+            case "我的审核":
+                holder.background_lin.setBackgroundColor(Color.rgb(236,105,65));
+                break;
+            case "我的待办":
+                holder.background_lin.setBackgroundColor(Color.rgb(0,155,223));
+                break;
+            case "我的申请":
+                holder.background_lin.setBackgroundColor(Color.rgb(0,175,171));
+                break;
+            case "我的草稿":
+                holder.background_lin.setBackgroundColor(Color.rgb(242,139,0));
+                break;
+            default:
+                holder.background_lin.setBackgroundColor(Color.rgb(0,155,223));
+                break;
+        }
     }
 }

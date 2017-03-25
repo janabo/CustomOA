@@ -4654,13 +4654,15 @@ containing a value of this type.
         public static int noAnimThemep=0x7f09018a;
         public static int noAnimThemep_noAnimThemeStatusBarColorGray=0x7f09018b;
         public static int pickTheme=0x7f09018c;
-        public static int setting_img=0x7f09018d;
-        public static int setting_img_into=0x7f09018e;
-        public static int setting_txt=0x7f09018f;
-        public static int style_big=0x7f090190;
-        public static int style_large=0x7f090191;
-        public static int style_norm=0x7f090192;
-        public static int title_txt=0x7f090193;
+        public static int rcap_but_back=0x7f09018d;
+        public static int rcap_title_txt=0x7f09018e;
+        public static int setting_img=0x7f09018f;
+        public static int setting_img_into=0x7f090190;
+        public static int setting_txt=0x7f090191;
+        public static int style_big=0x7f090192;
+        public static int style_large=0x7f090193;
+        public static int style_norm=0x7f090194;
+        public static int title_txt=0x7f090195;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

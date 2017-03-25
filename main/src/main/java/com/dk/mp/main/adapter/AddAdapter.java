@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 作者：janabo on 2017/3/20 16:34
  */
-public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder>{
+public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder> implements View.OnClickListener{
     private List<OaItemEntity> mData;
     private Context mContext;
     LayoutInflater inflater;
@@ -32,6 +32,7 @@ public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder>{
     @Override
     public AddAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflater.inflate(R.layout.main_manager_item,null,false);
+        v.setOnClickListener(this);
         return new MyViewHolder(v);
     }
 
@@ -40,11 +41,30 @@ public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder>{
         OaItemEntity bean = mData.get(position);
         setAppIcon(holder,bean.getLabel());
         holder.mTextView.setText(bean.getLabel());
+        holder.mTextView.setTag(bean);
     }
 
     @Override
     public int getItemCount() {
         return mData.size();
+    }
+
+    //onitemclicklistener事件
+    private OnRecyclerViewItemClickListener mOnItemClickListener = null;
+    public static interface OnRecyclerViewItemClickListener {
+        void onItemClick(View view, OaItemEntity data);
+    }
+
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener) {
+        this.mOnItemClickListener = listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (mOnItemClickListener != null) {
+            //注意这里使用getTag方法获取数据
+            mOnItemClickListener.onItemClick(v,(OaItemEntity)(v.findViewById(R.id.item_text).getTag()));
+        }
     }
 
     public class MyViewHolder extends AbstractDraggableItemViewHolder {
@@ -57,26 +77,6 @@ public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder>{
             mContainer = (FrameLayout) v.findViewById(R.id.container);
             imageView = (ImageView) v.findViewById(R.id.item_image);
             mTextView = (TextView) v.findViewById(R.id.item_text);
-
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    OaItemEntity bean = mData.get(getLayoutPosition());
-//                    Intent intent;
-//                    if(StringUtils.isNotEmpty(bean.getUrl())){
-//                        intent  = new Intent(mContext, HttpWebActivity.class);
-//                        intent.putExtra("title",bean.getLabel());
-//                        intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
-//                    }else{
-//                        intent = new Intent();
-//                        intent.putExtra("title",bean.getLabel());
-//                        intent.setAction(mContext.getString(R.string.projectcode)+"_" +bean.getIdentity());
-//                        intent.addCategory(Intent.CATEGORY_DEFAULT);
-//                    }
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    mContext.startActivity(intent);
-                }
-            });
         }
     }
 
@@ -119,5 +119,9 @@ public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder>{
                 holder.imageView.setImageResource(R.mipmap.app_hygl);
                 break;
         }
+    }
+
+    public List<OaItemEntity> getList() {
+        return mData;
     }
 }

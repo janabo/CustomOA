@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dk.mp.core.adapter.MyFragmentPagerAdapter;
+import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.setting.ui.SettingActivity;
 import com.dk.mp.core.ui.BaseFragment;
 import com.dk.mp.core.ui.MyActivity;
@@ -113,8 +115,10 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
 
         if (tab.getPosition() != 0) {
             loginmess.setVisibility(View.INVISIBLE);
+            search.setVisibility(View.INVISIBLE);
         } else {
             loginmess.setVisibility(View.VISIBLE);
+            search.setVisibility(View.VISIBLE);
         }
 
         switch (tab.getPosition()) {
@@ -147,6 +151,17 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
     public void onClick(View view) {
         if (view == loginmess) {
             startActivity(new Intent(this, SettingActivity.class));
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            AlertDialog alertDialog = new AlertDialog(mContext);
+            alertDialog.exitApp();
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
     }
 }

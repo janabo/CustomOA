@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.android.volley.VolleyError;
 import com.dk.mp.core.R;
 import com.dk.mp.core.entity.JsonData;
+import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.setting.ui.SettingActivity;
@@ -55,6 +56,10 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
     int yzmcount = 1;
     private boolean flag = false;
     private CoreSharedPreferencesHelper preference;
+    private String from = "";
+    private boolean needLock = true;
+    private LoginMsg loginMsg;
+
 
     @Override
     protected int getLayoutID() {
@@ -65,6 +70,9 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
     protected void initialize() {
         super.initialize();
         setTitle("登录");
+        if (getIntent().hasExtra("from")) {
+            from = getIntent().getStringExtra("from");
+        }
         preference = getSharedPreferences();
         valicode = (ValidationCode) findViewById(R.id.valicode);
         putview = (LinearLayout) findViewById(R.id.putview);
@@ -170,12 +178,7 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
                             @Override
                             public void run() {
                                 ok.setEnabled(true);
-                                if(SettingActivity.instance != null){
-                                    SettingActivity.instance.finish();
-                                }
-                                startActivity(new Intent().setAction("main"));
-                                finish();
-//                                back();
+                                loginSuccess();
                             }
                         },1000);
                     }
@@ -193,6 +196,34 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
             }
         });
     }
+
+    /**
+     * 登录成功
+     */
+    private void loginSuccess() {
+        if (needLock) {
+            navigateToLock("set");
+        } else {
+            if(SettingActivity.instance != null){
+                SettingActivity.instance.finish();
+            }
+            startActivity(new Intent().setAction("main"));
+            finish();
+        }
+
+    }
+
+    private void navigateToLock(String action) {
+        Intent intent = new Intent();
+        intent.setClassName(mContext, "com.dk.mp.main.ui.LockActivity");
+        intent.putExtra("from", "login");
+        intent.putExtra("action", action);
+        startActivity(intent);
+        finish();
+    }
+
+
+
 
     /**
      * 显示完整密码
