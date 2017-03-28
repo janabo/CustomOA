@@ -30,7 +30,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:paddingLeft="10dp"
-            android:text="2016-02-03"
             android:textColor="#1298FF"
             android:textSize="16sp" />
 

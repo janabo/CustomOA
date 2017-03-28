@@ -400,11 +400,11 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
-        public static final int slt_as_ios7_cancel_bt = 0x7f020083;
-        public static final int slt_as_ios7_other_bt_bottom = 0x7f020084;
-        public static final int slt_as_ios7_other_bt_middle = 0x7f020085;
-        public static final int slt_as_ios7_other_bt_single = 0x7f020086;
-        public static final int slt_as_ios7_other_bt_top = 0x7f020087;
+        public static final int slt_as_ios7_cancel_bt = 0x7f02008b;
+        public static final int slt_as_ios7_other_bt_bottom = 0x7f02008c;
+        public static final int slt_as_ios7_other_bt_middle = 0x7f02008d;
+        public static final int slt_as_ios7_other_bt_single = 0x7f02008e;
+        public static final int slt_as_ios7_other_bt_top = 0x7f02008f;
     }
     public static final class id {
         public static final int action_bar = 0x7f0d0071;

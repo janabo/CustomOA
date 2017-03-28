@@ -94,6 +94,7 @@ public class HyGlActivity extends MyActivity{
                     public void customLayout(View v) {
                         final TextView tvSubmit = (TextView) v.findViewById(R.id.tv_finish);
                         TextView ivCancel = (TextView) v.findViewById(R.id.tv_cancle);
+                        TextView tv_time = (TextView) v.findViewById(R.id.tv_time);
                         tvSubmit.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

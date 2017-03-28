@@ -24,6 +24,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\clear_press.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_wdsh.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_wdsh.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\photo.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\photo.png"
     },
@@ -48,6 +52,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\hy.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_gk.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_gk.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\icon_addapp.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\icon_addapp.png"
     },
@@ -62,6 +70,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\uid.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\uid.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_wdcy.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_wdcy.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\back_press1.png",
@@ -80,12 +92,28 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\setting_clean.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_gzzd.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_gzzd.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\setting_version.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\setting_version.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_tzgg.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_tzgg.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_zbap.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_zbap.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\about_bg.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\about_bg.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_hygl.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_hygl.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\search_icon.png",
@@ -100,6 +128,14 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\nomsg.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_wdsq.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_wdsq.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_wdcg.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_wdcg.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\splash_bg.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\splash_bg.png"
     },
@@ -108,12 +144,20 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\searchnodata.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_ldrc.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_ldrc.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\pwd.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\pwd.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\home.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\home.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_wddb.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_wddb.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\data_fail.png",

@@ -8,12 +8,12 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\ripple_bg_red.xml"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_middle.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\fba5c8642317929547a04aac4f75037d5e612092\\output\\res\\drawable\\slt_as_ios7_other_bt_middle.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_bottom.xml",
@@ -48,6 +48,10 @@
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_line_semicircle.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_line_semicircle.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rounded_corners_red.xml",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\rounded_corners_red.xml"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\slt_as_ios7_other_bt_single.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\fba5c8642317929547a04aac4f75037d5e612092\\output\\res\\drawable\\slt_as_ios7_other_bt_single.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_line_error.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_line_error.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\design_bottom_navigation_item_background.xml",
@@ -80,6 +88,10 @@
         "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_round_click.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_round_click.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dialog_btn_right_selector.xml",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_btn_right_selector.xml"
     },
@@ -90,6 +102,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\circle_border_ghi.xml",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\circle_border_ghi.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_arrow.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_arrow.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ripple_bg_while.xml",
@@ -140,6 +156,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\dialog_bg_bottom_right_press.9.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_line_semicircle_error.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_line_semicircle_error.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_vector_test.xml"
     },
@@ -166,6 +186,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_line.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_line.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\fab_label_background.xml",
@@ -248,6 +272,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\rounded_corners_f8.xml"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_round_original.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_round_original.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
@@ -290,6 +318,10 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\locus_round_click_error.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\drawable\\locus_round_click_error.png"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",
