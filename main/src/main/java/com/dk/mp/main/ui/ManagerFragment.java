@@ -130,7 +130,11 @@ public class ManagerFragment extends BaseFragment {
     public void getRecentUseApp(){
         uData.clear();
         List<OaApp> apps = mRealmHelper.queryAllOaApp();
+        int i = 0;
         for(OaApp o : apps){
+            i++;
+            if(i>4)
+                break;
             OaItemEntity oa = new OaItemEntity();
             oa.setBussessName(o.getBussessName());
             oa.setCount(o.getCount());
@@ -143,6 +147,11 @@ public class ManagerFragment extends BaseFragment {
             oa.setIdentity(o.getIdentity());
             uData.add(oa);
         }
+        if(uData.size()<=0){
+            recentUse_layout.setVisibility(View.GONE);
+        }else{
+            recentUse_layout.setVisibility(View.VISIBLE);
+        }
         uAdapter.notifyDataSetChanged();
     }
 
@@ -150,5 +159,11 @@ public class ManagerFragment extends BaseFragment {
     public void onStart() {
         super.onStart();
         getRecentUseApp();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+//        mRealmHelper.onClose();
     }
 }

@@ -72,18 +72,18 @@ public abstract class MyActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initTheme();
-        setContentView ( getLayoutID ( ) );
+//        setContentView ( getLayoutID ( ) );
         classname = this.getClass().getName();
         x = getIntent().getIntExtra("x",-10);
         y = getIntent().getIntExtra("y",-10);
 
-//        setContentView (R.layout.core);
-//        LayoutInflater inflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        View view = inflater.inflate(getLayoutID(), null);
-//        frameLayout = (FrameLayout)findViewById(R.id.id_content);
-//        frameLayout.addView(view);
-//        intentFilter2.addAction("flishall");
-//        registerReceiver(receiver, intentFilter2);
+        setContentView (R.layout.core);
+        LayoutInflater inflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(getLayoutID(), null);
+        frameLayout = (FrameLayout)findViewById(R.id.id_content);
+        frameLayout.addView(view);
+        intentFilter2.addAction("flishall");
+        registerReceiver(receiver, intentFilter2);
         getSharedPreferences();
         mRealmHelper = new RealmHelper(getContext(),preference);
         initView();
@@ -98,7 +98,7 @@ public abstract class MyActivity extends AppCompatActivity{
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (!"com.dk.mp.main.home.ui.HomeActivity".equals(classname)){
+            if (!"com.dk.mp.main.ui.MainActivity".equals(classname)){
                 finish();
             }
         }
@@ -127,7 +127,7 @@ public abstract class MyActivity extends AppCompatActivity{
      * 初始化
      */
     protected void initialize ( ) {
-//        initDock();
+        initDock();
     }
 
     /**

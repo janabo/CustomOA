@@ -1,7 +1,11 @@
 package com.dk.mp.rcap;
 
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.android.volley.VolleyError;
 import com.dk.mp.core.http.HttpUtil;
@@ -42,6 +46,16 @@ public class RcapHomeActivity extends MyActivity {
     @Override
     protected int getLayoutID() {
         return R.layout.app_rcap_home;
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(ContextCompat.getColor(this, com.dk.mp.core.R.color.colorPrimary));
+        }
     }
 
     @Override

@@ -3,8 +3,11 @@ package com.dk.mp.core.Splash;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 
 import com.android.volley.VolleyError;
@@ -13,7 +16,7 @@ import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.login.LoginActivity;
-import com.dk.mp.core.ui.MyActivity;
+import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 
 import org.json.JSONObject;
 
@@ -23,16 +26,20 @@ import java.util.Map;
 /**
  * 作者：janabo on 2016/12/14 15:08
  */
-public class SplashActivity extends MyActivity {
+public class SplashActivity extends AppCompatActivity {
+    public CoreSharedPreferencesHelper preference;
+
 
     @Override
-    protected int getLayoutID() {
-        return R.layout.mp_splash;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.mp_splash);
+        preference = new CoreSharedPreferencesHelper(this);
+        initialize();
     }
 
-    @Override
+
     protected void initialize() {
-        super.initialize();
         mHander.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -92,7 +99,7 @@ public class SplashActivity extends MyActivity {
     };
 
     private void loginSuccess() {
-        if (isPasswordEmpty(mContext)) {
+        if (isPasswordEmpty(SplashActivity.this)) {
             navigateToLock("set");
         } else {
             navigateToLock("vertify");

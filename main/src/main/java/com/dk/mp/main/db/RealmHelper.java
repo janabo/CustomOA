@@ -45,7 +45,7 @@ public class RealmHelper {
         }
         RealmResults<OaApp> jbxxss = mRealm.where(OaApp.class).equalTo("userid",uid).findAll();
         jbxxss = jbxxss.sort("id", Sort.DESCENDING);
-        for(int i=3;i<jbxxss.size();i++){
+        for(int i=5;i<jbxxss.size();i++){
             jbxxss.deleteFromRealm(i);
             i--;
         }
@@ -62,4 +62,12 @@ public class RealmHelper {
         return mRealm.copyFromRealm(jbxxs);
     }
 
+    /**
+     * 关闭数据库
+     */
+    public void onClose(){
+        if(mRealm != null){
+            mRealm.close();
+        }
+    }
 }

@@ -47,7 +47,7 @@ public class CoustomManagerUtils {
         }
 
         for (OaItemEntity t : oaItemEntityList){
-            if(oldMap.get(t.getLabel()).isEmpty()){
+            if(oldMap.get(t.getLabel())==null){
                 t.setShow("true".equals(t.getDiy())?true:false);
                 list.add(t);
             }
