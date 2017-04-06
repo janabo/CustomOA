@@ -34,11 +34,11 @@
             <include
                 layout="@layout/core_line"/>
             <TextView
-                android:layout_height="31dp"
+                android:layout_height="?attr/image31"
                 android:layout_width="match_parent"
                 android:text="最近使用的管理"
                 android:textColor="#A6A6A6"
-                android:textSize="12sp"
+                android:textSize="?attr/textSize12"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp">
                 </TextView>
@@ -64,11 +64,11 @@
             <include
                 layout="@layout/core_line"/>
             <TextView
-                android:layout_height="31dp"
+                android:layout_height="?attr/image31"
                 android:layout_width="match_parent"
                 android:text="业务管理"
                 android:textColor="#A6A6A6"
-                android:textSize="12sp"
+                android:textSize="?attr/textSize12"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp">
             </TextView>
@@ -95,11 +95,11 @@
             <include
                 layout="@layout/core_line"/>
             <TextView
-                android:layout_height="31dp"
+                android:layout_height="?attr/image31"
                 android:layout_width="match_parent"
                 android:text="其他管理"
                 android:textColor="#A6A6A6"
-                android:textSize="12sp"
+                android:textSize="?attr/textSize12"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp">
             </TextView>

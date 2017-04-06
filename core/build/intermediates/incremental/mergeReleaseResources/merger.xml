@@ -1909,7 +1909,7 @@
         <attr format="boolean" name="isSelected"/>
         <attr format="dimension" name="drawableWidth"/>
         <attr format="dimension" name="drawableHeight"/>
-    </declare-styleable><attr format="dimension" name="image13"/><attr format="dimension" name="image10"/><attr format="dimension" name="image32"/><attr format="dimension" name="image11"/><attr format="dimension" name="image30"/><attr format="dimension" name="image50"/><attr format="dimension" name="image73"/><attr format="dimension" name="image70"/><attr format="dimension" name="image71"/><attr format="dimension" name="textSize14"/><attr format="dimension" name="textSize13"/><attr format="dimension" name="textSize12"/><attr format="dimension" name="textSize18"/><attr format="dimension" name="textSize17"/><attr format="dimension" name="textSize16"/><attr format="dimension" name="textSize15"/><declare-styleable name="IndentifyingCode">
+    </declare-styleable><attr format="dimension" name="image13"/><attr format="dimension" name="image10"/><attr format="dimension" name="image32"/><attr format="dimension" name="image11"/><attr format="dimension" name="image30"/><attr format="dimension" name="image31"/><attr format="dimension" name="image50"/><attr format="dimension" name="image73"/><attr format="dimension" name="image70"/><attr format="dimension" name="image71"/><attr format="dimension" name="textSize14"/><attr format="dimension" name="textSize13"/><attr format="dimension" name="textSize12"/><attr format="dimension" name="textSize18"/><attr format="dimension" name="textSize17"/><attr format="dimension" name="textSize16"/><attr format="dimension" name="textSize15"/><declare-styleable name="IndentifyingCode">
         <attr format="integer|reference" name="codeCount"/>
         <attr format="dimension" name="textSize"/>
         <attr format="string" name="text"/>
@@ -1969,6 +1969,7 @@
         <item name="image16">16dp</item>
         <item name="image22">22dp</item>
         <item name="image30">30dp</item>
+        <item name="image31">31dp</item>
         <item name="image32">32dp</item>
         <item name="image34">34dp</item>
         <item name="image40">40dp</item>
@@ -2003,6 +2004,7 @@
         <item name="image16">20dp</item>
         <item name="image22">27.5dp</item>
         <item name="image30">37.5dp</item>
+        <item name="image31">38.75dp</item>
         <item name="image32">40dp</item>
         <item name="image34">42.5dp</item>
         <item name="image40">50dp</item>
@@ -2074,6 +2076,7 @@
         <item name="image16">18.4dp</item>
         <item name="image22">25.3dp</item>
         <item name="image30">34.5dp</item>
+        <item name="image31">35.65dp</item>
         <item name="image32">36.8dp</item>
         <item name="image34">39.1dp</item>
         <item name="image40">46dp</item>

@@ -2,7 +2,11 @@ package com.dk.mp.core.setting.ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -44,6 +48,12 @@ public class AboutActivity extends MyActivity {
     @Override
     protected void initView() {
         super.initView();
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(ContextCompat.getColor(this, com.dk.mp.core.R.color.colorPrimary));
+        }
+
         update_layout = (RelativeLayout) findViewById(R.id.update_layout);
         version = (TextView) findViewById(R.id.version);
         mTitle = (TextView) findViewById(R.id.schoolname);

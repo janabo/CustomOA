@@ -48,14 +48,17 @@ public class AddAppActivity extends MyActivity implements View.OnClickListener {
         title_bar = (RelativeLayout) findViewById(R.id.title_bar);
         title_bar.setVisibility(View.VISIBLE);
         main_error = (ErrorLayout) findViewById(R.id.main_error);
-        main_error.setVisibility(View.GONE);
         recentUse_layout = (LinearLayout) findViewById(R.id.recentUse_layout);
         oprition_layout = (LinearLayout) findViewById(R.id.oprition_layout);
         other_layout = (LinearLayout) findViewById(R.id.other_layout);
         recentUse_layout.setVisibility(View.GONE);
         other_layout.setVisibility(View.GONE);
         oprition_recycler_view = (RecyclerView) findViewById(R.id.oprition_recycler_view);
-
+        if(list.size()>0){
+            main_error.setErrorType(ErrorLayout.HIDE_LAYOUT);
+        }else{
+            main_error.setErrorType(ErrorLayout.NODATA);
+        }
         RecycleViewDivider vDivider = new RecycleViewDivider(mContext, GridLayoutManager.VERTICAL, 1, Color.rgb(201, 201, 201));
         RecycleViewDivider hDivider = new RecycleViewDivider(mContext, GridLayoutManager.HORIZONTAL, 1, Color.rgb(201, 201, 201));
         RecyclerView.ItemAnimator animator = new DefaultItemAnimator();

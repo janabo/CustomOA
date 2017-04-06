@@ -17,6 +17,7 @@
     <attr name="image16" format="dimension" />
     <attr name="image22" format="dimension" />
     <attr name="image30" format="dimension" />
+    <attr name="image31" format="dimension" />
     <attr name="image32" format="dimension" />
     <attr name="image34" format="dimension" />
     <attr name="image40" format="dimension" />

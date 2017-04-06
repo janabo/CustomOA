@@ -15,6 +15,7 @@ import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.setting.ui.SettingActivity;
 import com.dk.mp.core.ui.BaseFragment;
 import com.dk.mp.core.ui.MyActivity;
+import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
 import com.dk.mp.txl.ui.TxlFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -39,6 +40,7 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
     private TextView title;
     private SimpleDraweeView loginmess;
     private ImageView search;
+    private String theme="标准";
 
     @Override
     protected int getLayoutID() {
@@ -51,7 +53,7 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
     @Override
     protected void initView() {
         super.initView();
-
+        theme =  getSharedPreferences().getValue("font_type");
         mViewPager = (ViewPager) findViewById(R.id.vp_view);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
 
@@ -164,4 +166,25 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
             return super.onKeyDown(keyCode, event);
         }
     }
+
+
+    public void reload() {
+        Intent intent = getIntent();
+        overridePendingTransition(0, 0);//不设置进入退出动画
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (StringUtils.isNotEmpty(theme) && !theme.equals(getSharedPreferences().getValue("font_type"))) {
+            reload();
+        } else if (!StringUtils.isNotEmpty(theme) && StringUtils.isNotEmpty(getSharedPreferences().getValue("font_type"))) {
+            reload();
+        }
+    }
+
 }

@@ -121,7 +121,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         if (list.size() == 0) {
-            ((FootView)holder).linearLayout.setVisibility(View.GONE);
+//            ((FootView)holder).linearLayout.setVisibility(View.GONE);
         } else if (position == list.size()){
             ((FootView)holder).linearLayout.setVisibility(View.VISIBLE);
         }

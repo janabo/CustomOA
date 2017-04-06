@@ -10,6 +10,7 @@
     <attr format="dimension" name="image16"/>
     <attr format="dimension" name="image22"/>
     <attr format="dimension" name="image30"/>
+    <attr format="dimension" name="image31"/>
     <attr format="dimension" name="image32"/>
     <attr format="dimension" name="image34"/>
     <attr format="dimension" name="image40"/>
@@ -780,7 +781,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -1824,17 +1825,17 @@
     </style>
     <style name="MyDialog" parent="@android:style/Theme.DeviceDefault.DialogWhenLarge">
         <item name="android:windowFrame">@null</item>
-        
+        <!-- 边框 -->
         <item name="android:windowIsFloating">true</item>
-        
+        <!-- 是否浮现在activity之上 -->
         <item name="android:windowIsTranslucent">true</item>
-        
+        <!-- 半透明 -->
         <item name="android:windowNoTitle">true</item>
-        
+        <!-- 无标题 -->
         <item name="android:windowBackground">@color/transparent</item>
-        
+        <!-- 背景透明 -->
         <item name="android:backgroundDimEnabled">true</item>
-        
+        <!-- 模糊 -->
     </style>
     <style name="NoTitleTranslucentTheme" parent="FullScreenTheme">
         <item name="android:windowBackground">@color/black50</item>
@@ -2447,6 +2448,7 @@
         <item name="image16">20dp</item>
         <item name="image22">27.5dp</item>
         <item name="image30">37.5dp</item>
+        <item name="image31">38.75dp</item>
         <item name="image32">40dp</item>
         <item name="image34">42.5dp</item>
         <item name="image40">50dp</item>
@@ -2482,6 +2484,7 @@
         <item name="image16">18.4dp</item>
         <item name="image22">25.3dp</item>
         <item name="image30">34.5dp</item>
+        <item name="image31">35.65dp</item>
         <item name="image32">36.8dp</item>
         <item name="image34">39.1dp</item>
         <item name="image40">46dp</item>
@@ -2517,6 +2520,7 @@
         <item name="image16">16dp</item>
         <item name="image22">22dp</item>
         <item name="image30">30dp</item>
+        <item name="image31">31dp</item>
         <item name="image32">32dp</item>
         <item name="image34">34dp</item>
         <item name="image40">40dp</item>

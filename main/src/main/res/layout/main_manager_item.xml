@@ -8,8 +8,8 @@
 
         <ImageView
             android:id="@+id/item_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="?attr/image40"
+            android:layout_height="?attr/image40"
             android:layout_gravity="center_horizontal"
             android:scaleType="centerCrop"/>
 
@@ -23,12 +23,12 @@
             android:paddingBottom="15dip"
             android:text=""
             android:textColor="#212121"
-            android:textSize="12sp"/>
+            android:textSize="?attr/textSize12"/>
 
     </LinearLayout>
 
     <ImageView android:id="@+id/gragItemViewAdd"
-        android:layout_width="22dp" android:layout_height="22dp"
+        android:layout_width="?attr/image22" android:layout_height="?attr/image22"
         android:layout_gravity="right" android:src="@mipmap/addapp"
         android:background="@null"
         android:paddingRight="10dp"

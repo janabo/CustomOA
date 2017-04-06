@@ -20,7 +20,7 @@
             android:elevation="3dp">
             <Button
                 android:id="@+id/back"
-                style="@style/but_back"
+                style="@style/rcap_but_back"
                 android:layout_width="70dip"
                 android:layout_height="48dip"
                 android:layout_alignParentLeft="true"

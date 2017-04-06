@@ -108,6 +108,15 @@ public class ManagerFragment extends BaseFragment {
                                 else
                                     oData.add(o);
                             }
+                            if(bData.size()>0)
+                                oprition_layout.setVisibility(View.VISIBLE);
+                            else
+                                oprition_layout.setVisibility(View.GONE);
+                            if(oData.size()>0)
+                                other_layout.setVisibility(View.VISIBLE);
+                            else
+                                other_layout.setVisibility(View.GONE);
+
                             bAdapter.notifyDataSetChanged();
                             oAdapter.notifyDataSetChanged();
                         }

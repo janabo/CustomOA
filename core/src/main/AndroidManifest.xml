@@ -19,6 +19,9 @@
         <activity android:name=".setting.ui.UserInfoActivity"
             android:theme="@style/Transparent"></activity>
 
+        <activity android:name=".setting.ui.AboutActivity"
+            android:theme="@style/Transparent"></activity>
+
     </application>
 
 </manifest>
