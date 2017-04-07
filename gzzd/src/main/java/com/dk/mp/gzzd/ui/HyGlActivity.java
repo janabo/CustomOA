@@ -85,6 +85,7 @@ public class HyGlActivity extends MyActivity{
             public void onTimeSelect(Date date, View v) {//选中事件回调
                 String time = TimeUtils.getDay(date);
                 setTitle(time+" "+TimeUtils.getWeekDayInt2Str(TimeUtils.getWeek(time)));
+                setMUrl("apps/oa/hysap?date="+time);
             }
         })      .setType(TimePickerView.Type.YEAR_MONTH_DAY)
                 .setDate(selectedDate)

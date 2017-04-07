@@ -19,12 +19,12 @@ public final class R {
         public static int rollviewpager_play_delay = 0x7f010150;
     }
     public static final class id {
-        public static int center = 0x7f0d002a;
-        public static int left = 0x7f0d002f;
-        public static int number = 0x7f0d004a;
-        public static int point = 0x7f0d004b;
-        public static int right = 0x7f0d0030;
-        public static int viewpager_inner = 0x7f0d0011;
+        public static int center = 0x7f0c0028;
+        public static int left = 0x7f0c002d;
+        public static int number = 0x7f0c0048;
+        public static int point = 0x7f0c0049;
+        public static int right = 0x7f0c002e;
+        public static int viewpager_inner = 0x7f0c000f;
     }
     public static final class styleable {
         public static int[] RollViewPager = { 0x7f01014a, 0x7f01014b, 0x7f01014c, 0x7f01014d, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152 };

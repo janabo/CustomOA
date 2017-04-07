@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_popup_enter.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\left_out_animation.xml",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\anim\\left_out_animation.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_down_in.xml",
@@ -13,19 +13,19 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_snackbar_out.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_slide_out_top.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_fab_out.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_fab_out.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_fade_in.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
@@ -33,11 +33,11 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_popup_exit.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_fade_out.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_left_out.xml",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_snackbar_in.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_bottom.xml",
@@ -65,11 +65,11 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_fab_in.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_fab_in.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\slide_up.xml",
@@ -85,11 +85,11 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_right_in.xml",
@@ -101,7 +101,7 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\push_down_out.xml",
@@ -129,7 +129,7 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_slide_in_top.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_bottom.xml",
@@ -137,10 +137,10 @@
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\anim\\abc_slide_out_bottom.xml"
+        "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\anim\\abc_slide_out_bottom.xml"
     }
 ]

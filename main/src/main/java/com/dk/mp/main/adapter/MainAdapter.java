@@ -76,12 +76,14 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                 @Override
                 public void onClick(View view) {
                     OaItemEntity bean = list.get(getLayoutPosition());
-                    insertRealm(bean);
-                    Intent intent  = new Intent(getContext(), HttpWebActivity.class);
-                    intent.putExtra("title",bean.getTitle());
-                    intent.putExtra("url",bean.getDetailUrl()+"&token="+helper.getLoginMsg().getUid());
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(intent);
+                    if(StringUtils.isNotEmpty(bean.getCount()) && Integer.parseInt(bean.getCount())>0) {
+                        insertRealm(bean);
+                        Intent intent = new Intent(getContext(), HttpWebActivity.class);
+                        intent.putExtra("title", bean.getTitle());
+                        intent.putExtra("url", bean.getDetailUrl() + "&token=" + helper.getLoginMsg().getUid());
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                    }
                 }
             });
 

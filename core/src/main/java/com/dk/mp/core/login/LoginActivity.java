@@ -22,6 +22,7 @@ import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.setting.ui.SettingActivity;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
+import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.util.SnackBarUtil;
 import com.dk.mp.core.util.encrypt.Base64Utils;
 import com.dk.mp.core.view.DrawCheckMarkView;
@@ -152,6 +153,11 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
         hideKeyb(v);
         ok_text.setVisibility(View.GONE);
         progress.setVisibility(View.VISIBLE);
+        if(!DeviceUtil.checkNet()){
+            errorInfo();
+            SnackBarUtil.showShort(putview,getReString(R.string.net_no2));
+            return;
+        }
         HttpUtil.getInstance().postJsonObjectRequest("login", map, new HttpListener<JSONObject>() {
             @Override
             public void onSuccess(JSONObject result)  {

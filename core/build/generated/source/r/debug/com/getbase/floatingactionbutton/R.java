@@ -26,30 +26,30 @@ public final class R {
         public static int fab_title = 0x7f010106;
     }
     public static final class dimen {
-        public static int fab_actions_spacing = 0x7f080076;
-        public static int fab_icon_size = 0x7f080077;
-        public static int fab_labels_margin = 0x7f080078;
-        public static int fab_plus_icon_size = 0x7f080079;
-        public static int fab_plus_icon_stroke = 0x7f08007a;
-        public static int fab_shadow_offset = 0x7f08007b;
-        public static int fab_shadow_radius = 0x7f08007c;
-        public static int fab_size_mini = 0x7f08007d;
-        public static int fab_size_normal = 0x7f08007e;
-        public static int fab_stroke_width = 0x7f08007f;
+        public static int fab_actions_spacing = 0x7f070076;
+        public static int fab_icon_size = 0x7f070077;
+        public static int fab_labels_margin = 0x7f070078;
+        public static int fab_plus_icon_size = 0x7f070079;
+        public static int fab_plus_icon_stroke = 0x7f07007a;
+        public static int fab_shadow_offset = 0x7f07007b;
+        public static int fab_shadow_radius = 0x7f07007c;
+        public static int fab_size_mini = 0x7f07007d;
+        public static int fab_size_normal = 0x7f07007e;
+        public static int fab_stroke_width = 0x7f07007f;
     }
     public static final class drawable {
-        public static int fab_bg_mini = 0x7f020068;
-        public static int fab_bg_normal = 0x7f020069;
+        public static int fab_bg_mini = 0x7f020064;
+        public static int fab_bg_normal = 0x7f020065;
     }
     public static final class id {
-        public static int down = 0x7f0d003b;
-        public static int fab_expand_menu_button = 0x7f0d0004;
-        public static int fab_label = 0x7f0d0005;
-        public static int left = 0x7f0d002f;
-        public static int mini = 0x7f0d003a;
-        public static int normal = 0x7f0d0013;
-        public static int right = 0x7f0d0030;
-        public static int up = 0x7f0d000f;
+        public static int down = 0x7f0c0039;
+        public static int fab_expand_menu_button = 0x7f0c0004;
+        public static int fab_label = 0x7f0c0005;
+        public static int left = 0x7f0c002d;
+        public static int mini = 0x7f0c0038;
+        public static int normal = 0x7f0c0011;
+        public static int right = 0x7f0c002e;
+        public static int up = 0x7f0c000d;
     }
     public static final class styleable {
         public static int[] AddFloatingActionButton = { 0x7f010050 };
