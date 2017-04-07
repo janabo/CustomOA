@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="support-media-compat-25.2.0">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/578019e77a9c0a9fc6e8dfe24fea0de26e60b704/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+      <root url="jar://D:/project/adt-bundle-windows-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.2.0/support-media-compat-25.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

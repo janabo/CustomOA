@@ -12,16 +12,16 @@
         "source": "C:\\Users\\admin\\.android\\build-cache\\b134c3f815235d35532e17b773f672c1837769fa\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\leak_canary_heap_dump_toast.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\dc157e49f943965988f7507f7387fff95ca04a97\\output\\res\\layout\\leak_canary_heap_dump_toast.xml"
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\mp_userinfo.xml",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\layout\\mp_userinfo.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\012560fd20f0c4a11661614126e3af26b303c0fd\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\mp_userinfo.xml",
-        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\layout\\mp_userinfo.xml"
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\leak_canary_heap_dump_toast.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\dc157e49f943965988f7507f7387fff95ca04a97\\output\\res\\layout\\leak_canary_heap_dump_toast.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\layout\\abc_dialog_title_material.xml",

@@ -38,8 +38,9 @@ public class RealmHelper {
      * 新增星标同事
      * @return
      */
-    public List<XbPersons> queryALlXb(){
-        RealmResults<XbPersons> jbxxs = mRealm.where(XbPersons.class).findAll();
+    public List<XbPersons> queryALlXb(String loginname){
+        RealmResults<XbPersons> jbxxs = mRealm.where(XbPersons.class).equalTo("loginname",loginname).findAll();
+//        RealmResults<XbPersons> jbxxs = mRealm.where(XbPersons.class).findAll();
         return mRealm.copyFromRealm(jbxxs);
     }
 
@@ -65,12 +66,12 @@ public class RealmHelper {
     /**
      * delete星标同事 （删）
      */
-    public void deleteALlXb() {
-        RealmResults<Jbxx> d = mRealm.where(Jbxx.class).findAll();
-        mRealm.beginTransaction();
-        d.deleteAllFromRealm();
-        mRealm.commitTransaction();
-    }
+//    public void deleteALlXb() {
+//        RealmResults<Jbxx> d = mRealm.where(Jbxx.class).findAll();
+//        mRealm.beginTransaction();
+//        d.deleteAllFromRealm();
+//        mRealm.commitTransaction();
+//    }
 
 
     /**

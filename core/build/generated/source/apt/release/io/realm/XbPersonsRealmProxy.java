@@ -41,9 +41,10 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         public long departmentidIndex;
         public long departmentnameIndex;
         public long phonesIndex;
+        public long loginnameIndex;
 
         XbPersonsColumnInfo(String path, Table table) {
-            final Map<String, Long> indicesMap = new HashMap<String, Long>(6);
+            final Map<String, Long> indicesMap = new HashMap<String, Long>(7);
             this.prikeyIndex = getValidColumnIndex(path, table, "XbPersons", "prikey");
             indicesMap.put("prikey", this.prikeyIndex);
             this.idIndex = getValidColumnIndex(path, table, "XbPersons", "id");
@@ -56,6 +57,8 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             indicesMap.put("departmentname", this.departmentnameIndex);
             this.phonesIndex = getValidColumnIndex(path, table, "XbPersons", "phones");
             indicesMap.put("phones", this.phonesIndex);
+            this.loginnameIndex = getValidColumnIndex(path, table, "XbPersons", "loginname");
+            indicesMap.put("loginname", this.loginnameIndex);
 
             setIndicesMap(indicesMap);
         }
@@ -69,6 +72,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             this.departmentidIndex = otherInfo.departmentidIndex;
             this.departmentnameIndex = otherInfo.departmentnameIndex;
             this.phonesIndex = otherInfo.phonesIndex;
+            this.loginnameIndex = otherInfo.loginnameIndex;
 
             setIndicesMap(otherInfo.getIndicesMap());
         }
@@ -90,6 +94,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         fieldNames.add("departmentid");
         fieldNames.add("departmentname");
         fieldNames.add("phones");
+        fieldNames.add("loginname");
         FIELD_NAMES = Collections.unmodifiableList(fieldNames);
     }
 
@@ -326,6 +331,44 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         proxyState.getRow$realm().setString(columnInfo.phonesIndex, value);
     }
 
+    @SuppressWarnings("cast")
+    public String realmGet$loginname() {
+        if (proxyState == null) {
+            // Called from model's constructor. Inject context.
+            injectObjectContext();
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.loginnameIndex);
+    }
+
+    public void realmSet$loginname(String value) {
+        if (proxyState == null) {
+            // Called from model's constructor. Inject context.
+            injectObjectContext();
+        }
+
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.loginnameIndex, row.getIndex(), true);
+                return;
+            }
+            row.getTable().setString(columnInfo.loginnameIndex, row.getIndex(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.loginnameIndex);
+            return;
+        }
+        proxyState.getRow$realm().setString(columnInfo.loginnameIndex, value);
+    }
+
     public static RealmObjectSchema createRealmObjectSchema(RealmSchema realmSchema) {
         if (!realmSchema.contains("XbPersons")) {
             RealmObjectSchema realmObjectSchema = realmSchema.create("XbPersons");
@@ -335,6 +378,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             realmObjectSchema.add(new Property("departmentid", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
             realmObjectSchema.add(new Property("departmentname", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
             realmObjectSchema.add(new Property("phones", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
+            realmObjectSchema.add(new Property("loginname", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED));
             return realmObjectSchema;
         }
         return realmSchema.get("XbPersons");
@@ -349,6 +393,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             table.addColumn(RealmFieldType.STRING, "departmentid", Table.NULLABLE);
             table.addColumn(RealmFieldType.STRING, "departmentname", Table.NULLABLE);
             table.addColumn(RealmFieldType.STRING, "phones", Table.NULLABLE);
+            table.addColumn(RealmFieldType.STRING, "loginname", Table.NULLABLE);
             table.addSearchIndex(table.getColumnIndex("prikey"));
             table.setPrimaryKey("prikey");
             return table;
@@ -360,18 +405,18 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         if (sharedRealm.hasTable("class_XbPersons")) {
             Table table = sharedRealm.getTable("class_XbPersons");
             final long columnCount = table.getColumnCount();
-            if (columnCount != 6) {
-                if (columnCount < 6) {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 6 but was " + columnCount);
+            if (columnCount != 7) {
+                if (columnCount < 7) {
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is less than expected - expected 7 but was " + columnCount);
                 }
                 if (allowExtraColumns) {
-                    RealmLog.debug("Field count is more than expected - expected 6 but was %1$d", columnCount);
+                    RealmLog.debug("Field count is more than expected - expected 7 but was %1$d", columnCount);
                 } else {
-                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 6 but was " + columnCount);
+                    throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field count is more than expected - expected 7 but was " + columnCount);
                 }
             }
             Map<String, RealmFieldType> columnTypes = new HashMap<String, RealmFieldType>();
-            for (long i = 0; i < 6; i++) {
+            for (long i = 0; i < 7; i++) {
                 columnTypes.put(table.getColumnName(i), table.getColumnType(i));
             }
 
@@ -436,6 +481,15 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             }
             if (!table.isColumnNullable(columnInfo.phonesIndex)) {
                 throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'phones' is required. Either set @Required to field 'phones' or migrate using RealmObjectSchema.setNullable().");
+            }
+            if (!columnTypes.containsKey("loginname")) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Missing field 'loginname' in existing Realm file. Either remove field or migrate using io.realm.internal.Table.addColumn().");
+            }
+            if (columnTypes.get("loginname") != RealmFieldType.STRING) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Invalid type 'String' for field 'loginname' in existing Realm file.");
+            }
+            if (!table.isColumnNullable(columnInfo.loginnameIndex)) {
+                throw new RealmMigrationNeededException(sharedRealm.getPath(), "Field 'loginname' is required. Either set @Required to field 'loginname' or migrate using RealmObjectSchema.setNullable().");
             }
             return columnInfo;
         } else {
@@ -521,6 +575,13 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
                 ((XbPersonsRealmProxyInterface) obj).realmSet$phones((String) json.getString("phones"));
             }
         }
+        if (json.has("loginname")) {
+            if (json.isNull("loginname")) {
+                ((XbPersonsRealmProxyInterface) obj).realmSet$loginname(null);
+            } else {
+                ((XbPersonsRealmProxyInterface) obj).realmSet$loginname((String) json.getString("loginname"));
+            }
+        }
         return obj;
     }
 
@@ -575,6 +636,13 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
                     ((XbPersonsRealmProxyInterface) obj).realmSet$phones(null);
                 } else {
                     ((XbPersonsRealmProxyInterface) obj).realmSet$phones((String) reader.nextString());
+                }
+            } else if (name.equals("loginname")) {
+                if (reader.peek() == JsonToken.NULL) {
+                    reader.skipValue();
+                    ((XbPersonsRealmProxyInterface) obj).realmSet$loginname(null);
+                } else {
+                    ((XbPersonsRealmProxyInterface) obj).realmSet$loginname((String) reader.nextString());
                 }
             } else {
                 reader.skipValue();
@@ -646,6 +714,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             ((XbPersonsRealmProxyInterface) realmObject).realmSet$departmentid(((XbPersonsRealmProxyInterface) newObject).realmGet$departmentid());
             ((XbPersonsRealmProxyInterface) realmObject).realmSet$departmentname(((XbPersonsRealmProxyInterface) newObject).realmGet$departmentname());
             ((XbPersonsRealmProxyInterface) realmObject).realmSet$phones(((XbPersonsRealmProxyInterface) newObject).realmGet$phones());
+            ((XbPersonsRealmProxyInterface) realmObject).realmSet$loginname(((XbPersonsRealmProxyInterface) newObject).realmGet$loginname());
             return realmObject;
         }
     }
@@ -690,6 +759,10 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         String realmGet$phones = ((XbPersonsRealmProxyInterface)object).realmGet$phones();
         if (realmGet$phones != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.phonesIndex, rowIndex, realmGet$phones, false);
+        }
+        String realmGet$loginname = ((XbPersonsRealmProxyInterface)object).realmGet$loginname();
+        if (realmGet$loginname != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.loginnameIndex, rowIndex, realmGet$loginname, false);
         }
         return rowIndex;
     }
@@ -739,6 +812,10 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
                 String realmGet$phones = ((XbPersonsRealmProxyInterface)object).realmGet$phones();
                 if (realmGet$phones != null) {
                     Table.nativeSetString(tableNativePtr, columnInfo.phonesIndex, rowIndex, realmGet$phones, false);
+                }
+                String realmGet$loginname = ((XbPersonsRealmProxyInterface)object).realmGet$loginname();
+                if (realmGet$loginname != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.loginnameIndex, rowIndex, realmGet$loginname, false);
                 }
             }
         }
@@ -792,6 +869,12 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
             Table.nativeSetString(tableNativePtr, columnInfo.phonesIndex, rowIndex, realmGet$phones, false);
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.phonesIndex, rowIndex, false);
+        }
+        String realmGet$loginname = ((XbPersonsRealmProxyInterface)object).realmGet$loginname();
+        if (realmGet$loginname != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.loginnameIndex, rowIndex, realmGet$loginname, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.loginnameIndex, rowIndex, false);
         }
         return rowIndex;
     }
@@ -850,6 +933,12 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
                 } else {
                     Table.nativeSetNull(tableNativePtr, columnInfo.phonesIndex, rowIndex, false);
                 }
+                String realmGet$loginname = ((XbPersonsRealmProxyInterface)object).realmGet$loginname();
+                if (realmGet$loginname != null) {
+                    Table.nativeSetString(tableNativePtr, columnInfo.loginnameIndex, rowIndex, realmGet$loginname, false);
+                } else {
+                    Table.nativeSetNull(tableNativePtr, columnInfo.loginnameIndex, rowIndex, false);
+                }
             }
         }
     }
@@ -878,6 +967,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         ((XbPersonsRealmProxyInterface) unmanagedObject).realmSet$departmentid(((XbPersonsRealmProxyInterface) realmObject).realmGet$departmentid());
         ((XbPersonsRealmProxyInterface) unmanagedObject).realmSet$departmentname(((XbPersonsRealmProxyInterface) realmObject).realmGet$departmentname());
         ((XbPersonsRealmProxyInterface) unmanagedObject).realmSet$phones(((XbPersonsRealmProxyInterface) realmObject).realmGet$phones());
+        ((XbPersonsRealmProxyInterface) unmanagedObject).realmSet$loginname(((XbPersonsRealmProxyInterface) realmObject).realmGet$loginname());
         return unmanagedObject;
     }
 
@@ -887,6 +977,7 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         ((XbPersonsRealmProxyInterface) realmObject).realmSet$departmentid(((XbPersonsRealmProxyInterface) newObject).realmGet$departmentid());
         ((XbPersonsRealmProxyInterface) realmObject).realmSet$departmentname(((XbPersonsRealmProxyInterface) newObject).realmGet$departmentname());
         ((XbPersonsRealmProxyInterface) realmObject).realmSet$phones(((XbPersonsRealmProxyInterface) newObject).realmGet$phones());
+        ((XbPersonsRealmProxyInterface) realmObject).realmSet$loginname(((XbPersonsRealmProxyInterface) newObject).realmGet$loginname());
         return realmObject;
     }
 
@@ -918,6 +1009,10 @@ public class XbPersonsRealmProxy extends com.dk.mp.core.entity.XbPersons
         stringBuilder.append(",");
         stringBuilder.append("{phones:");
         stringBuilder.append(realmGet$phones() != null ? realmGet$phones() : "null");
+        stringBuilder.append("}");
+        stringBuilder.append(",");
+        stringBuilder.append("{loginname:");
+        stringBuilder.append(realmGet$loginname() != null ? realmGet$loginname() : "null");
         stringBuilder.append("}");
         stringBuilder.append("]");
         return stringBuilder.toString();

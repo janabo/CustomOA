@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.android.volley.VolleyError;
 import com.dk.mp.core.entity.Department;
 import com.dk.mp.core.entity.Jbxx;
+import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.entity.XbPersons;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
@@ -54,8 +55,10 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
     TxlAdapter bAdapter;
     List<Jbxx> mList = new ArrayList<>();//星标同事
     List<Department> mData = new ArrayList<>();//所有部门
+
     private RealmHelper mRealmHelper;
     private boolean isxb = true;
+    String uid = "guest";
 
     @Override
     protected int getLayoutId() {
@@ -68,7 +71,11 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
         mRealmHelper = new RealmHelper(getContext());
         initView(view);
         error_layout.setErrorType(ErrorLayout.LOADDATA);
-        getXb();
+        LoginMsg loginMsg = getSharedPreferences().getLoginMsg();
+        if(loginMsg!=null){
+            uid = loginMsg.getUid();
+        }
+        getXb(uid);
         if(DeviceUtil.checkNet()) {//判断是否有网络
             getData();
         }else{
@@ -114,7 +121,11 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (action.equals("txl_persons")) {
-                getXb();
+                LoginMsg loginMsg = getSharedPreferences().getLoginMsg();
+                if(loginMsg!=null){
+                    uid = loginMsg.getUid();
+                }
+                getXb(uid);
             }
         }
     };
@@ -189,8 +200,8 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
     /**
      * 获取星标用户
      */
-    public void getXb(){
-        List<XbPersons> xbtss = mRealmHelper.queryALlXb();
+    public void getXb(String uid){
+        List<XbPersons> xbtss = mRealmHelper.queryALlXb(uid);
         if(xbtss!= null && xbtss.size()>0){
             isxb = true;
             xbts_lin.setVisibility(View.VISIBLE);
@@ -201,8 +212,9 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
                 j.setDepartmentname(x.getDepartmentname());
                 j.setDepartmentid(x.getDepartmentid());
                 j.setName(x.getName());
-                j.setPrikey(x.getPrikey());
+                j.setPrikey(x.getPrikey()+x.getLoginname());
                 j.setPhones(x.getPhones());
+                j.setLoginname(x.getLoginname());
                 jbxxs.add(j);
             }
             mList.clear();

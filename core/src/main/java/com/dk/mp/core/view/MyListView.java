@@ -225,7 +225,7 @@ public class MyListView extends SwipeRefreshLayout {
         @Override
         public void onRefresh() {
             pageNo = 1;
-//            list.clear();
+            list.clear();
             adapterInterface.loadDatas();
         }
     };

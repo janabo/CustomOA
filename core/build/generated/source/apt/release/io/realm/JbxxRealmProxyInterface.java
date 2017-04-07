@@ -14,4 +14,6 @@ public interface JbxxRealmProxyInterface {
     public void realmSet$departmentname(String value);
     public String realmGet$phones();
     public void realmSet$phones(String value);
+    public String realmGet$loginname();
+    public void realmSet$loginname(String value);
 }

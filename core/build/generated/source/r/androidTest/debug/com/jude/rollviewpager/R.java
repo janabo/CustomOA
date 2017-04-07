@@ -8,15 +8,15 @@ package com.jude.rollviewpager;
 
 public final class R {
     public static final class attr {
-        public static final int rollviewpager_hint_alpha = 0x7f010151;
-        public static final int rollviewpager_hint_color = 0x7f010150;
-        public static final int rollviewpager_hint_gravity = 0x7f01014a;
-        public static final int rollviewpager_hint_mode = 0x7f010149;
-        public static final int rollviewpager_hint_paddingBottom = 0x7f01014e;
-        public static final int rollviewpager_hint_paddingLeft = 0x7f01014c;
-        public static final int rollviewpager_hint_paddingRight = 0x7f01014b;
-        public static final int rollviewpager_hint_paddingTop = 0x7f01014d;
-        public static final int rollviewpager_play_delay = 0x7f01014f;
+        public static final int rollviewpager_hint_alpha = 0x7f010152;
+        public static final int rollviewpager_hint_color = 0x7f010151;
+        public static final int rollviewpager_hint_gravity = 0x7f01014b;
+        public static final int rollviewpager_hint_mode = 0x7f01014a;
+        public static final int rollviewpager_hint_paddingBottom = 0x7f01014f;
+        public static final int rollviewpager_hint_paddingLeft = 0x7f01014d;
+        public static final int rollviewpager_hint_paddingRight = 0x7f01014c;
+        public static final int rollviewpager_hint_paddingTop = 0x7f01014e;
+        public static final int rollviewpager_play_delay = 0x7f010150;
     }
     public static final class id {
         public static final int center = 0x7f0d002a;
@@ -27,7 +27,7 @@ public final class R {
         public static final int viewpager_inner = 0x7f0d0011;
     }
     public static final class styleable {
-        public static final int[] RollViewPager = { 0x7f010149, 0x7f01014a, 0x7f01014b, 0x7f01014c, 0x7f01014d, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151 };
+        public static final int[] RollViewPager = { 0x7f01014a, 0x7f01014b, 0x7f01014c, 0x7f01014d, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152 };
         public static final int RollViewPager_rollviewpager_hint_alpha = 8;
         public static final int RollViewPager_rollviewpager_hint_color = 7;
         public static final int RollViewPager_rollviewpager_hint_gravity = 1;

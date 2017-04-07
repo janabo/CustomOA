@@ -67,8 +67,8 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
     }
 
     @Override
-    protected void initialize() {
-        super.initialize();
+    protected void initView() {
+        super.initView();
         setTitle("登录");
         if (getIntent().hasExtra("from")) {
             from = getIntent().getStringExtra("from");

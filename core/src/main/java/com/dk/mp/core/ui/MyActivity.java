@@ -76,19 +76,21 @@ public abstract class MyActivity extends AppCompatActivity{
         classname = this.getClass().getName();
         x = getIntent().getIntExtra("x",-10);
         y = getIntent().getIntExtra("y",-10);
-
-        setContentView (R.layout.core);
-        LayoutInflater inflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(getLayoutID(), null);
-        frameLayout = (FrameLayout)findViewById(R.id.id_content);
-        frameLayout.addView(view);
+        if(getLayoutID() == R.layout.mp_login) {
+            setContentView ( getLayoutID ( ) );
+        }else{
+            setContentView(R.layout.core);
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View view = inflater.inflate(getLayoutID(), null);
+            frameLayout = (FrameLayout) findViewById(R.id.id_content);
+            frameLayout.addView(view);
+            initialize ( );
+        }
         intentFilter2.addAction("flishall");
         registerReceiver(receiver, intentFilter2);
         getSharedPreferences();
         mRealmHelper = new RealmHelper(getContext(),preference);
         initView();
-        initialize ( );
-
         //在自己的应用初始Activity中加入如下两行代码
 //        RefWatcher refWatcher = MyApplication.getRefWatcher(this);
 //        refWatcher.watch(this);

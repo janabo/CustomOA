@@ -22,8 +22,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dk.mp.core.entity.Jbxx;
+import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.entity.XbPersons;
 import com.dk.mp.core.util.BroadcastUtil;
+import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.core.view.RecycleViewDivider;
@@ -53,6 +55,8 @@ public class PhonesDialog{
     LinearLayout expro_lin,xb_lin;
     RealmHelper realmHelper;
     Jbxx jbxx;
+    final String finalUid;
+    public CoreSharedPreferencesHelper preference;
 
     public PhonesDialog(final Context context, final Activity activity){
         this.context = context;
@@ -69,17 +73,24 @@ public class PhonesDialog{
         expro_lin = (LinearLayout) window.findViewById(R.id.expro_lin);
         xb_lin = (LinearLayout) window.findViewById(R.id.xb_lin);
         realmHelper = new RealmHelper(context);
+        preference = new CoreSharedPreferencesHelper(context);
+        LoginMsg loginMsg = preference.getLoginMsg();
+        String uid = "guest";
+        if(loginMsg != null){
+            uid = loginMsg.getUid();
+        }
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 cancel();
             }
         });
+        finalUid = uid;
         xb_lin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(realmHelper.queryPersonsByKey(jbxx.getPrikey()) !=null) {
+                if(realmHelper.queryPersonsByKey(jbxx.getPrikey()+finalUid) !=null) {
                     mXb.setBackgroundResource(R.mipmap.icon_unsc);
-                    realmHelper.deleteXbById(jbxx.getPrikey());
+                    realmHelper.deleteXbById(jbxx.getPrikey()+finalUid);
                 } else {
                     mXb.setBackgroundResource(R.mipmap.icon_sc);
                     XbPersons persons = new XbPersons();
@@ -87,8 +98,9 @@ public class PhonesDialog{
                     persons.setDepartmentname(jbxx.getDepartmentname());
                     persons.setDepartmentid(jbxx.getDepartmentid());
                     persons.setName(jbxx.getName());
-                    persons.setPrikey(jbxx.getPrikey());
+                    persons.setPrikey(jbxx.getPrikey()+finalUid);
                     persons.setPhones(jbxx.getPhones());
+                    persons.setLoginname(finalUid);
                     realmHelper.addXb(persons);
                 }
                 BroadcastUtil.sendBroadcast(context, "txl_persons");
@@ -125,7 +137,7 @@ public class PhonesDialog{
         department.setText(j.getDepartmentname());
         mRecyclerView.setHasFixedSize ( true );
         mRecyclerView.setLayoutManager ( new LinearLayoutManager( mContext ) );
-        if(realmHelper.queryPersonsByKey(jbxx.getPrikey()) !=null)
+        if(realmHelper.queryPersonsByKey(jbxx.getPrikey()+finalUid) !=null)
             mXb.setBackgroundResource(R.mipmap.icon_sc);
         else
             mXb.setBackgroundResource(R.mipmap.icon_unsc);

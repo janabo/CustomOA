@@ -35,6 +35,9 @@
         <activity
             android:name="com.dk.mp.core.setting.ui.UserInfoActivity"
             android:theme="@style/Transparent" />
+        <activity
+            android:name="com.dk.mp.core.setting.ui.AboutActivity"
+            android:theme="@style/Transparent" />
     </application>
 
 </manifest>

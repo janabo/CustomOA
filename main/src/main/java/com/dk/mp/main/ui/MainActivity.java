@@ -2,8 +2,11 @@ package com.dk.mp.main.ui;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +17,7 @@ import com.dk.mp.core.adapter.MyFragmentPagerAdapter;
 import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.setting.ui.SettingActivity;
 import com.dk.mp.core.ui.BaseFragment;
-import com.dk.mp.core.ui.MyActivity;
+import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
 import com.dk.mp.txl.ui.TxlFragment;
@@ -23,7 +26,9 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedListener , View.OnClickListener{
+import static com.dk.mp.core.http.HttpUtil.mContext;
+
+public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener , View.OnClickListener{
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -41,18 +46,17 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
     private SimpleDraweeView loginmess;
     private ImageView search;
     private String theme="标准";
+    public CoreSharedPreferencesHelper preference;
 
     @Override
-    protected int getLayoutID() {
-        return R.layout.main_activity;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_activity);
+        initTheme();
+        initView();
     }
 
-    @Override
-    protected void initialize() {}
-
-    @Override
     protected void initView() {
-        super.initView();
         theme =  getSharedPreferences().getValue("font_type");
         mViewPager = (ViewPager) findViewById(R.id.vp_view);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -88,6 +92,20 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
         search = (ImageView) findViewById(R.id.oa_search);
     }
 
+    /**
+     * 初始化皮肤
+     */
+    protected void initTheme ( ) {
+        preference = getSharedPreferences();
+        String value = preference.getValue("font_type");
+        if("大".equals(value)) {
+            this.setTheme(com.dk.mp.core.R.style.style_large);
+        }else if("特大".equals(value)){
+            this.setTheme(com.dk.mp.core.R.style.style_big);
+        }else{
+            this.setTheme(com.dk.mp.core.R.style.style_norm);
+        }
+    }
 
     public View getTabView(int position) {
         View v = LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_tab, null);
@@ -187,4 +205,10 @@ public class MainActivity extends MyActivity implements TabLayout.OnTabSelectedL
         }
     }
 
+    public CoreSharedPreferencesHelper getSharedPreferences() {
+        if (preference == null){
+            preference = new CoreSharedPreferencesHelper(this);
+        }
+        return preference;
+    }
 }
