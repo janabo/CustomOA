@@ -232,6 +232,9 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             case "我的草稿":
                 holder.background_lin.setBackgroundColor(Color.rgb(242,139,0));
                 break;
+            case "邀我参加的会议":
+                holder.background_lin.setBackgroundColor(Color.rgb(52,144,65));
+                break;
             default:
                 holder.background_lin.setBackgroundColor(Color.rgb(0,155,223));
                 break;

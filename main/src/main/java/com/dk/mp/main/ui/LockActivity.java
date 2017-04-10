@@ -3,8 +3,6 @@ package com.dk.mp.main.ui;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -15,20 +13,19 @@ import android.widget.TextView;
 import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.entity.User;
 import com.dk.mp.core.login.LoginActivity;
+import com.dk.mp.core.ui.BaseActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.SnackBarUtil;
 import com.dk.mp.core.util.StringUtils;
+import com.dk.mp.core.view.locus.LocusPassWordView;
 import com.dk.mp.main.R;
-import com.dk.mp.main.view.locus.LocusPassWordView;
 import com.facebook.drawee.view.SimpleDraweeView;
-
-import static com.dk.mp.core.http.HttpUtil.mContext;
 
 /**
  * 手势密码
  * 作者：janabo on 2017/3/25 10:13
  */
-public class LockActivity extends AppCompatActivity implements View.OnClickListener,LocusPassWordView.OnCompleteListener {
+public class LockActivity extends BaseActivity implements View.OnClickListener,LocusPassWordView.OnCompleteListener {
     SimpleDraweeView loginMess;//用户头像
     FrameLayout id_user_avatarView;
     private TextView mUserName;
@@ -43,16 +40,25 @@ public class LockActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout lock_message;
     public CoreSharedPreferencesHelper preference;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.lock_activity);
-        preference = new CoreSharedPreferencesHelper(this);
-        initView();
-        initialize();
+    protected int getLayoutID() {
+        return R.layout.lock_activity;
     }
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView();
+//        preference = new CoreSharedPreferencesHelper(this);
+//        initView();
+//        initialize();
+//    }
+
+    @Override
     protected void initView() {
+        super.initView();
+        preference = new CoreSharedPreferencesHelper(this);
         if(preference.getInt("lock_num")>-1){
             count=preference.getInt("lock_num");
         }
@@ -65,7 +71,9 @@ public class LockActivity extends AppCompatActivity implements View.OnClickListe
         lock_message = (LinearLayout) findViewById(R.id.lock_message);
         mForgetText.setOnClickListener(this);
         mLockView.setOnCompleteListener(this);
+        initialize();
     }
+
 
     protected void initialize() {
         from = getIntent().getStringExtra("from");

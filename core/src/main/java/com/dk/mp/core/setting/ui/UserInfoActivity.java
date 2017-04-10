@@ -1,6 +1,7 @@
 package com.dk.mp.core.setting.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
@@ -13,10 +14,12 @@ import com.dk.mp.core.entity.JsonData;
 import com.dk.mp.core.entity.User;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
+import com.dk.mp.core.login.LoginActivity;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.core.util.BroadcastUtil;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
+import com.dk.mp.core.view.locus.LocusPassWordView;
 
 /**
  * 用户信息
@@ -100,6 +103,12 @@ public class UserInfoActivity extends MyActivity {
         h.cleanUser();
         h.setValue("nick", null);
         BroadcastUtil.sendBroadcast(context, "user");
-        back();
+        LocusPassWordView.clearPassword(context);
+
+        Intent intent = new Intent();
+        intent.putExtra("from", "lock");
+        intent.setClass(UserInfoActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -135,6 +135,7 @@ public class GzzdListActivity extends MyActivity implements View.OnClickListener
     public void toSearch(View view){
         Intent intent = new Intent(this,SearchActivity.class);
         intent.putExtra("url","apps/oa/tzgglist");
+        intent.putExtra("type","gzzd");
         startActivity(intent);
     }
 

@@ -162,5 +162,9 @@
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_gzzd.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_gzzd.png"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\release\\mipmap\\app_ywhy.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_ywhy.png"
     }
 ]

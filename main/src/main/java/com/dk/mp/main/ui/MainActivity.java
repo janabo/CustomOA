@@ -2,11 +2,8 @@ package com.dk.mp.main.ui;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +13,8 @@ import android.widget.TextView;
 import com.dk.mp.core.adapter.MyFragmentPagerAdapter;
 import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.setting.ui.SettingActivity;
+import com.dk.mp.core.ui.BaseActivity;
 import com.dk.mp.core.ui.BaseFragment;
-import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
 import com.dk.mp.txl.ui.TxlFragment;
@@ -26,9 +23,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.dk.mp.core.http.HttpUtil.mContext;
 
-public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener , View.OnClickListener{
+public class MainActivity extends BaseActivity implements TabLayout.OnTabSelectedListener , View.OnClickListener{
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -46,17 +42,24 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     private SimpleDraweeView loginmess;
     private ImageView search;
     private String theme="标准";
-    public CoreSharedPreferencesHelper preference;
+//    public CoreSharedPreferencesHelper preference;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
-        initTheme();
-        initView();
+    protected int getLayoutID() {
+        return R.layout.main_activity;
     }
 
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.main_activity);
+//        initTheme();
+//        initView();
+//    }
+
+    @Override
     protected void initView() {
+        super.initView();
         theme =  getSharedPreferences().getValue("font_type");
         mViewPager = (ViewPager) findViewById(R.id.vp_view);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -205,10 +208,10 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         }
     }
 
-    public CoreSharedPreferencesHelper getSharedPreferences() {
-        if (preference == null){
-            preference = new CoreSharedPreferencesHelper(this);
-        }
-        return preference;
-    }
+//    public CoreSharedPreferencesHelper getSharedPreferences() {
+//        if (preference == null){
+//            preference = new CoreSharedPreferencesHelper(this);
+//        }
+//        return preference;
+//    }
 }

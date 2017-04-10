@@ -48,6 +48,7 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
     private List<Gzzd> mList = new ArrayList<>();
     private ErrorLayout mError;
     private String mUrl;
+    private String mType;
 
     @Override
     protected int getLayoutID() {
@@ -69,6 +70,7 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
      * 初始化界面
      */
     private void findView(){
+        mType = getIntent().getStringExtra("type");
         mUrl = getIntent().getStringExtra("url");
         mError = (ErrorLayout) findViewById(R.id.error_layout);
         mError.setOnLayoutClickListener(this);
@@ -89,8 +91,16 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
             public void setItemValue(RecyclerView.ViewHolder holder, int position) {
                 Gzzd m = mList.get(position);
                 ((MyView)holder).ssl_fjh.setText(m.getTitle());
-                ((MyView)holder).ssq.setText(m.getDate());
-                ((MyView)holder).fs.setText(m.getUser());
+                if("gzzd".equals(mType)){//规章制度
+                    ((MyView)holder).ssq.setText(m.getDate());
+                    ((MyView)holder).fs.setText(m.getUser());
+                }else if("tzgg".equals(mType)) {//通知公告
+                    ((MyView)holder).ssq.setText(m.getSubTitle());
+                    ((MyView)holder).fs.setText(m.getTime());
+                }else{//值班安排
+                    ((MyView)holder).ssq.setText(m.getSubTitle());
+                    ((MyView)holder).fs.setText("");
+                }
             }
 
             @Override
@@ -99,7 +109,7 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
             }
         });
 
-        mKeywords.setHint("标题");
+        mKeywords.setHint("关键词搜索");
         mKeywords.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

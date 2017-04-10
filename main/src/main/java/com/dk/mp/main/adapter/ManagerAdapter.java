@@ -140,6 +140,9 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.MyViewHo
             case "我的草稿":
                 holder.imageView.setImageResource(R.mipmap.app_wdcg);
                 break;
+            case "邀我参加的会议":
+                holder.imageView.setImageResource(R.mipmap.app_ywhy);
+                break;
             default:
                 holder.imageView.setImageResource(R.mipmap.app_hygl);
                 break;

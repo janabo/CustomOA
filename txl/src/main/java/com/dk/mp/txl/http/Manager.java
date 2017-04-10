@@ -33,7 +33,7 @@ public class Manager {
                 String pid = object2.optString("id");
                 p.setId(pid);
                 p.setName(object2.getString("xm"));
-                p.setPrikey("bm"+bmid+"p"+pid);
+                p.setPrikey(pid);
                 p.setDepartmentid(bmid);
                 p.setDepartmentname(bmname);
                 String hm="";

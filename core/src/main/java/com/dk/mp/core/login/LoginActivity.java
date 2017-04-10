@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
@@ -15,12 +16,13 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.dk.mp.core.R;
+import com.dk.mp.core.dialog.AlertDialog;
 import com.dk.mp.core.entity.JsonData;
 import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.setting.ui.SettingActivity;
-import com.dk.mp.core.ui.MyActivity;
+import com.dk.mp.core.ui.BaseActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.util.SnackBarUtil;
@@ -40,7 +42,7 @@ import java.util.Map;
  * 登录
  * 作者：janabo on 2016/12/14 17:42
  */
-public class LoginActivity extends MyActivity implements View.OnClickListener{
+public class LoginActivity extends BaseActivity implements View.OnClickListener{
     TextView ok_text;
     DrawHookView progress;
     DrawCheckMarkView progress_check;
@@ -296,5 +298,16 @@ public class LoginActivity extends MyActivity implements View.OnClickListener{
                 ok.setEnabled(true);
             }
         },1000);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            AlertDialog alertDialog = new AlertDialog(mContext);
+            alertDialog.exitApp();
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
     }
 }

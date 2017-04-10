@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp" >
 
-        <com.dk.mp.main.view.locus.LocusPassWordView
+        <com.dk.mp.core.view.locus.LocusPassWordView
             android:id="@+id/id_lock_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

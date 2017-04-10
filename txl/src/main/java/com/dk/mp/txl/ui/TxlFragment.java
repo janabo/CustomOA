@@ -212,7 +212,7 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
                 j.setDepartmentname(x.getDepartmentname());
                 j.setDepartmentid(x.getDepartmentid());
                 j.setName(x.getName());
-                j.setPrikey(x.getPrikey()+x.getLoginname());
+                j.setPrikey(x.getId());
                 j.setPhones(x.getPhones());
                 j.setLoginname(x.getLoginname());
                 jbxxs.add(j);
