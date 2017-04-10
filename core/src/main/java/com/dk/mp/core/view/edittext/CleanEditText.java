@@ -75,7 +75,8 @@ public class CleanEditText extends EditText {
 		if ((this.dRight != null) && (event.getAction() == 1)) {
 			this.rBounds = this.dRight.getBounds();
 			int i = (int) event.getX();
-			if (i > getRight() - 3 * this.rBounds.width()) {
+//			if (i > getRight() - 3 * this.rBounds.width()) {
+			if (i > getRight() - this.rBounds.width()-20) {
 				setText("");
 				event.setAction(MotionEvent.ACTION_CANCEL);
 			}

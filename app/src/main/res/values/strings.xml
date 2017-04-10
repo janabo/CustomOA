@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">自定义oa</string>
 
-    <!--<string name="rootUrl">http://192.168.3.127:8082/mp/</string>-->
+    <!--<string name="rootUrl">http://192.168.3.127:8081/mp/</string>-->
     <!--<string name="rootUrl">	http://192.168.3.163:8084/mp-zdyoa/</string>-->
     <string name="rootUrl">http://192.168.1.155:9096/mp-zdyoa/</string>
 

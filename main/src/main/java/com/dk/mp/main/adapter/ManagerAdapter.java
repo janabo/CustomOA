@@ -48,7 +48,11 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         OaItemEntity bean = mData.get(position);
-        setAppIcon(holder,bean.getLabel());
+        if(StringUtils.isNotEmpty(bean.getUrl())) {
+            setAppIcon(holder, bean.getName());//自定义oa
+        }else{
+            setAppIcon(holder, bean.getIdentity());//非自定义
+        }
         holder.mTextView.setText(bean.getLabel());
     }
 
@@ -77,6 +81,7 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.MyViewHo
                     if(StringUtils.isNotEmpty(bean.getUrl())){
                         intent  = new Intent(mContext, HttpWebActivity.class);
                         intent.putExtra("title",bean.getLabel());
+                        intent.putExtra("close_web",-1);
                         intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
                     }else{
                         intent = new Intent();
@@ -107,40 +112,40 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.MyViewHo
 
     public void setAppIcon(MyViewHolder holder,String appname){
         switch (appname){
-            case "通知公告":
+            case "tzgg"://通知公告
                 holder.imageView.setImageResource(R.mipmap.app_tzgg);
                 break;
-            case "规章制度":
+            case "gzzd"://规章制度
                 holder.imageView.setImageResource(R.mipmap.app_gzzd);
                 break;
-            case "值班安排":
+            case "zbap"://值班安排
                 holder.imageView.setImageResource(R.mipmap.app_zbap);
                 break;
-            case "领导日程":
+            case "ldrc"://领导日程
                 holder.imageView.setImageResource(R.mipmap.app_ldrc);
                 break;
-            case "会议管理":
+            case "hygl"://会议管理
                 holder.imageView.setImageResource(R.mipmap.app_hygl);
                 break;
-            case "我的传阅":
+            case "cy"://我的传阅
                 holder.imageView.setImageResource(R.mipmap.app_wdcy);
                 break;
-            case "公开":
+            case "gk"://公开
                 holder.imageView.setImageResource(R.mipmap.app_gk);
                 break;
-            case "我的审核":
+            case "wdsh"://我的审核
                 holder.imageView.setImageResource(R.mipmap.app_wdsh);
                 break;
-            case "我的待办":
+            case "wddb"://我的待办
                 holder.imageView.setImageResource(R.mipmap.app_wddb);
                 break;
-            case "我的申请":
+            case "dwsq"://我的申请
                 holder.imageView.setImageResource(R.mipmap.app_wdsq);
                 break;
-            case "我的草稿":
+            case "wdcg"://我的草稿
                 holder.imageView.setImageResource(R.mipmap.app_wdcg);
                 break;
-            case "邀我参加的会议":
+            case "ywhy"://邀我参加的会议
                 holder.imageView.setImageResource(R.mipmap.app_ywhy);
                 break;
             default:

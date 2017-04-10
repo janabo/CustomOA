@@ -1947,6 +1947,13 @@
     </style><style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style><style name="but_close">
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:text">关闭</item>
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
     </style><style name="setting_img">
         <item name="android:layout_width">?attr/image22</item>
         <item name="android:layout_height">?attr/image22</item>

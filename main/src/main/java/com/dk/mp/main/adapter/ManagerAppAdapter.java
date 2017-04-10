@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dk.mp.core.entity.OaItemEntity;
+import com.dk.mp.core.util.StringUtils;
 import com.dk.mp.main.R;
 import com.dk.mp.main.ui.ManagerActivity;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
@@ -78,7 +79,12 @@ public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.My
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final OaItemEntity item = list.get(position);
         holder.titlelable.setText(item.getLabel());
-        setBackground(holder,item.getLabel());
+        if(StringUtils.isNotEmpty(item.getUrl())) {
+            setBackground(holder,item.getName());//自定义oa
+        }else{
+            setBackground(holder,item.getIdentity());//非自定义
+        }
+
         int dragState = holder.getDragStateFlags();
         if (((dragState & DraggableItemConstants.STATE_FLAG_IS_UPDATED) != 0)) {
             if ((dragState & DraggableItemConstants.STATE_FLAG_IS_ACTIVE) != 0) {
@@ -116,40 +122,40 @@ public class ManagerAppAdapter extends RecyclerView.Adapter<ManagerAppAdapter.My
 
     public void setBackground(MyViewHolder holder, String appname){
         switch (appname){
-            case "通知公告":
+            case "tzgg"://通知公告
                 holder.background_lin.setBackgroundColor(Color.rgb(239,125,90));
                 break;
-            case "规章制度":
+            case "gzzd"://规章制度
                 holder.background_lin.setBackgroundColor(Color.rgb(103,115,183));
                 break;
-            case "值班安排":
+            case "zbap"://值班安排
                 holder.background_lin.setBackgroundColor(Color.rgb(85,165,28));
                 break;
-            case "领导日程":
+            case "ldrc"://领导日程
                 holder.background_lin.setBackgroundColor(Color.rgb(45,147,200));
                 break;
-            case "会议管理":
+            case "hygl"://会议管理
                 holder.background_lin.setBackgroundColor(Color.rgb(0,131,194));
                 break;
-            case "我的传阅":
+            case "cy"://我的传阅
                 holder.background_lin.setBackgroundColor(Color.rgb(0,168,136));
                 break;
-            case "公开":
+            case "gk"://公开
                 holder.background_lin.setBackgroundColor(Color.rgb(50,177,108));
                 break;
-            case "我的审核":
+            case "wdsh"://我的审核
                 holder.background_lin.setBackgroundColor(Color.rgb(236,105,65));
                 break;
-            case "我的待办":
+            case "wddb"://我的待办
                 holder.background_lin.setBackgroundColor(Color.rgb(0,155,223));
                 break;
-            case "我的申请":
+            case "dwsq"://我的申请
                 holder.background_lin.setBackgroundColor(Color.rgb(0,175,171));
                 break;
-            case "我的草稿":
+            case "wdcg"://我的草稿
                 holder.background_lin.setBackgroundColor(Color.rgb(242,139,0));
                 break;
-            case "邀我参加的会议":
+            case "ywhy"://邀我参加的会议
                 holder.background_lin.setBackgroundColor(Color.rgb(52,144,65));
                 break;
             default:

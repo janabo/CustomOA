@@ -116,7 +116,8 @@ public class SearchActivity extends MyActivity {
             public void onSuccess(JSONObject result)  {
                 try {
                     if (result.getInt("code") != 200) {
-                        mError.setErrorMessage(getReString(R.string.search_fail));
+                        mError.setErrorType(ErrorLayout.DATAFAIL);
+//                        mError.setErrorMessage(getReString(R.string.search_fail));
                     }else{
                         List<Jbxx> departments = Manager.getPeoples(result);
                         mList.addAll(departments);
@@ -124,17 +125,19 @@ public class SearchActivity extends MyActivity {
                         if(departments.size()>0) {
                             mError.setErrorType(ErrorLayout.HIDE_LAYOUT);
                         }else{
-                            mError.setErrorType(ErrorLayout.NODATA);
+                            mError.setErrorType(ErrorLayout.SEARCHNODATA);
                         }
                     }
                 }catch (Exception e){
                     e.printStackTrace();
-                    mError.setErrorMessage(getReString(R.string.search_fail));
+//                    mError.setErrorMessage(getReString(R.string.search_fail));
+                    mError.setErrorType(ErrorLayout.DATAFAIL);
                 }
             }
             @Override
             public void onError(VolleyError error) {
-                mError.setErrorMessage(getReString(R.string.search_fail));
+//                mError.setErrorMessage(getReString(R.string.search_fail));
+                mError.setErrorType(ErrorLayout.DATAFAIL);
             }
         });
     }

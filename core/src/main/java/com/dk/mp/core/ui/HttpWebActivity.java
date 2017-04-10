@@ -1,14 +1,18 @@
 package com.dk.mp.core.ui;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.dk.mp.core.R;
 import com.dk.mp.core.util.DeviceUtil;
@@ -22,6 +26,7 @@ public class HttpWebActivity extends MyActivity{
     WebView mWebView;
     private ErrorLayout mError;
     private ProgressBar mProgressBar;
+    private TextView mClose;
 
     @Override
     protected int getLayoutID() {
@@ -31,11 +36,13 @@ public class HttpWebActivity extends MyActivity{
     @Override
     protected void initView() {
         super.initView();
+        mClose = (TextView) findViewById(R.id.close_web);
         mWebView = (WebView) findViewById(R.id.webview);
         mError = (ErrorLayout) findViewById(R.id.error_layout);
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
         setTitle(getIntent().getStringExtra("title"));
         String url = getIntent().getStringExtra("url");
+        int close_web = getIntent().getIntExtra("close_web",1);
         mError.setErrorType(ErrorLayout.LOADDATA);
         if(DeviceUtil.checkNet()){
             setMUrl(url);
@@ -54,6 +61,15 @@ public class HttpWebActivity extends MyActivity{
                 }
             });
         } catch (Exception e) {
+        }
+
+        if(-1 == close_web){
+            mClose.setVisibility(View.VISIBLE);
+            mClose.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    back();
+                }
+            });
         }
     }
 
@@ -75,6 +91,15 @@ public class HttpWebActivity extends MyActivity{
         settings.setDatabaseEnabled ( true );
         settings.setCacheMode ( WebSettings.LOAD_NO_CACHE );
         settings.setJavaScriptEnabled ( true );    //启用JS脚本
+        mWebView.setDownloadListener(new DownloadListener() {
+            @Override
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                // 监听下载功能，当用户点击下载链接的时候，直接调用系统的浏览器来下载
+                Uri uri = Uri.parse(url+"&token=" + getSharedPreferences().getLoginMsg().getUid());
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
     }
 
 

@@ -262,7 +262,12 @@ public abstract class MyActivity extends AppCompatActivity{
                         ImageView imageView = (ImageView) view.findViewById(R.id.item_image);
                         TextView textView= (TextView) view.findViewById(R.id.item_text);
                         textView.setText(app.getLabel());
-                        imageView.setImageResource(ImageUtil.getRes(app.getLabel()));
+                        if(StringUtils.isNotEmpty(app.getUrl())) {
+                            imageView.setImageResource(ImageUtil.getRes(app.getName()));
+                        }else{
+                            imageView.setImageResource(ImageUtil.getRes(app.getIdentity()));
+                        }
+
                         view.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {

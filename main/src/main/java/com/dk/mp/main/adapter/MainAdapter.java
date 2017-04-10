@@ -79,7 +79,8 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                     if(StringUtils.isNotEmpty(bean.getCount()) && Integer.parseInt(bean.getCount())>0) {
                         insertRealm(bean);
                         Intent intent = new Intent(getContext(), HttpWebActivity.class);
-                        intent.putExtra("title", bean.getTitle());
+                        intent.putExtra("close_web",-1);
+                        intent.putExtra("title", "详情");
                         intent.putExtra("url", bean.getDetailUrl() + "&token=" + helper.getLoginMsg().getUid());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
@@ -93,6 +94,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                     OaItemEntity bean = list.get(getLayoutPosition());
                     insertRealm(bean);
                     Intent intent  = new Intent(getContext(), HttpWebActivity.class);
+                    intent.putExtra("close_web",-1);
                     intent.putExtra("title",bean.getLabel());
                     intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -130,7 +132,12 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         if (position == list.size()) {
         } else {
             OaItemEntity bean= list.get(position);
-            setBackground((MyView)holder,bean.getLabel());
+            if(StringUtils.isNotEmpty(bean.getUrl())) {
+                setBackground((MyView)holder,bean.getName());//自定义oa
+            }else{
+                setBackground((MyView)holder,bean.getIdentity());//非自定义
+            }
+
             ((MyView)holder).modeltitle.setText(conventEmpToString(bean.getLabel()));
             ((MyView)holder).modelsecondtitle.setText("你需要查看的"+conventEmpToString(bean.getLabel()));
             ((MyView)holder).count.setText(StringUtils.isNotEmpty(bean.getCount())?bean.getCount():"0");
@@ -199,40 +206,40 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     public void setBackground(MainAdapter.MyView holder, String appname){
         switch (appname){
-            case "通知公告":
+            case "tzgg"://通知公告
                 holder.background_lin.setBackgroundColor(Color.rgb(239,125,90));
                 break;
-            case "规章制度":
+            case "gzzd"://规章制度
                 holder.background_lin.setBackgroundColor(Color.rgb(103,115,183));
                 break;
-            case "值班安排":
+            case "zbap"://值班安排
                 holder.background_lin.setBackgroundColor(Color.rgb(85,165,28));
                 break;
-            case "领导日程":
+            case "ldrc"://领导日程
                 holder.background_lin.setBackgroundColor(Color.rgb(45,147,200));
                 break;
-            case "会议管理":
+            case "hygl"://会议管理
                 holder.background_lin.setBackgroundColor(Color.rgb(0,131,194));
                 break;
-            case "我的传阅":
+            case "cy"://我的传阅
                 holder.background_lin.setBackgroundColor(Color.rgb(0,168,136));
                 break;
-            case "公开":
+            case "gk"://公开
                 holder.background_lin.setBackgroundColor(Color.rgb(50,177,108));
                 break;
-            case "我的审核":
+            case "wdsh"://我的审核
                 holder.background_lin.setBackgroundColor(Color.rgb(236,105,65));
                 break;
-            case "我的待办":
+            case "wddb"://我的待办
                 holder.background_lin.setBackgroundColor(Color.rgb(0,155,223));
                 break;
-            case "我的申请":
+            case "dwsq"://我的申请
                 holder.background_lin.setBackgroundColor(Color.rgb(0,175,171));
                 break;
-            case "我的草稿":
+            case "wdcg"://我的草稿
                 holder.background_lin.setBackgroundColor(Color.rgb(242,139,0));
                 break;
-            case "邀我参加的会议":
+            case "ywhy"://邀我参加的会议
                 holder.background_lin.setBackgroundColor(Color.rgb(52,144,65));
                 break;
             default:

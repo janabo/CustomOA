@@ -109,7 +109,7 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
             }
         });
 
-        mKeywords.setHint("关键词搜索");
+        mKeywords.setHint("关键字搜索");
         mKeywords.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
