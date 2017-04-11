@@ -124,6 +124,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\back_press1.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\mipmap\\app_ywhy.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_ywhy.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\mipmap\\app_ldrc.png",
         "source": "D:\\DanDan\\CustomOA\\core\\src\\main\\res\\mipmap\\app_ldrc.png"
     },

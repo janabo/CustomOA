@@ -89,7 +89,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
         mTabLayout.addOnTabSelectedListener(this);
 
         title = (TextView) findViewById(R.id.oa_title);
-        title.setText("自定义OA");
+        title.setText("首页");
         loginmess = (SimpleDraweeView) findViewById(R.id.loginMess);
         loginmess.setOnClickListener(this);
         search = (ImageView) findViewById(R.id.oa_search);
@@ -146,7 +146,7 @@ public class MainActivity extends BaseActivity implements TabLayout.OnTabSelecte
 
         switch (tab.getPosition()) {
             case 0:
-                title.setText("自定义OA");
+                title.setText("首页");
                 break;
             case 1:
                 title.setText("通讯录");

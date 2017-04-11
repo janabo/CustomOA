@@ -4468,8 +4468,6 @@ containing a value of this type.
         public static int Base_Widget_Design_AppBarLayout=0x7f0800d9;
         public static int Base_Widget_Design_TabLayout=0x7f0800da;
         public static int FullScreenTheme=0x7f0800db;
-        /**  模糊 
-         */
         public static int MyDialog=0x7f0800dc;
         public static int NoTitleTranslucentTheme=0x7f0800dd;
         public static int Platform_AppCompat=0x7f08001f;

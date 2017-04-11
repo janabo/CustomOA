@@ -67,8 +67,8 @@ public class TzggListActivity extends MyActivity implements View.OnClickListener
             public void setItemValue(RecyclerView.ViewHolder holder, int position) {
                 Gzzd m = mData.get(position);
                 ((MyView)holder).ssl_fjh.setText(m.getTitle());
-                ((MyView)holder).ssq.setText(m.getSubTitle());
-                ((MyView)holder).fs.setText(m.getTime());
+                ((MyView)holder).ssq.setText(m.getTime());
+                ((MyView)holder).fs.setText(m.getUser());
             }
 
             @Override
@@ -136,6 +136,7 @@ public class TzggListActivity extends MyActivity implements View.OnClickListener
         Intent intent = new Intent(this,SearchActivity.class);
         intent.putExtra("url","apps/oa/tzgglist");
         intent.putExtra("type","tzgg");
+        intent.putExtra("title",getIntent().getStringExtra("title"));
         startActivity(intent);
     }
 
@@ -155,7 +156,7 @@ public class TzggListActivity extends MyActivity implements View.OnClickListener
                 public void onClick(View view) {
                     Gzzd sswz = mData.get(getLayoutPosition());
                     Intent intent = new Intent(mContext, HttpWebActivity.class);
-                    intent.putExtra("title",sswz.getTitle());
+                    intent.putExtra("title",getIntent().getStringExtra("title"));
                     intent.putExtra("url",sswz.getUrl());
                     startActivity(intent);
                 }

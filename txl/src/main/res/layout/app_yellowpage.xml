@@ -124,7 +124,6 @@
         app:borderWidth="0.0dip"
         app:elevation="5.0dip"
         app:fabSize="normal"
-        app:pressedTranslationZ="10.0dip"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="40dp"
         app:rippleColor="#248901">

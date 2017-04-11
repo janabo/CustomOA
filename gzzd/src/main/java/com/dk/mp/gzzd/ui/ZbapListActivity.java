@@ -135,6 +135,8 @@ public class ZbapListActivity extends MyActivity implements View.OnClickListener
     public void toSearch(View view){
         Intent intent = new Intent(this,SearchActivity.class);
         intent.putExtra("url","apps/oa/zbaplist");
+        intent.putExtra("type","zbap");
+        intent.putExtra("title",getIntent().getStringExtra("title"));
         startActivity(intent);
     }
 
@@ -154,7 +156,7 @@ public class ZbapListActivity extends MyActivity implements View.OnClickListener
                 public void onClick(View view) {
                     Gzzd sswz = mData.get(getLayoutPosition());
                     Intent intent = new Intent(mContext, HttpWebActivity.class);
-                    intent.putExtra("title",sswz.getTitle());
+                    intent.putExtra("title",getIntent().getStringExtra("title"));
                     intent.putExtra("url",sswz.getUrl());
                     startActivity(intent);
                 }

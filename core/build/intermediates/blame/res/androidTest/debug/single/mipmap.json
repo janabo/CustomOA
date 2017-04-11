@@ -116,6 +116,10 @@
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_hygl.png"
     },
     {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\app_ywhy.png",
+        "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\app_ywhy.png"
+    },
+    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap\\search_icon.png",
         "source": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\bundles\\debug\\res\\mipmap\\search_icon.png"
     },

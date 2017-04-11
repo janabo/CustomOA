@@ -95,8 +95,8 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
                     ((MyView)holder).ssq.setText(m.getDate());
                     ((MyView)holder).fs.setText(m.getUser());
                 }else if("tzgg".equals(mType)) {//通知公告
-                    ((MyView)holder).ssq.setText(m.getSubTitle());
-                    ((MyView)holder).fs.setText(m.getTime());
+                    ((MyView)holder).ssq.setText(m.getTime());
+                    ((MyView)holder).fs.setText(m.getUser());
                 }else{//值班安排
                     ((MyView)holder).ssq.setText(m.getSubTitle());
                     ((MyView)holder).fs.setText("");
@@ -210,7 +210,7 @@ public class SearchActivity extends MyActivity implements View.OnClickListener{
                 public void onClick(View view) {
                     Gzzd sswz = mList.get(getLayoutPosition());
                     Intent intent = new Intent(mContext, HttpWebActivity.class);
-                    intent.putExtra("title",sswz.getTitle());
+                    intent.putExtra("title",getIntent().getStringExtra("title"));
                     intent.putExtra("url",sswz.getUrl());
                     startActivity(intent);
                 }
