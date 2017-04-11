@@ -14,8 +14,6 @@ import android.provider.ContactsContract.CommonDataKinds.Photo;
 import android.provider.ContactsContract.Data;
 import android.text.TextUtils;
 
-import com.dk.mp.core.util.StringUtils;
-
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
@@ -49,7 +47,7 @@ public class CursorDBHelper {
 	 * @param name 姓名
 	 * @param tel 号码
 	 */
-	public static void insertPerson(Context context, String name,String tel) {
+	public static void insertPerson(Context context, String name,String[] tel) {
 		ContentResolver resolver = context.getContentResolver();
 		Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
 		ContentValues values = new ContentValues();
@@ -62,25 +60,17 @@ public class CursorDBHelper {
 		values.put("mimetype", "vnd.android.cursor.item/name");
 		resolver.insert(uri, values);
 
-		String dhhm = tel;
-
-		//添加联系人电话   
-		if (StringUtils.isNotEmpty(dhhm)) {
-			values.clear(); // 清空上次的数据
-			values.put("raw_contact_id", id);
-			values.put("data1", dhhm);
-			values.put("data2", "2");
-			values.put("mimetype", "vnd.android.cursor.item/phone_v2");
-			resolver.insert(uri, values);
+		//添加联系人电话
+		if (tel != null && tel.length>0) {
+			for(int i=0;i<tel.length;i++) {
+				values.clear(); // 清空上次的数据
+				values.put(Data.RAW_CONTACT_ID, id);
+				values.put(Data.MIMETYPE, Phone.CONTENT_ITEM_TYPE);
+				values.put(Phone.NUMBER, tel[i]);
+				values.put(Phone.TYPE, Phone.TYPE_MOBILE);
+				resolver.insert(uri, values);
+			}
 		}
-
-		//添加联系人邮件
-		values.clear();
-		values.put("raw_contact_id", id);
-		values.put("data1", "");
-		values.put("data2", "1");
-		values.put("mimetype", "vnd.android.cursor.item/email_v2");
-		resolver.insert(uri, values);
 	}
 
 	private static Bitmap getPhoto(Context mContext, String tel) {

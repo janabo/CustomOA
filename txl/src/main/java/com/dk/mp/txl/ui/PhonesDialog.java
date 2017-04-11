@@ -179,7 +179,7 @@ public class PhonesDialog{
             }
 
             if (!CursorDBHelper.checkNumber(context, phone)) {
-                CursorDBHelper.insertPerson(context, jbxx.getName(), phone);
+                CursorDBHelper.insertPerson(context, jbxx.getName(), items);
                 mExpro.setImageResource(R.mipmap.icon_expr_success);
                 Toast.makeText(context,"导入联系人成功",Toast.LENGTH_SHORT).show();
             }else{
