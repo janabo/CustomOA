@@ -4430,8 +4430,6 @@ containing a value of this type.
         public static final int Base_Widget_Design_AppBarLayout=0x7f0800d8;
         public static final int Base_Widget_Design_TabLayout=0x7f0800d9;
         public static final int FullScreenTheme=0x7f0800da;
-        /**  模糊 
-         */
         public static final int MyDialog=0x7f0800db;
         public static final int NoTitleTranslucentTheme=0x7f0800dc;
         public static final int Platform_AppCompat=0x7f08001f;

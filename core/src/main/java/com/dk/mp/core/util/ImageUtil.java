@@ -35,7 +35,7 @@ public class ImageUtil {
 				case "zbap"://值班安排
 					appid = R.mipmap.app_zbap;
 					break;
-				case "ldrc"://领导日程
+				case "grrc"://领导日程
 					appid = R.mipmap.app_ldrc;
 					break;
 				case "hygl"://会议管理

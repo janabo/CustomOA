@@ -248,4 +248,5 @@ public class TxlFragment extends BaseFragment implements EasyPermissions.Permiss
                     1, perms);
         }
     }
+
 }

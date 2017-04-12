@@ -693,7 +693,7 @@
     <string name="data_fail">服务异常哦</string>
     <string name="defulicon">[{\"id\":\"1\",\"name\":\"学校新闻\",\"url\":\"\",\"idCat\":\"1\",\"icon\":\"app_xxxw\",\"packageName\":\"\",\"action\":\"xxxw\",\"nameCat\":\"生活\"}]</string>
     <string name="login_fail">登录失败</string>
-    <string name="net_no2">没有网络</string>
+    <string name="net_no2">网络异常哦</string>
     <string name="nodata">还没有数据哦</string>
     <string name="pickerview_cancel">取消</string>
     <string name="pickerview_day">日</string>
@@ -749,7 +749,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -1793,17 +1793,17 @@
     </style>
     <style name="MyDialog" parent="@android:style/Theme.DeviceDefault.DialogWhenLarge">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 模糊 -->
+        
     </style>
     <style name="NoTitleTranslucentTheme" parent="FullScreenTheme">
         <item name="android:windowBackground">@color/black50</item>

@@ -39,11 +39,23 @@
         android:layout_below="@id/top"
         android:background="@color/colorPrimary">
     </com.dk.mp.rcap.widget.CollapseCalendarView>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
-        android:layout_height="match_parent"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@id/calendar">
-    </android.support.v7.widget.RecyclerView>
 
+        <com.dk.mp.core.widget.ErrorLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/error_layout"
+            android:gravity="center_horizontal"
+            android:visibility="visible"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
 </RelativeLayout>

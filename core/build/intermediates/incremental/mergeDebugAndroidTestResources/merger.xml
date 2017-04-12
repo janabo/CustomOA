@@ -2105,7 +2105,7 @@
         <item name="image80">100dp</item>
         <item name="image100">125dp</item>
         <item name="image154">192.5dp</item>
-    </style><attr format="dimension" name="image100"/><string name="net_no2">没有网络</string><style name="AppTheme.NoTitle" parent="AppTheme">
+    </style><attr format="dimension" name="image100"/><string name="net_no2">网络异常哦</string><style name="AppTheme.NoTitle" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style><color name="red">#ff0000</color><attr format="dimension" name="image50"/><color name="black50">#7f000000</color><style name="rcap_title_txt">

@@ -215,7 +215,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             case "zbap"://值班安排
                 holder.background_lin.setBackgroundColor(Color.rgb(85,165,28));
                 break;
-            case "ldrc"://领导日程
+            case "grrc"://领导日程
                 holder.background_lin.setBackgroundColor(Color.rgb(45,147,200));
                 break;
             case "hygl"://会议管理

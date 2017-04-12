@@ -97,7 +97,7 @@ public class AddAdapter extends RecyclerView.Adapter<AddAdapter.MyViewHolder> im
             case "zbap"://值班安排
                 holder.imageView.setImageResource(R.mipmap.app_zbap);
                 break;
-            case "ldrc"://领导日程
+            case "grrc"://领导日程
                 holder.imageView.setImageResource(R.mipmap.app_ldrc);
                 break;
             case "hygl"://会议管理

@@ -28,12 +28,12 @@
         "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\layout\\design_navigation_menu_item.xml"
-    },
-    {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\admin\\.android\\build-cache\\69e7baac529edd9ad5918df40db5fadeb6be9226\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\95a8339e61690112b0e9a4593eb9eae45915b16a\\output\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "D:\\DanDan\\CustomOA\\core\\build\\intermediates\\res\\merged\\debug\\layout\\empty.xml",

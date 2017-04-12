@@ -7,7 +7,7 @@
             android:theme="@style/Transparent"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="customoa_ldrc" />
+                <action android:name="customoa_grrc" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
 import com.bigkoo.pickerview.listener.CustomListener;
+import com.dk.mp.core.entity.LoginMsg;
 import com.dk.mp.core.ui.MyActivity;
 import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.util.Logger;
@@ -50,7 +51,12 @@ public class HyGlActivity extends MyActivity{
                 pvCustomTime.show();
             }
         });
-        setMUrl("apps/oa/hysap?date="+TimeUtils.getToday());
+        LoginMsg loginMsg = getSharedPreferences().getLoginMsg();
+        if(loginMsg!= null){
+            setMUrl("apps/oa/hysap?date=" + TimeUtils.getToday() + "&uid=" + loginMsg.getUid()+"&pwd="+loginMsg.getPsw());
+        }else {
+            setMUrl("apps/oa/hysap?date=" + TimeUtils.getToday() );
+        }
     }
 
     public void setMUrl(String url){
@@ -85,7 +91,13 @@ public class HyGlActivity extends MyActivity{
             public void onTimeSelect(Date date, View v) {//选中事件回调
                 String time = TimeUtils.getDay(date);
                 setTitle(time+" "+TimeUtils.getWeekDayInt2Str(TimeUtils.getWeek(time)));
-                setMUrl("apps/oa/hysap?date="+time);
+                LoginMsg loginMsg = getSharedPreferences().getLoginMsg();
+                if(loginMsg!= null){
+                    setMUrl("apps/oa/hysap?date=" + time + "&uid=" + loginMsg.getUid()+"&pwd="+loginMsg.getPsw());
+                }else {
+                    setMUrl("apps/oa/hysap?date=" + time );
+                }
+//                setMUrl("apps/oa/hysap?date="+time);
             }
         })      .setType(TimePickerView.Type.YEAR_MONTH_DAY)
                 .setDate(selectedDate)

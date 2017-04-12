@@ -47,7 +47,7 @@ public class RcapAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if ( holder instanceof RcapAdapter.MyViewHolder) {
             Rcap j = (Rcap) mData.get(position);
-            ((MyViewHolder) holder).rcsj.setText(j.getTime_start().length()>=16?j.getTime_start().substring(12,j.getTime_start().length()):j.getTime_start());
+            ((MyViewHolder) holder).rcsj.setText(j.getTime_start().length()>=16?j.getTime_start().substring(11,j.getTime_start().length()):j.getTime_start());
             ((MyViewHolder) holder).rczt.setText(j.getTitle());
             ((MyViewHolder) holder).rcdd.setText(j.getLocation());
             ((MyViewHolder) holder).rcnr.setText(j.getContent());

@@ -4,6 +4,7 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -11,7 +12,9 @@ import com.android.volley.VolleyError;
 import com.dk.mp.core.http.HttpUtil;
 import com.dk.mp.core.http.request.HttpListener;
 import com.dk.mp.core.ui.MyActivity;
+import com.dk.mp.core.util.DeviceUtil;
 import com.dk.mp.core.util.TimeUtils;
+import com.dk.mp.core.widget.ErrorLayout;
 import com.dk.mp.rcap.adapter.RcapAdapter;
 import com.dk.mp.rcap.entity.Rc;
 import com.dk.mp.rcap.entity.Rcap;
@@ -41,6 +44,7 @@ public class RcapHomeActivity extends MyActivity {
     private List<String> rqs = new ArrayList<>();//当月有日程的日期
     private List<Rcap> rcaps = new ArrayList<>();//当天的日程
     private Map<String,String> rqMap = new HashMap<>();
+    private ErrorLayout error_layout;
 
 
     @Override
@@ -63,6 +67,7 @@ public class RcapHomeActivity extends MyActivity {
         super.initialize();
         setTitle(TimeUtils.getToday2());
         sdf = new SimpleDateFormat("yyyy.MM.dd");
+        error_layout = (ErrorLayout) findViewById(R.id.error_layout);
         mRecyclerView = (RecyclerView) findViewById(R.id.mRecyclerView);
         mRecyclerView.setHasFixedSize ( true );
         mRecyclerView.setLayoutManager ( new LinearLayoutManager( mContext ) );
@@ -85,7 +90,13 @@ public class RcapHomeActivity extends MyActivity {
                 setTitle(TimeUtils.formatDateTime(date.toString()));
                 if(!mDate.equals( date.toString())) {
                     mDate = date.toString();
-                    getRcaps(mDate);
+                    if(DeviceUtil.checkNet()) {
+                        error_layout.setErrorType(ErrorLayout.LOADDATA);
+                        getRcaps(mDate);
+                    }else{
+                        mRecyclerView.setVisibility(View.GONE);
+                        error_layout.setErrorType(ErrorLayout.NETWORK_ERROR);
+                    }
                 }
             }
         });
@@ -101,7 +112,12 @@ public class RcapHomeActivity extends MyActivity {
         }
         //初始化日历管理器
         calendarView.init(mManager,rqMap);
-        getRcaps(TimeUtils.getToday());
+        if(DeviceUtil.checkNet()) {
+            getRcaps(TimeUtils.getToday());
+        }else{
+            mRecyclerView.setVisibility(View.GONE);
+            error_layout.setErrorType(ErrorLayout.NETWORK_ERROR);
+        }
     }
 
     public void getRcaps(String day){
@@ -115,8 +131,15 @@ public class RcapHomeActivity extends MyActivity {
                         JSONObject jsonObject = result.getJSONObject("data");
                         Rc rc = getGson().fromJson(jsonObject.toString(),Rc.class);
                         rcaps.clear();
-                        rcaps.addAll(rc.getList());
-                        mAdapter.notifyDataSetChanged();
+                        if(rc.getList().size()>0){
+                            mRecyclerView.setVisibility(View.VISIBLE);
+                            error_layout.setErrorType(ErrorLayout.HIDE_LAYOUT);
+                            rcaps.addAll(rc.getList());
+                            mAdapter.notifyDataSetChanged();
+                        }else{
+                            mRecyclerView.setVisibility(View.GONE);
+                            error_layout.setErrorType(ErrorLayout.NODATA);
+                        }
                         rqs.clear();
                         rqs.addAll(rc.getDates());
                         rqMap.clear();
@@ -127,11 +150,14 @@ public class RcapHomeActivity extends MyActivity {
                     }
                 }catch (Exception e){
                     e.printStackTrace();
+                    mRecyclerView.setVisibility(View.GONE);
+                    error_layout.setErrorType(ErrorLayout.DATAFAIL);
                 }
             }
             @Override
             public void onError(VolleyError error) {
-
+                mRecyclerView.setVisibility(View.GONE);
+                error_layout.setErrorType(ErrorLayout.DATAFAIL);
             }
         });
     }
