@@ -90,6 +90,9 @@ public class RcapHomeActivity extends MyActivity {
                 setTitle(TimeUtils.formatDateTime(date.toString()));
                 if(!mDate.equals( date.toString())) {
                     mDate = date.toString();
+                    if(mAdapter!= null) {
+                        mAdapter.setDate(mDate);
+                    }
                     if(DeviceUtil.checkNet()) {
                         error_layout.setErrorType(ErrorLayout.LOADDATA);
                         getRcaps(mDate);

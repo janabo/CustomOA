@@ -28,21 +28,26 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/detail_title"
                     android:layout_width="wrap_content"
-                    android:layout_height="?attr/image45"
-                    android:gravity="center_vertical"
-                    android:text="日程主题" />
+                    android:layout_height="wrap_content"
+                    android:text="日程主题"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="top"
+                    android:textColor="#212121"
+                    android:textSize="?attr/textSize15"
+                    android:paddingLeft="10dp"/>
 
                 <TextView
                     android:id="@+id/schedule_title"
                     style="@style/detail_value"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"/>
             </LinearLayout>
 
             <View
@@ -53,21 +58,26 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/detail_title"
                     android:layout_width="wrap_content"
-                    android:layout_height="?attr/image45"
-                    android:gravity="center_vertical"
-                    android:text="日程地点" />
+                    android:layout_height="wrap_content"
+                    android:text="日程地点"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="top"
+                    android:textColor="#212121"
+                    android:textSize="?attr/textSize15"
+                    android:paddingLeft="10dp"/>
 
                 <TextView
                     android:id="@+id/schedule_place"
                     style="@style/detail_value"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"/>
             </LinearLayout>
 
             <View
