@@ -20,6 +20,7 @@ import io.realm.RealmConfiguration;
 public class MyApplication extends Application{
     public static App app = new App("","","","显示应用","-1","","icon_addapp","addapps");
 
+
     private static Application mApplication;
 
 
@@ -28,7 +29,6 @@ public class MyApplication extends Application{
     public static Context getContext ( ) {
         return mApplication;
     }
-
     private static MyApplication instance;
 
     public static MyApplication newInstance() {

@@ -95,10 +95,20 @@ public class SearchActivity extends MyActivity {
                     } else {
                         SnackBarUtil.showShort(layout_search,"请输入关键字");
                     }
+                }else if(actionId == 3 && event == null){
+                    final String keywords = mKeywords.getText().toString();
+                    if (!StringUtils.isNotEmpty(keywords)) {
+                        hideSoftInput();
+                        SnackBarUtil.showShort(layout_search,"请输入关键字");
+                    }
                 }
                 return false;
             }
         });
+
+
+
+
         cancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

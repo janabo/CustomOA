@@ -18,6 +18,7 @@ import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.ui.HttpWebActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
+import com.dk.mp.core.util.security.Signature;
 import com.dk.mp.main.R;
 import com.dk.mp.main.db.RealmHelper;
 import com.dk.mp.main.ui.ManagerActivity;
@@ -61,6 +62,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         private TextView title;
         private Button gotolist;
         private LinearLayout background_lin;
+        private TextView more;
 
         public MyView(View itemView) {
             super(itemView);
@@ -71,6 +73,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             newimage = (ImageView) itemView.findViewById(R.id.newimage);// 新、无图标
             title = (TextView) itemView.findViewById(R.id.content);// 消息标题
             gotolist = (Button) itemView.findViewById(R.id.gotolist);// 查看更多
+            more = (TextView) itemView.findViewById(R.id.more);
 
             title.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -81,7 +84,14 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                         Intent intent = new Intent(getContext(), HttpWebActivity.class);
                         intent.putExtra("close_web",-1);
                         intent.putExtra("title", "详情");
-                        intent.putExtra("url", bean.getDetailUrl() + "&token=" + helper.getLoginMsg().getUid());
+
+                        String uid ="";
+                        if(helper.getLoginMsg() != null){
+                            uid = helper.getLoginMsg().getUid();
+                            uid = Signature.encrypt(uid+"|"+Signature.encrypt("dake_oa_app_key")+"|"+System.currentTimeMillis());
+                        }
+
+                        intent.putExtra("url", bean.getDetailUrl() + "&token=" + uid);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
                     }
@@ -96,7 +106,12 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                     Intent intent  = new Intent(getContext(), HttpWebActivity.class);
                     intent.putExtra("close_web",-1);
                     intent.putExtra("title",bean.getLabel());
-                    intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
+                    String uid ="";
+                    if(helper.getLoginMsg() != null){
+                        uid = helper.getLoginMsg().getUid();
+                        uid = Signature.encrypt(uid+"|"+Signature.encrypt("dake_oa_app_key")+"|"+System.currentTimeMillis());
+                    }
+                    intent.putExtra("url",bean.getUrl()+"&token="+uid);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
@@ -140,9 +155,20 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
             ((MyView)holder).modeltitle.setText(conventEmpToString(bean.getLabel()));
             ((MyView)holder).modelsecondtitle.setText("你需要查看的"+conventEmpToString(bean.getLabel()));
-            ((MyView)holder).count.setText(StringUtils.isNotEmpty(bean.getCount())?bean.getCount():"0");
+
             ((MyView)holder).title.setText(!StringUtils.isNotEmpty(bean.getTitle())?"目前还没有你需要查看的"+bean.getLabel()+"哦！":bean.getTitle());
             ((MyView)holder).newimage.setImageResource((StringUtils.isNotEmpty(bean.getCount()) && !bean.getCount().equals("0")) ? R.mipmap.newimage : R.mipmap.noimage);
+            if(StringUtils.isNotEmpty(bean.getCount()) && bean.getCount().length()>2){
+                ((MyView)holder).count.setText("99");
+                ((MyView)holder).more.setVisibility(View.VISIBLE);
+            }else if(StringUtils.isNotEmpty(bean.getCount()) && bean.getCount().length()<=2){
+                ((MyView)holder).count.setText(bean.getCount());
+                ((MyView)holder).more.setVisibility(View.GONE);
+            }else{
+                ((MyView)holder).count.setText("0");
+                ((MyView)holder).more.setVisibility(View.GONE);
+            }
+
         }
     }
 

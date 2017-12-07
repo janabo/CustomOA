@@ -3,7 +3,7 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 16
@@ -55,6 +55,11 @@ dependencies {
 //    compile 'com.google.android.gms:play-services:10.0.1'
     compile 'com.baoyz.actionsheet:library:1.1.7'
     compile 'com.contrarywind:Android-PickerView:3.0.8'
+
+    compile files('libs/BASE64Encoder.jar')
+    compile files('libs/sun.misc.BASE64Decoder.jar')
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/commons-lang3-3.0.jar')
 
 
 }

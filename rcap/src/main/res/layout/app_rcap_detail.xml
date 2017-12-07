@@ -164,7 +164,7 @@
                 <TextView
                     android:id="@+id/schedule_content"
                     android:layout_width="fill_parent"
-                    android:paddingLeft="20dp"
+                    android:layout_marginRight="10dip"
                     android:textColor="#212121"
                     android:textSize="?attr/textSize15"
                     android:layout_height="wrap_content"

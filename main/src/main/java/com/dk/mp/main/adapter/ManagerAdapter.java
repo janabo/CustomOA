@@ -15,6 +15,7 @@ import com.dk.mp.core.entity.OaItemEntity;
 import com.dk.mp.core.ui.HttpWebActivity;
 import com.dk.mp.core.util.CoreSharedPreferencesHelper;
 import com.dk.mp.core.util.StringUtils;
+import com.dk.mp.core.util.security.Signature;
 import com.dk.mp.main.R;
 import com.dk.mp.main.db.RealmHelper;
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractDraggableItemViewHolder;
@@ -82,7 +83,12 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.MyViewHo
                         intent  = new Intent(mContext, HttpWebActivity.class);
                         intent.putExtra("title",bean.getLabel());
                         intent.putExtra("close_web",-1);
-                        intent.putExtra("url",bean.getUrl()+"&token="+helper.getLoginMsg().getUid());
+                        String uid ="";
+                        if(helper.getLoginMsg() != null){
+                            uid = helper.getLoginMsg().getUid();
+                            uid = Signature.encrypt(uid+"|"+Signature.encrypt("dake_oa_app_key")+"|"+System.currentTimeMillis());
+                        }
+                        intent.putExtra("url",bean.getUrl()+"&token="+uid);
                     }else{
                         intent = new Intent();
                         intent.putExtra("title",bean.getLabel());
